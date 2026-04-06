@@ -18,33 +18,31 @@
         }
         body { font-family: 'Pretendard', sans-serif; background-color: var(--bg-color); display: flex; flex-direction: column; align-items: center; min-height: 100vh; margin: 0; padding: 20px; }
         
-        /* 메인 메뉴 */
         .menu-container { text-align: center; max-width: 600px; width: 100%; margin-top: 50px; }
         .part-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 30px; }
         .part-card { background: white; padding: 30px; border-radius: 12px; cursor: pointer; transition: 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.05); font-weight: bold; font-size: 1.2rem; border: 2px solid transparent; }
         .part-card:hover { transform: translateY(-5px); border-color: var(--primary-color); color: var(--primary-color); }
 
-        /* 학습 카드 */
         .card { background: white; padding: 2rem; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 100%; max-width: 500px; text-align: center; position: relative; }
         
-        /* 스코어보드 */
+        /* 설정 영역 (속도 조절 추가) */
+        .settings-bar { background: #f8f9fa; padding: 10px; border-radius: 10px; margin-bottom: 15px; font-size: 0.85rem; color: #666; display: flex; align-items: center; justify-content: center; gap: 15px; }
+        .speed-slider { cursor: pointer; vertical-align: middle; }
+
         .scoreboard { display: flex; justify-content: space-around; margin-bottom: 15px; font-weight: bold; font-size: 1.1rem; }
         .score-item.correct { color: var(--success-color); }
         .score-item.wrong { color: var(--danger-color); }
 
-        /* 타이머 UI */
         #timer-display { font-size: 2rem; font-weight: bold; color: var(--danger-color); margin-bottom: 5px; }
         .timer-progress { width: 100%; height: 8px; background: #eee; border-radius: 4px; margin-bottom: 20px; overflow: hidden; }
         #timer-bar { width: 100%; height: 100%; background: var(--danger-color); transition: width 1s linear; }
 
-        /* 힌트 박스 (클릭 전/후) */
-        .hint-box { background: #f1f3f5; padding: 15px; border-radius: 10px; margin-bottom: 20px; font-size: 0.9rem; border: 1px dashed #ced4da; text-align: center; cursor: pointer; transition: 0.2s; }
+        .hint-box { background: #f1f3f5; padding: 15px; border-radius: 10px; margin-bottom: 20px; font-size: 0.9rem; border: 1px dashed #ced4da; text-align: center; cursor: pointer; }
         .hint-box.revealed { background: #fff9db; border: 1px solid #ffe066; text-align: left; cursor: default; }
         .chinese-wrapper { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 5px; }
         .chinese { font-size: 1.8rem; font-weight: bold; color: var(--text-dark); margin: 0; }
         .pinyin { font-size: 1.1rem; color: #7f8c8d; margin-bottom: 20px; min-height: 1.5rem; }
         
-        /* 버튼 스타일 */
         .btn-group { margin-top: 20px; display: flex; gap: 10px; justify-content: center; }
         button { padding: 12px 20px; border: none; border-radius: 10px; cursor: pointer; transition: 0.2s; font-weight: bold; font-size: 1rem; }
         .show-btn { background-color: var(--primary-color); color: white; width: 100%; }
@@ -63,7 +61,6 @@
 
     <div id="main-menu" class="menu-container">
         <h1>🇨🇳 TSC 스피킹 마스터</h1>
-        <p>연습할 파트를 선택하세요.</p>
         <div class="part-grid">
             <div class="part-card" onclick="startStudy(2)">제 2부분<br><small>그림 보고 답하기</small></div>
             <div class="part-card" onclick="startStudy(3)">제 3부분<br><small>대화 완성하기</small></div>
@@ -74,6 +71,13 @@
         <button class="home-btn" onclick="goHome()">🏠 메인으로 돌아가기</button>
         
         <div class="card">
+            <div class="settings-bar">
+                <span>🐢 느림</span>
+                <input type="range" id="speed-range" class="speed-slider" min="0.5" max="1.2" step="0.1" value="0.9" onchange="updateSpeedDisplay()">
+                <span>빠름 🚀</span>
+                <span id="speed-value" style="font-weight:bold; color:var(--primary-color);">0.9x</span>
+            </div>
+
             <div class="scoreboard">
                 <span class="score-item correct">정답: <span id="count-correct">0</span></span>
                 <span class="score-item wrong">오답: <span id="count-wrong">0</span></span>
@@ -111,12 +115,11 @@
             <button class="show-btn" id="show-btn" onclick="showAnswer()">답변 확인</button>
             
             <div id="feedback-group" class="btn-group hidden">
-                <button class="correct-btn" onclick="handleResult(true)">알아요 (빈도↓)</button>
-                <button class="wrong-btn" onclick="handleResult(false)">몰라요 (리포트 기록)</button>
+                <button class="correct-btn" onclick="handleResult(true)">알아요</button>
+                <button class="wrong-btn" onclick="handleResult(false)">몰라요</button>
             </div>
 
             <div class="stats" id="stats-text"></div>
-
             <button class="exit-btn" onclick="confirmExit()">학습 종료 및 리포트 다운로드</button>
         </div>
     </div>
@@ -127,20 +130,17 @@
         let wrongAnswers = new Set();
         let timerInterval;
         let timeLeft = 30;
-        
-        // 누적 카운트 변수
         let correctCount = 0;
         let wrongCount = 0;
 
-        function startStudy(part) {
-            if (part === 2) {
-                if (typeof PART2_DATA === 'undefined') return alert('part2_data.js 파일을 찾을 수 없습니다.');
-                currentData = [...PART2_DATA];
-            } else if (part === 3) {
-                if (typeof PART3_DATA === 'undefined') return alert('part3_data.js 파일을 찾을 수 없습니다.');
-                currentData = [...PART3_DATA];
-            }
+        // 속도 표시 업데이트
+        function updateSpeedDisplay() {
+            const speed = document.getElementById('speed-range').value;
+            document.getElementById('speed-value').innerText = speed + "x";
+        }
 
+        function startStudy(part) {
+            currentData = (part === 2) ? [...PART2_DATA] : [...PART3_DATA];
             document.getElementById('main-menu').classList.add('hidden');
             const studyPage = document.getElementById('study-page');
             studyPage.classList.remove('hidden');
@@ -148,7 +148,6 @@
             nextQuestion();
         }
 
-        // 힌트 공개 함수
         function revealHint() {
             const container = document.getElementById('hint-container');
             if (!container.classList.contains('revealed')) {
@@ -158,7 +157,6 @@
             }
         }
 
-        // 힌트 초기화 함수
         function resetHintUI() {
             const container = document.getElementById('hint-container');
             container.classList.remove('revealed');
@@ -186,11 +184,11 @@
         }
 
         function getWeightedRandom() {
-            let totalWeight = currentData.reduce((sum, item) => sum + item.weight, 0);
-            let randomNum = Math.random() * totalWeight;
+            let total = currentData.reduce((sum, item) => sum + item.weight, 0);
+            let r = Math.random() * total;
             for (let i = 0; i < currentData.length; i++) {
-                if (randomNum < currentData[i].weight) return i;
-                randomNum -= currentData[i].weight;
+                if (r < currentData[i].weight) return i;
+                r -= currentData[i].weight;
             }
             return 0;
         }
@@ -201,10 +199,7 @@
             timerInterval = setInterval(() => {
                 timeLeft--;
                 updateTimerUI();
-                if (timeLeft <= 0) {
-                    clearInterval(timerInterval);
-                    showAnswer();
-                }
+                if (timeLeft <= 0) { clearInterval(timerInterval); showAnswer(); }
             }, 1000);
         }
 
@@ -215,7 +210,7 @@
 
         function showAnswer() {
             clearInterval(timerInterval);
-            revealHint(); // 답변 확인 시 힌트도 자동 공개
+            revealHint();
             const item = currentData[currentIdx];
             document.getElementById('a-text').innerText = item.a;
             document.getElementById('a-pinyin').innerText = item.aP;
@@ -238,6 +233,21 @@
             nextQuestion();
         }
 
+        function playTTS(elementId, callback) {
+            const text = document.getElementById(elementId).innerText;
+            if (!window.speechSynthesis) return;
+            window.speechSynthesis.cancel();
+            
+            // 실시간 슬라이더 값 가져오기
+            const currentSpeed = document.getElementById('speed-range').value;
+            
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'zh-CN';
+            utterance.rate = parseFloat(currentSpeed); // 속도 적용
+            if(callback) utterance.onend = callback;
+            window.speechSynthesis.speak(utterance);
+        }
+
         function confirmExit() {
             if (wrongAnswers.size === 0) {
                 if (confirm("기록된 오답이 없습니다. 메인으로 돌아갈까요?")) location.reload();
@@ -251,38 +261,19 @@
 
         function downloadCSV() {
             let csvContent = "\uFEFF"; 
-            csvContent += "구분,질문,질문병음,답변,답변병음,최종 가중치\n";
+            csvContent += "구분,질문,질문병음,답변,답변병음,가중치\n";
             wrongAnswers.forEach(item => {
-                let row = `오답,"${item.q}","${item.qP}","${item.a}","${item.aP}",${item.weight}`;
-                csvContent += row + "\n";
+                csvContent += `오답,"${item.q}","${item.qP}","${item.a}","${item.aP}",${item.weight}\n`;
             });
             const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
             const url = URL.createObjectURL(blob);
             const link = document.createElement("a");
-            link.setAttribute("href", url);
-            link.setAttribute("download", `TSC_오답리포트_${new Date().toLocaleDateString()}.csv`);
-            document.body.appendChild(link);
+            link.href = url;
+            link.download = `TSC_오답리포트_${new Date().toLocaleDateString()}.csv`;
             link.click();
-            document.body.removeChild(link);
         }
 
-        function playTTS(elementId, callback) {
-            const text = document.getElementById(elementId).innerText;
-            if (!window.speechSynthesis) return;
-            window.speechSynthesis.cancel();
-            const utterance = new SpeechSynthesisUtterance(text);
-            utterance.lang = 'zh-CN';
-            utterance.rate = 0.9;
-            if(callback) utterance.onend = callback;
-            window.speechSynthesis.speak(utterance);
-        }
-
-        function goHome() {
-            if (confirm("진행 상황이 저장되지 않을 수 있습니다. 메인으로 돌아가시겠습니까?")) {
-                location.reload();
-            }
-        }
-
+        function goHome() { location.reload(); }
         function updateStats() {
             document.getElementById('stats-text').innerText = `문항 가중치: ${currentData[currentIdx].weight}`;
         }
