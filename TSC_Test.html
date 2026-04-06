@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TSC 스피킹 마스터 - 학습 모드</title>
+    
+    <script src="part2_data.js"></script>
+    <script src="part3_data.js"></script>
+
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --success-color: #2ecc71;
+            --danger-color: #e74c3c;
+            --bg-color: #f5f7fa;
+            --text-dark: #2c3e50;
+        }
+        body { font-family: 'Pretendard', sans-serif; background-color: var(--bg-color); display: flex; flex-direction: column; align-items: center; min-height: 100vh; margin: 0; padding: 20px; }
+        
+        /* 메인 메뉴 */
+        .menu-container { text-align: center; max-width: 600px; width: 100%; margin-top: 50px; }
+        .part-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 30px; }
+        .part-card { background: white; padding: 30px; border-radius: 12px; cursor: pointer; transition: 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.05); font-weight: bold; font-size: 1.2rem; border: 2px solid transparent; }
+        .part-card:hover { transform: translateY(-5px); border-color: var(--primary-color); color: var(--primary-color); }
+
+        /* 학습 카드 */
+        .card { background: white; padding: 2rem; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 100%; max-width: 500px; text-align: center; position: relative; }
+        
+        /* 스코어보드 */
+        .scoreboard { display: flex; justify-content: space-around; margin-bottom: 15px; font-weight: bold; font-size: 1.1rem; }
+        .score-item.correct { color: var(--success-color); }
+        .score-item.wrong { color: var(--danger-color); }
+
+        /* 타이머 UI */
+        #timer-display { font-size: 2rem; font-weight: bold; color: var(--danger-color); margin-bottom: 5px; }
+        .timer-progress { width: 100%; height: 8px; background: #eee; border-radius: 4px; margin-bottom: 20px; overflow: hidden; }
+        #timer-bar { width: 100%; height: 100%; background: var(--danger-color); transition: width 1s linear; }
+
+        /* 힌트 박스 (클릭 전/후) */
+        .hint-box { background: #f1f3f5; padding: 15px; border-radius: 10px; margin-bottom: 20px; font-size: 0.9rem; border: 1px dashed #ced4da; text-align: center; cursor: pointer; transition: 0.2s; }
+        .hint-box.revealed { background: #fff9db; border: 1px solid #ffe066; text-align: left; cursor: default; }
+        .chinese-wrapper { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 5px; }
+        .chinese { font-size: 1.8rem; font-weight: bold; color: var(--text-dark); margin: 0; }
+        .pinyin { font-size: 1.1rem; color: #7f8c8d; margin-bottom: 20px; min-height: 1.5rem; }
+        
+        /* 버튼 스타일 */
+        .btn-group { margin-top: 20px; display: flex; gap: 10px; justify-content: center; }
+        button { padding: 12px 20px; border: none; border-radius: 10px; cursor: pointer; transition: 0.2s; font-weight: bold; font-size: 1rem; }
+        .show-btn { background-color: var(--primary-color); color: white; width: 100%; }
+        .correct-btn { background-color: var(--success-color); color: white; flex: 1; }
+        .wrong-btn { background-color: var(--danger-color); color: white; flex: 1; }
+        .speak-btn { background: #edf2f7; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; }
+        .exit-btn { background-color: #636e72; color: white; margin-top: 20px; width: 100%; }
+        .home-btn { background: none; border: 1px solid #bdc3c7; color: #7f8c8d; margin-bottom: 20px; }
+
+        .hidden { display: none; }
+        .stats { margin-top: 15px; font-size: 0.8rem; color: #a0aec0; }
+        hr { border: 0; border-top: 1px solid #edf2f7; margin: 25px 0; }
+    </style>
+</head>
+<body>
+
+    <div id="main-menu" class="menu-container">
+        <h1>🇨🇳 TSC 스피킹 마스터</h1>
+        <p>연습할 파트를 선택하세요.</p>
+        <div class="part-grid">
+            <div class="part-card" onclick="startStudy(2)">제 2부분<br><small>그림 보고 답하기</small></div>
+            <div class="part-card" onclick="startStudy(3)">제 3부분<br><small>대화 완성하기</small></div>
+        </div>
+    </div>
+
+    <div id="study-page" class="hidden" style="width: 100%; flex-direction: column; align-items: center;">
+        <button class="home-btn" onclick="goHome()">🏠 메인으로 돌아가기</button>
+        
+        <div class="card">
+            <div class="scoreboard">
+                <span class="score-item correct">정답: <span id="count-correct">0</span></span>
+                <span class="score-item wrong">오답: <span id="count-wrong">0</span></span>
+            </div>
+
+            <div id="timer-display">30</div>
+            <div class="timer-progress"><div id="timer-bar"></div></div>
+
+            <div id="hint-container" class="hint-box" onclick="revealHint()">
+                <div id="hint-placeholder">🔍 클릭하여 힌트 보기</div>
+                <div id="hint-content" class="hidden">
+                    <div><strong>💡 힌트:</strong> <span id="q-hint"></span></div>
+                    <div><strong>🔑 키워드:</strong> <span id="q-keywords"></span></div>
+                </div>
+            </div>
+            
+            <div id="question-area">
+                <div class="chinese-wrapper">
+                    <p class="chinese" id="q-text"></p>
+                    <button class="speak-btn" onclick="playTTS('q-text')">🔊</button>
+                </div>
+                <p class="pinyin" id="q-pinyin"></p>
+            </div>
+
+            <hr>
+
+            <div id="answer-area" class="hidden">
+                <div class="chinese-wrapper">
+                    <p class="chinese" id="a-text" style="color: var(--success-color);"></p>
+                    <button class="speak-btn" onclick="playTTS('a-text')">🔊</button>
+                </div>
+                <p class="pinyin" id="a-pinyin"></p>
+            </div>
+
+            <button class="show-btn" id="show-btn" onclick="showAnswer()">답변 확인</button>
+            
+            <div id="feedback-group" class="btn-group hidden">
+                <button class="correct-btn" onclick="handleResult(true)">알아요 (빈도↓)</button>
+                <button class="wrong-btn" onclick="handleResult(false)">몰라요 (리포트 기록)</button>
+            </div>
+
+            <div class="stats" id="stats-text"></div>
+
+            <button class="exit-btn" onclick="confirmExit()">학습 종료 및 리포트 다운로드</button>
+        </div>
+    </div>
+
+    <script>
+        let currentData = [];
+        let currentIdx = 0;
+        let wrongAnswers = new Set();
+        let timerInterval;
+        let timeLeft = 30;
+        
+        // 누적 카운트 변수
+        let correctCount = 0;
+        let wrongCount = 0;
+
+        function startStudy(part) {
+            if (part === 2) {
+                if (typeof PART2_DATA === 'undefined') return alert('part2_data.js 파일을 찾을 수 없습니다.');
+                currentData = [...PART2_DATA];
+            } else if (part === 3) {
+                if (typeof PART3_DATA === 'undefined') return alert('part3_data.js 파일을 찾을 수 없습니다.');
+                currentData = [...PART3_DATA];
+            }
+
+            document.getElementById('main-menu').classList.add('hidden');
+            const studyPage = document.getElementById('study-page');
+            studyPage.classList.remove('hidden');
+            studyPage.style.display = 'flex';
+            nextQuestion();
+        }
+
+        // 힌트 공개 함수
+        function revealHint() {
+            const container = document.getElementById('hint-container');
+            if (!container.classList.contains('revealed')) {
+                container.classList.add('revealed');
+                document.getElementById('hint-placeholder').classList.add('hidden');
+                document.getElementById('hint-content').classList.remove('hidden');
+            }
+        }
+
+        // 힌트 초기화 함수
+        function resetHintUI() {
+            const container = document.getElementById('hint-container');
+            container.classList.remove('revealed');
+            document.getElementById('hint-placeholder').classList.remove('hidden');
+            document.getElementById('hint-content').classList.add('hidden');
+        }
+
+        function nextQuestion() {
+            clearInterval(timerInterval);
+            resetHintUI();
+            currentIdx = getWeightedRandom();
+            const item = currentData[currentIdx];
+            
+            document.getElementById('q-text').innerText = item.q;
+            document.getElementById('q-pinyin').innerText = item.qP;
+            document.getElementById('q-hint').innerText = item.hint || "힌트가 없습니다.";
+            document.getElementById('q-keywords').innerText = item.keywords || "키워드가 없습니다.";
+            
+            document.getElementById('answer-area').classList.add('hidden');
+            document.getElementById('feedback-group').classList.add('hidden');
+            document.getElementById('show-btn').classList.remove('hidden');
+            
+            playTTS('q-text', startTimer);
+            updateStats();
+        }
+
+        function getWeightedRandom() {
+            let totalWeight = currentData.reduce((sum, item) => sum + item.weight, 0);
+            let randomNum = Math.random() * totalWeight;
+            for (let i = 0; i < currentData.length; i++) {
+                if (randomNum < currentData[i].weight) return i;
+                randomNum -= currentData[i].weight;
+            }
+            return 0;
+        }
+
+        function startTimer() {
+            timeLeft = 30;
+            updateTimerUI();
+            timerInterval = setInterval(() => {
+                timeLeft--;
+                updateTimerUI();
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    showAnswer();
+                }
+            }, 1000);
+        }
+
+        function updateTimerUI() {
+            document.getElementById('timer-display').innerText = timeLeft;
+            document.getElementById('timer-bar').style.width = (timeLeft / 30 * 100) + "%";
+        }
+
+        function showAnswer() {
+            clearInterval(timerInterval);
+            revealHint(); // 답변 확인 시 힌트도 자동 공개
+            const item = currentData[currentIdx];
+            document.getElementById('a-text').innerText = item.a;
+            document.getElementById('a-pinyin').innerText = item.aP;
+            document.getElementById('answer-area').classList.remove('hidden');
+            document.getElementById('feedback-group').classList.remove('hidden');
+            document.getElementById('show-btn').classList.add('hidden');
+        }
+
+        function handleResult(isCorrect) {
+            if (isCorrect) {
+                correctCount++;
+                document.getElementById('count-correct').innerText = correctCount;
+                if (currentData[currentIdx].weight > 1) currentData[currentIdx].weight--;
+            } else {
+                wrongCount++;
+                document.getElementById('count-wrong').innerText = wrongCount;
+                wrongAnswers.add(currentData[currentIdx]);
+                currentData[currentIdx].weight += 3;
+            }
+            nextQuestion();
+        }
+
+        function confirmExit() {
+            if (wrongAnswers.size === 0) {
+                if (confirm("기록된 오답이 없습니다. 메인으로 돌아갈까요?")) location.reload();
+                return;
+            }
+            if (confirm(`학습을 종료하시겠습니까?\n기록된 오답 ${wrongAnswers.size}건을 CSV로 다운로드하시겠습니까?`)) {
+                downloadCSV();
+                location.reload();
+            }
+        }
+
+        function downloadCSV() {
+            let csvContent = "\uFEFF"; 
+            csvContent += "구분,질문,질문병음,답변,답변병음,최종 가중치\n";
+            wrongAnswers.forEach(item => {
+                let row = `오답,"${item.q}","${item.qP}","${item.a}","${item.aP}",${item.weight}`;
+                csvContent += row + "\n";
+            });
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement("a");
+            link.setAttribute("href", url);
+            link.setAttribute("download", `TSC_오답리포트_${new Date().toLocaleDateString()}.csv`);
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        function playTTS(elementId, callback) {
+            const text = document.getElementById(elementId).innerText;
+            if (!window.speechSynthesis) return;
+            window.speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'zh-CN';
+            utterance.rate = 0.9;
+            if(callback) utterance.onend = callback;
+            window.speechSynthesis.speak(utterance);
+        }
+
+        function goHome() {
+            if (confirm("진행 상황이 저장되지 않을 수 있습니다. 메인으로 돌아가시겠습니까?")) {
+                location.reload();
+            }
+        }
+
+        function updateStats() {
+            document.getElementById('stats-text').innerText = `문항 가중치: ${currentData[currentIdx].weight}`;
+        }
+    </script>
+</body>
+</html>
