@@ -442,7 +442,7 @@ const PART3_DATA = [
         "weight": 1
     },
     {
-        "q": "你能能不能帮我买展览会门票?",
+        "q": "你能不能帮我买展览会门票?",
         "qP": "Nǐ néng bù néng bāng wǒ mǎi zhǎnlǎnhuì ménpiào?",
         "a": "当然可以, 我帮你。",
         "aP": "Dāngrán kěyǐ, wǒ bāng nǐ.",
