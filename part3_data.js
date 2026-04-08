@@ -809,5 +809,248 @@ const PART3_DATA = [
         "hint": "배움에 대한 계획에 공감하는 답변입니다.",
         "keywords": "打算 (dǎsuàn), 游泳 (yóuyǒng)",
         "weight": 1
+    },
+    {
+        "q": "你经常去书店吗?",
+        "qP": "Nǐ jīngcháng qù shūdiàn ma?",
+        "a": "我经常去书店。",
+        "aP": "Wǒ jīngcháng qù shūdiàn.",
+        "hint": "빈도를 나타내는 부사 '经常'을 사용한 질문입니다.",
+        "keywords": "经常 (jīngcháng), 书店 (shūdiàn)",
+        "weight": 1
+    },
+    {
+        "q": "下周의考试, 你想跟谁一起准备?",
+        "qP": "Xiàzhōu de kǎoshì, nǐ xiǎng gēn shéi yìqǐ zhǔnbèi?",
+        "a": "下周的考试, 我想跟哥哥一起准备。",
+        "aP": "Xiàzhōu de kǎoshì, wǒ xiǎng gēn gēge yìqǐ zhǔnbèi.",
+        "hint": "~와 함께(跟~一起) 무엇을 하는지 묻는 표현입니다.",
+        "keywords": "准备 (zhǔnbèi), 哥哥 (gēge)",
+        "weight": 1
+    },
+    {
+        "q": "明天跟同事们一起去爬山怎么样?",
+        "qP": "Míngtiān gēn tóngshìmen yìqǐ qù páshān zěnmeyàng?",
+        "a": "好, 一起去爬山吧。",
+        "aP": "Hǎo, yìqǐ qù páshān ba.",
+        "hint": "상대방에게 제안(怎么样)하고 이에 동의(吧)하는 대화입니다.",
+        "keywords": "同事 (tóngshì), 爬山 (páshān)",
+        "weight": 1
+    },
+    {
+        "q": "百货商店已经关门了。",
+        "qP": "Bǎihuò shāngdiàn yǐjīng guānmén le.",
+        "a": "百货商店已经关门了? 那怎么办?",
+        "aP": "Bǎihuò shāngdiàn yǐjīng guānmén le? Nà zěnmebàn?",
+        "hint": "이미 일어난 상황(已经~了)에 대한 대처를 묻는 표현입니다.",
+        "keywords": "百货商店 (bǎihuò shāngdiàn), 怎么办 (zěnmebàn)",
+        "weight": 1
+    },
+    {
+        "q": "你多长时间换一次手机?",
+        "qP": "Nǐ duō cháng shíjiān huàn yí cì shǒujī?",
+        "a": "我一年换一次手机。",
+        "aP": "Wǒ yì nián huàn yí cì shǒujī.",
+        "hint": "주기나 빈도(多长时间~一次)를 묻고 답하는 문장입니다.",
+        "keywords": "换 (huàn), 手机 (shǒujī)",
+        "weight": 1
+    },
+    {
+        "q": "你通常在哪儿锻炼身体?",
+        "qP": "Nǐ tōngcháng zài nǎr duànliàn shēntǐ?",
+        "a": "我通常在家锻炼身体。",
+        "aP": "Wǒ tōngcháng zài jiā duànliàn shēntǐ.",
+        "hint": "장소를 나타내는 전치사 '在'를 활용한 문장입니다.",
+        "keywords": "通常 (tōngcháng), 锻炼 (duànliàn)",
+        "weight": 1
+    },
+    {
+        "q": "这家餐厅的菜很好吃, 尝一尝吧。",
+        "qP": "Zhè jiā cāntīng de cài hěn hǎochī, cháng yì cháng ba.",
+        "a": "好, 尝一尝吧。",
+        "aP": "Hǎo, cháng yì cháng ba.",
+        "hint": "동사를 중첩(尝一尝)하여 '한 번 해보다'라는 의미를 전달합니다.",
+        "keywords": "餐厅 (cāntīng), 尝 (cháng)",
+        "weight": 1
+    },
+    {
+        "q": "你汉语说得真棒!",
+        "qP": "Nǐ Hànyǔ shuō de zhēn bàng!",
+        "a": "没有啊, 我说得不太好。",
+        "aP": "Méiyǒu a, wǒ shuō de bú tài hǎo.",
+        "hint": "정도를 나타내는 보어 '得'와 겸손한 대답 '没有'가 핵심입니다.",
+        "keywords": "汉语 (Hànyǔ), 真棒 (zhēn bàng)",
+        "weight": 1
+    },
+    {
+        "q": "我觉得这个帽子很好看。",
+        "qP": "Wǒ juéde zhège màozi hěn hǎokàn.",
+        "a": "你说得对, 我也觉得这个帽子很好看。",
+        "aP": "Nǐ shuō de duì, wǒ yě juéde zhège màozi hěn hǎokàn.",
+        "hint": "자신의 의견(我觉得)을 말하고 상대방에게 동의하는 표현입니다.",
+        "keywords": "觉得 (juéde), 帽子 (màozi)",
+        "weight": 1
+    },
+    {
+        "q": "家人过生日时, 你一般送什么礼物?",
+        "qP": "Jiārén guò shēngrì shí, nǐ yìbān sòng shénme lǐwù?",
+        "a": "家人过生日时, 我一般送衣服。",
+        "aP": "Jiārén guò shēngrì shí, wǒ yìbān sòng yīfu.",
+        "hint": "~할 때(~时)를 사용하여 특정 상황의 습관을 묻습니다.",
+        "keywords": "生日 (shēngrì), 礼物 (lǐwù)",
+        "weight": 1
+    },
+    {
+        "q": "对不起, 现在我们超市没有猪肉。",
+        "qP": "Duìbuqǐ, xiànzài wǒmen chāoshì méiyǒu zhūròu.",
+        "a": "什么? 怎么又没有?",
+        "aP": "Shénme? Zěnme yòu méiyǒu?",
+        "hint": "부정문 '没有'와 반복을 나타내는 '又'가 포함된 당황스러운 상황입니다.",
+        "keywords": "超市 (chāoshì), 猪肉 (zhūròu)",
+        "weight": 1
+    },
+    {
+        "q": "你最近写过信吗?",
+        "qP": "Nǐ zuìjìn xiěguò xìn ma?",
+        "a": "我最近写过信.",
+        "aP": "Wǒ zuìjìn xiěguò xìn.",
+        "hint": "경험을 나타내는 '过'를 사용하여 과거의 경험을 묻습니다.",
+        "keywords": "最近 (zuìjìn), 写信 (xiě xìn)",
+        "weight": 1
+    },
+    {
+        "q": "百货商店已经关门了。",
+        "qP": "Bǎihuò shāngdiàn yǐjīng guānmén le.",
+        "a": "百货商店已经关门了? 那怎么办?",
+        "aP": "Bǎihuò shāngdiàn yǐjīng guānmén le? Nà zěnmebàn?",
+        "hint": "이미 일어난 상황(已经~了)에 대한 대처를 묻는 표현입니다.",
+        "keywords": "百货商店 (bǎihuò shāngdiàn), 怎么办 (zěnmebàn)",
+        "weight": 1
+    },
+    {
+        "q": "你多长时间换一次手机?",
+        "qP": "Nǐ duō cháng shíjiān huàn yí cì shǒujī?",
+        "a": "我一年换一次手机。",
+        "aP": "Wǒ yì nián huàn yí cì shǒujī.",
+        "hint": "주기나 빈도(多长时间~一次)를 묻고 답하는 문장입니다.",
+        "keywords": "换 (huàn), 手机 (shǒujī)",
+        "weight": 1
+    },
+    {
+        "q": "你通常在哪儿锻炼身体?",
+        "qP": "Nǐ tōngcháng zài nǎr duànliàn shēntǐ?",
+        "a": "我通常在家锻炼身体。",
+        "aP": "Wǒ tōngcháng zài jiā duànliàn shēntǐ.",
+        "hint": "장소를 나타내는 전치사 '在'를 활용한 문장입니다.",
+        "keywords": "通常 (tōngcháng), 锻炼 (duànliàn)",
+        "weight": 1
+    },
+    {
+        "q": "这家餐厅的菜很好吃, 尝一尝吧。",
+        "qP": "Zhè jiā cāntīng de cài hěn hǎochī, cháng yì cháng ba.",
+        "a": "好, 尝一尝吧。",
+        "aP": "Hǎo, cháng yì cháng ba.",
+        "hint": "동사를 중첩(尝一尝)하여 '한 번 해보다'라는 의미를 전달합니다.",
+        "keywords": "餐厅 (cāntīng), 尝 (cháng)",
+        "weight": 1
+    },
+    {
+        "q": "你汉语说得真棒!",
+        "qP": "Nǐ Hànyǔ shuō de zhēn bàng!",
+        "a": "没有啊, 我说得不太好。",
+        "aP": "Méiyǒu a, wǒ shuō de bú tài hǎo.",
+        "hint": "정도를 나타내는 보어 '得'와 겸손한 대답 '没有'가 핵심입니다.",
+        "keywords": "汉语 (Hànyǔ), 真棒 (zhēn bàng)",
+        "weight": 1
+    },
+    {
+        "q": "我觉得这个帽子很好看。",
+        "qP": "Wǒ juéde zhège màozi hěn hǎokàn.",
+        "a": "你说得对, 我也觉得这个帽子很好看。",
+        "aP": "Nǐ shuō de duì, wǒ yě juéde zhège màozi hěn hǎokàn.",
+        "hint": "자신의 의견(我觉得)을 말하고 상대방에게 동의하는 표현입니다.",
+        "keywords": "觉得 (juéde), 帽子 (màozi)",
+        "weight": 1
+    },
+    {
+        "q": "家人过生日时, 你一般送什么礼物?",
+        "qP": "Jiārén guò shēngrì shí, nǐ yìbān sòng shénme lǐwù?",
+        "a": "家人过生日时, 我一般送衣服。",
+        "aP": "Jiārén guò shēngrì shí, wǒ yìbān sòng yīfu.",
+        "hint": "~할 때(~时)를 사용하여 특정 상황의 습관을 묻습니다.",
+        "keywords": "生日 (shēngrì), 礼物 (lǐwù)",
+        "weight": 1
+    },
+    {
+        "q": "对不起, 现在我们超市没有猪肉。",
+        "qP": "Duìbuqǐ, xiànzài wǒmen chāoshì méiyǒu zhūròu.",
+        "a": "什么? 怎么又没有?",
+        "aP": "Shénme? Zěnme yòu méiyǒu?",
+        "hint": "부정문 '没有'와 반복을 나타내는 '又'가 포함된 당황스러운 상황입니다.",
+        "keywords": "超市 (chāoshì), 猪肉 (zhūròu)",
+        "weight": 1
+    },
+    {
+        "q": "你最近写过信吗?",
+        "qP": "Nǐ zuìjìn xiěguò xìn ma?",
+        "a": "我最近写过信.",
+        "aP": "Wǒ zuìjìn xiěguò xìn.",
+        "hint": "경험을 나타내는 '过'를 사용하여 과거의 경험을 묻습니다.",
+        "keywords": "最近 (zuìjìn), 写信 (xiě xìn)",
+        "weight": 1
+    },
+    {
+        "q": "这是我做的菜, 怎么样?",
+        "qP": "Zhè shì wǒ zuò de cài, zěnmeyàng?",
+        "a": "我觉得你做的菜很不错。",
+        "aP": "Wǒ juéde nǐ zuò de cài hěn búcuò.",
+        "hint": "상태를 묻는 '怎么样'과 칭찬의 표현 '不错'이 핵심입니다.",
+        "keywords": "做菜 (zuò cài), 不错 (búcuò)",
+        "weight": 1
+    },
+    {
+        "q": "你现在有시간的话, 能帮我一下吧。",
+        "qP": "Nǐ xiànzài yǒu shíjiān dehuà, néng bāng wǒ yíxià ba.",
+        "a": "当然可以, 我帮你。",
+        "aP": "Dāngrán kěyǐ, wǒ bāng nǐ.",
+        "hint": "가정(~的话)과 조동사(能)를 사용한 정중한 부탁 표현입니다.",
+        "keywords": "帮 (bāng), 帮忙 (bāngmáng)",
+        "weight": 1
+    },
+    {
+        "q": "我打算下个月去欧洲旅行。",
+        "qP": "Wǒ dǎsuàn xià gè yuè qù Ōuzhōu lǚxíng.",
+        "a": "是吗? 我야打算下个月去欧洲旅行。",
+        "aP": "Shì ma? Wǒ yě dǎsuàn xià gè yuè qù Ōuzhōu lǚxíng.",
+        "hint": "계획(打算)을 말하고 상대방의 의견에 동조(也是)하는 대화입니다.",
+        "keywords": "打算 (dǎsuàn), 旅行 (lǚxíng)",
+        "weight": 1
+    },
+    {
+        "q": "你这次暑假过得怎么样?",
+        "qP": "Nǐ zhè cì shǔjià guò de zěnmeyàng?",
+        "a": "我这次暑假过得不好。",
+        "aP": "Wǒ zhè cì shǔjià guò de bù hǎo.",
+        "hint": "시간을 보내다(过) 뒤에 정도보어 '得'를 사용하여 상태를 묘사합니다.",
+        "keywords": "暑假 (shǔjià), 过 (guò)",
+        "weight": 1
+    },
+    {
+        "q": "你打算什么时候请一天假?",
+        "qP": "Nǐ dǎsuàn shénme shíhou qǐng yì tiān jià?",
+        "a": "我打算这周五请一天假。",
+        "aP": "Wǒ dǎsuàn zhè zhōuwǔ qǐng yì tiān jià.",
+        "hint": "휴가를 내다(请假)라는 이합동사를 활용한 문장입니다.",
+        "keywords": "请假 (qǐngjià), 时候 (shíhou)",
+        "weight": 1
+    },
+    {
+        "q": "咱们怎么去机场?",
+        "qP": "Zánmen zěnme qù jīchǎng?",
+        "a": "坐地铁吧。",
+        "aP": "Zuò dìtiě ba.",
+        "hint": "방법을 묻는 '怎么'와 교통수단을 이용할 때 쓰는 '坐'가 핵심입니다.",
+        "keywords": "机场 (jīchǎng), 地铁 (dìtiě)",
+        "weight": 1
     }
 ];
