@@ -111,14 +111,14 @@ const PART3_DATA = [
     {
         "q": "这双鞋是什么时候买的?",
         "qP": "Zhè shuāng xié shì shénme shíhou mǎi de?",
-        "a": "这双鞋是周末买의.",
+        "a": "这双鞋是周末买.",
         "aP": "Zhè shuāng xié shì zhōumò mǎi de.",
         "hint": "과거의 시점을 강조하는 '是~的' 구문입니다.",
         "keywords": "什么时候 (shénme shíhou), 周末 (zhōumò)",
         "weight": 1
     },
     {
-        "q": "你是从什么时候开始学游泳의?",
+        "q": "你是从什么时候开始学游泳?",
         "qP": "Nǐ shì cóng shénme shíhou kāishǐ xué yóuyǒng de?",
         "a": "我是从七岁开始学游泳的。",
         "aP": "Wǒ shì cóng qī suì kāishǐ xué yóuyǒng de.",
@@ -292,7 +292,7 @@ const PART3_DATA = [
         "q": "我给老师送什么礼物好呢?",
         "qP": "Wǒ gěi lǎoshī sòng shénme lǐwù hǎo ne?",
         "a": "你给老师送鞋子吧。",
-        "aP": "Anǐ gěi lǎoshī sòng xiézi ba.",
+        "aP": "nǐ gěi lǎoshī sòng xiézi ba.",
         "hint": "제안이나 조언을 구하는 질문에 대한 답입니다.",
         "keywords": "老师 (lǎoshī), 鞋子 (xiézi)",
         "weight": 1
@@ -408,7 +408,7 @@ const PART3_DATA = [
     {
         "q": "我有点儿饿了, 想不想吃辣的?",
         "qP": "Wǒ yǒudiǎnr è le, xiǎng bù xiǎng chī là de?",
-        "a": "我想吃辣의.",
+        "a": "我想吃辣.",
         "aP": "Wǒ xiǎng chī là de.",
         "hint": "입맛이나 기호를 묻는 질문입니다.",
         "keywords": "饿 (è), 辣 (là)",
