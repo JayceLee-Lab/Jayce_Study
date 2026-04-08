@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TSC 스피킹 마스터 - 학습 모드</title>
+    <title>TSC 스피킹 마스터</title>
     
     <script src="part2_data.js"></script>
     <script src="part3_data.js"></script>
@@ -17,265 +17,331 @@
             --text-dark: #2c3e50;
         }
         body { font-family: 'Pretendard', sans-serif; background-color: var(--bg-color); display: flex; flex-direction: column; align-items: center; min-height: 100vh; margin: 0; padding: 20px; }
+        .menu-container { text-align: center; max-width: 700px; width: 100%; margin-top: 50px; }
+        .part-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px; }
+        .part-card { background: white; padding: 25px; border-radius: 15px; cursor: pointer; transition: 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px solid transparent; }
+        .part-card:hover { transform: translateY(-5px); border-color: var(--primary-color); }
+        .card { background: white; padding: 1.5rem; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 100%; max-width: 500px; text-align: center; }
         
-        .menu-container { text-align: center; max-width: 600px; width: 100%; margin-top: 50px; }
-        .part-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 30px; }
-        .part-card { background: white; padding: 30px; border-radius: 12px; cursor: pointer; transition: 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.05); font-weight: bold; font-size: 1.2rem; border: 2px solid transparent; }
-        .part-card:hover { transform: translateY(-5px); border-color: var(--primary-color); color: var(--primary-color); }
+        /* 설정 섹션 - 가운데 정렬 강화 */
+        .config-section { background: #fff; padding: 20px; border-radius: 12px; margin: 0 auto 25px auto; box-shadow: 0 2px 5px rgba(0,0,0,0.05); width: 100%; max-width: 500px; display: flex; justify-content: center; }
+        .config-row { display: flex; align-items: center; gap: 15px; font-size: 1rem; }
+        select { padding: 8px 12px; border-radius: 8px; border: 1px solid #ddd; font-family: inherit; font-weight: bold; cursor: pointer; background-color: #f9f9f9; text-align: center; }
 
-        .card { background: white; padding: 2rem; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 100%; max-width: 500px; text-align: center; position: relative; }
-        
-        /* 설정 영역 (속도 조절 추가) */
-        .settings-bar { background: #f8f9fa; padding: 10px; border-radius: 10px; margin-bottom: 15px; font-size: 0.85rem; color: #666; display: flex; align-items: center; justify-content: center; gap: 15px; }
-        .speed-slider { cursor: pointer; vertical-align: middle; }
+        .status-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; font-size: 0.9rem; font-weight: bold; background: #eee; padding: 8px 15px; border-radius: 10px; }
+        .score-box { display: flex; gap: 10px; }
+        .correct { color: var(--success-color); }
+        .wrong { color: var(--danger-color); }
 
-        .scoreboard { display: flex; justify-content: space-around; margin-bottom: 15px; font-weight: bold; font-size: 1.1rem; }
-        .score-item.correct { color: var(--success-color); }
-        .score-item.wrong { color: var(--danger-color); }
+        .jump-box { margin-bottom: 15px; display: flex; justify-content: center; gap: 5px; align-items: center; font-size: 0.85rem; }
+        .jump-input { width: 50px; padding: 5px; border: 1px solid #ccc; border-radius: 5px; text-align: center; }
+        .jump-btn { background: #95a5a6; color: white; padding: 5px 10px; border-radius: 5px; font-size: 0.8rem; }
 
-        #timer-display { font-size: 2rem; font-weight: bold; color: var(--danger-color); margin-bottom: 5px; }
-        .timer-progress { width: 100%; height: 8px; background: #eee; border-radius: 4px; margin-bottom: 20px; overflow: hidden; }
+        .settings-bar { background: #f8f9fa; padding: 10px; border-radius: 10px; margin-bottom: 15px; font-size: 0.85rem; display: flex; align-items: center; justify-content: center; gap: 10px; }
+        #timer-display { font-size: 2rem; font-weight: bold; color: var(--danger-color); }
+        .timer-progress { width: 100%; height: 6px; background: #eee; border-radius: 3px; margin: 10px 0 20px; overflow: hidden; }
         #timer-bar { width: 100%; height: 100%; background: var(--danger-color); transition: width 1s linear; }
 
-        .hint-box { background: #f1f3f5; padding: 15px; border-radius: 10px; margin-bottom: 20px; font-size: 0.9rem; border: 1px dashed #ced4da; text-align: center; cursor: pointer; }
-        .hint-box.revealed { background: #fff9db; border: 1px solid #ffe066; text-align: left; cursor: default; }
-        .chinese-wrapper { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 5px; }
-        .chinese { font-size: 1.8rem; font-weight: bold; color: var(--text-dark); margin: 0; }
-        .pinyin { font-size: 1.1rem; color: #7f8c8d; margin-bottom: 20px; min-height: 1.5rem; }
+        /* 힌트 및 병음 가리기 - 확실한 블러 효과 */
+        .blur-box { background: #f1f3f5; padding: 15px; border-radius: 10px; margin-bottom: 20px; font-size: 0.9rem; border: 1px dashed #ced4da; text-align: center; cursor: pointer; }
+        .blur-box.revealed { background: #fff9db; border: 1px solid #ffe066; text-align: left; cursor: default; }
         
-        .btn-group { margin-top: 20px; display: flex; gap: 10px; justify-content: center; }
-        button { padding: 12px 20px; border: none; border-radius: 10px; cursor: pointer; transition: 0.2s; font-weight: bold; font-size: 1rem; }
-        .show-btn { background-color: var(--primary-color); color: white; width: 100%; }
-        .correct-btn { background-color: var(--success-color); color: white; flex: 1; }
-        .wrong-btn { background-color: var(--danger-color); color: white; flex: 1; }
-        .speak-btn { background: #edf2f7; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; }
-        .exit-btn { background-color: #636e72; color: white; margin-top: 20px; width: 100%; }
-        .home-btn { background: none; border: 1px solid #bdc3c7; color: #7f8c8d; margin-bottom: 20px; }
+        /* Hard 모드 전용 병음 가리기 스타일 */
+        .pinyin-blur { 
+            cursor: pointer !important; 
+            background: #e2e8f0 !important; 
+            color: transparent !important; 
+            text-shadow: 0 0 15px rgba(0,0,0,0.6) !important; 
+            border-radius: 8px !important; 
+            padding: 2px 10px !important; 
+            transition: all 0.2s ease;
+            user-select: none;
+        }
+        .pinyin-blur.revealed { 
+            color: #7f8c8d !important; 
+            text-shadow: none !important; 
+            background: transparent !important; 
+            user-select: auto;
+        }
 
+        .audio-btn-wrapper { margin-bottom: 25px; } 
+        .chinese { font-size: 1.7rem; font-weight: bold; color: var(--text-dark); margin: 0; }
+        .pinyin { font-size: 1.1rem; color: #7f8c8d; margin-bottom: 15px; min-height: 1.6rem; }
+        .btn-group { margin-top: 15px; display: flex; gap: 10px; }
+        button { padding: 12px; border: none; border-radius: 10px; cursor: pointer; font-weight: bold; }
+        .show-btn { background: var(--primary-color); color: white; width: 100%; }
+        .correct-btn { background: var(--success-color); color: white; flex: 1; }
+        .wrong-btn { background: var(--danger-color); color: white; flex: 1; }
+        .exit-btn { background: #636e72; color: white; width: 100%; margin-top: 15px; }
+        .home-btn { background: none; border: 1px solid #ccc; margin-bottom: 15px; }
         .hidden { display: none; }
-        .stats { margin-top: 15px; font-size: 0.8rem; color: #a0aec0; }
-        hr { border: 0; border-top: 1px solid #edf2f7; margin: 25px 0; }
     </style>
 </head>
 <body>
 
     <div id="main-menu" class="menu-container">
         <h1>🇨🇳 TSC 스피킹 마스터</h1>
+        
+        <div class="config-section">
+            <div class="config-row">
+                <strong>🔥 난이도 설정:</strong>
+                <select id="difficulty-select">
+                    <option value="easy">Easy (힌트 자동공개)</option>
+                    <option value="medium" selected>Medium (기본)</option>
+                    <option value="hard">Hard (병음 가리기)</option>
+                </select>
+            </div>
+        </div>
+
+        <h3 style="color: var(--primary-color);">랜덤 학습 (완수 모드)</h3>
         <div class="part-grid">
-            <div class="part-card" onclick="startStudy(2)">제 2부분<br><small>그림 보고 답하기</small></div>
-            <div class="part-card" onclick="startStudy(3)">제 3부분<br><small>대화 완성하기</small></div>
+            <div class="part-card" onclick="startStudy(2, true)"><h3>2부분 랜덤</h3></div>
+            <div class="part-card" onclick="startStudy(3, true)"><h3>3부분 랜덤</h3></div>
+        </div>
+        <h3 style="color: var(--text-dark); margin-top: 30px;">순차 학습</h3>
+        <div class="part-grid">
+            <div class="part-card" onclick="startStudy(2, false)"><h3>2부분 순차</h3></div>
+            <div class="part-card" onclick="startStudy(3, false)"><h3>3부분 순차</h3></div>
         </div>
     </div>
 
     <div id="study-page" class="hidden" style="width: 100%; flex-direction: column; align-items: center;">
-        <button class="home-btn" onclick="goHome()">🏠 메인으로 돌아가기</button>
+        <button class="home-btn" onclick="location.reload()">🏠 메인으로</button>
         
         <div class="card">
-            <div class="settings-bar">
-                <span>🐢 느림</span>
-                <input type="range" id="speed-range" class="speed-slider" min="0.5" max="1.2" step="0.1" value="0.9" onchange="updateSpeedDisplay()">
-                <span>빠름 🚀</span>
-                <span id="speed-value" style="font-weight:bold; color:var(--primary-color);">0.9x</span>
+            <div class="status-bar">
+                <span class="progress-text">진행: <span id="current-pos">0</span> / <span id="total-count">0</span></span>
+                <div class="score-box">
+                    <span class="correct">정답: <span id="count-correct">0</span></span>
+                    <span class="wrong">오답: <span id="count-wrong">0</span></span>
+                </div>
             </div>
 
-            <div class="scoreboard">
-                <span class="score-item correct">정답: <span id="count-correct">0</span></span>
-                <span class="score-item wrong">오답: <span id="count-wrong">0</span></span>
+            <div id="jump-container" class="jump-box hidden">
+                <input type="number" id="jump-to" class="jump-input" placeholder="No.">
+                <button class="jump-btn" onclick="jumpToNumber()">이동</button>
+            </div>
+
+            <div class="settings-bar">
+                <span>🐢</span>
+                <input type="range" id="speed-range" min="0.5" max="1.2" step="0.1" value="0.9" onchange="updateSpeedText()">
+                <span>🚀</span> <span id="speed-val">0.9x</span>
             </div>
 
             <div id="timer-display">30</div>
             <div class="timer-progress"><div id="timer-bar"></div></div>
 
-            <div id="hint-container" class="hint-box" onclick="revealHint()">
+            <div id="hint-container" class="blur-box" onclick="revealHint()">
                 <div id="hint-placeholder">🔍 클릭하여 힌트 보기</div>
                 <div id="hint-content" class="hidden">
-                    <div><strong>💡 힌트:</strong> <span id="q-hint"></span></div>
-                    <div><strong>🔑 키워드:</strong> <span id="q-keywords"></span></div>
+                    <strong>💡 힌트:</strong> <span id="q-hint"></span><br>
+                    <strong>🔑 키워드:</strong> <span id="q-keywords"></span>
                 </div>
             </div>
             
             <div id="question-area">
-                <div class="chinese-wrapper">
-                    <p class="chinese" id="q-text"></p>
-                    <button class="speak-btn" onclick="playTTS('q-text')">🔊</button>
+                <p class="chinese" id="q-text"></p>
+                <p id="q-pinyin" class="pinyin" onclick="this.classList.add('revealed')"></p>
+                <div class="audio-btn-wrapper">
+                    <button onclick="playTTS('q-text')">🔊 다시듣기</button>
                 </div>
-                <p class="pinyin" id="q-pinyin"></p>
             </div>
 
-            <hr>
-
             <div id="answer-area" class="hidden">
-                <div class="chinese-wrapper">
-                    <p class="chinese" id="a-text" style="color: var(--success-color);"></p>
-                    <button class="speak-btn" onclick="playTTS('a-text')">🔊</button>
-                </div>
+                <hr>
+                <p class="chinese" id="a-text" style="color:var(--success-color)"></p>
                 <p class="pinyin" id="a-pinyin"></p>
+                <div class="audio-btn-wrapper">
+                    <button onclick="playTTS('a-text')">🔊 정답듣기</button>
+                </div>
             </div>
 
             <button class="show-btn" id="show-btn" onclick="showAnswer()">답변 확인</button>
-            
             <div id="feedback-group" class="btn-group hidden">
                 <button class="correct-btn" onclick="handleResult(true)">알아요</button>
                 <button class="wrong-btn" onclick="handleResult(false)">몰라요</button>
             </div>
 
-            <div class="stats" id="stats-text"></div>
-            <button class="exit-btn" onclick="confirmExit()">학습 종료 및 리포트 다운로드</button>
+            <button class="exit-btn" onclick="confirmExit()">종료 및 리포트</button>
         </div>
     </div>
 
     <script>
-        let currentData = [];
+        let fullData = [];
+        let studyQueue = [];
         let currentIdx = 0;
-        let wrongAnswers = new Set();
+        let isRandomMode = true;
+        let difficulty = 'medium';
+        let totalWrongSet = new Set();
         let timerInterval;
         let timeLeft = 30;
         let correctCount = 0;
         let wrongCount = 0;
 
-        // 속도 표시 업데이트
-        function updateSpeedDisplay() {
-            const speed = document.getElementById('speed-range').value;
-            document.getElementById('speed-value').innerText = speed + "x";
+        function playTTS(id, callback) {
+            const text = document.getElementById(id).innerText;
+            window.speechSynthesis.cancel();
+            const u = new SpeechSynthesisUtterance(text);
+            u.lang = 'zh-CN';
+            u.rate = parseFloat(document.getElementById('speed-range').value);
+            const voices = window.speechSynthesis.getVoices();
+            const cnVoice = voices.find(v => v.lang === 'zh-CN' || v.lang === 'zh_CN');
+            if (cnVoice) u.voice = cnVoice;
+            if (callback) u.onend = callback;
+            window.speechSynthesis.speak(u);
         }
 
-        function startStudy(part) {
-            currentData = (part === 2) ? [...PART2_DATA] : [...PART3_DATA];
+        function updateSpeedText() { document.getElementById('speed-val').innerText = document.getElementById('speed-range').value + "x"; }
+
+        function startStudy(part, randomMode) {
+            difficulty = document.getElementById('difficulty-select').value;
+            isRandomMode = randomMode;
+            fullData = (part === 2) ? [...PART2_DATA] : [...PART3_DATA];
+            fullData.forEach(item => { if(!item.weight) item.weight = 1; });
+            studyQueue = [...fullData];
+            currentIdx = 0; correctCount = 0; wrongCount = 0; totalWrongSet.clear();
+
+            document.getElementById('total-count').innerText = fullData.length;
             document.getElementById('main-menu').classList.add('hidden');
-            const studyPage = document.getElementById('study-page');
-            studyPage.classList.remove('hidden');
-            studyPage.style.display = 'flex';
+            document.getElementById('study-page').classList.remove('hidden');
+            document.getElementById('study-page').style.display = 'flex';
+            
+            if (!isRandomMode) document.getElementById('jump-container').classList.remove('hidden');
+            else document.getElementById('jump-container').classList.add('hidden');
+
+            updateScoreUI();
             nextQuestion();
         }
 
         function revealHint() {
-            const container = document.getElementById('hint-container');
-            if (!container.classList.contains('revealed')) {
-                container.classList.add('revealed');
-                document.getElementById('hint-placeholder').classList.add('hidden');
-                document.getElementById('hint-content').classList.remove('hidden');
-            }
-        }
-
-        function resetHintUI() {
-            const container = document.getElementById('hint-container');
-            container.classList.remove('revealed');
-            document.getElementById('hint-placeholder').classList.remove('hidden');
-            document.getElementById('hint-content').classList.add('hidden');
+            document.getElementById('hint-container').classList.add('revealed');
+            document.getElementById('hint-placeholder').classList.add('hidden');
+            document.getElementById('hint-content').classList.remove('hidden');
         }
 
         function nextQuestion() {
             clearInterval(timerInterval);
-            resetHintUI();
-            currentIdx = getWeightedRandom();
-            const item = currentData[currentIdx];
+            resetUI();
+            if (studyQueue.length === 0) { alert("완수했습니다!"); confirmExit(); return; }
+            if (!isRandomMode && currentIdx >= studyQueue.length) { finishSequentialSession(); return; }
             
-            document.getElementById('q-text').innerText = item.q;
-            document.getElementById('q-pinyin').innerText = item.qP;
-            document.getElementById('q-hint').innerText = item.hint || "힌트가 없습니다.";
-            document.getElementById('q-keywords').innerText = item.keywords || "키워드가 없습니다.";
+            let item = isRandomMode ? getWeightedRandomItemFromQueue() : studyQueue[currentIdx];
+            document.getElementById('current-pos').innerText = isRandomMode ? correctCount : (currentIdx + 1);
             
-            document.getElementById('answer-area').classList.add('hidden');
-            document.getElementById('feedback-group').classList.add('hidden');
-            document.getElementById('show-btn').classList.remove('hidden');
-            
+            renderQuestion(item);
+            if (difficulty === 'easy') revealHint();
             playTTS('q-text', startTimer);
-            updateStats();
         }
 
-        function getWeightedRandom() {
-            let total = currentData.reduce((sum, item) => sum + item.weight, 0);
-            let r = Math.random() * total;
-            for (let i = 0; i < currentData.length; i++) {
-                if (r < currentData[i].weight) return i;
-                r -= currentData[i].weight;
+        function renderQuestion(item) {
+            document.getElementById('q-text').innerText = item.q;
+            const qPinyin = document.getElementById('q-pinyin');
+            qPinyin.innerText = item.qP;
+            
+            // Hard 모드 설정: 병음을 숨기고 blur 처리
+            if (difficulty === 'hard') {
+                qPinyin.classList.remove('revealed');
+                qPinyin.classList.add('pinyin-blur');
+            } else {
+                qPinyin.classList.remove('pinyin-blur', 'revealed');
             }
-            return 0;
-        }
 
-        function startTimer() {
-            timeLeft = 30;
-            updateTimerUI();
-            timerInterval = setInterval(() => {
-                timeLeft--;
-                updateTimerUI();
-                if (timeLeft <= 0) { clearInterval(timerInterval); showAnswer(); }
-            }, 1000);
-        }
-
-        function updateTimerUI() {
-            document.getElementById('timer-display').innerText = timeLeft;
-            document.getElementById('timer-bar').style.width = (timeLeft / 30 * 100) + "%";
+            document.getElementById('q-hint').innerText = item.hint || "없음";
+            document.getElementById('q-keywords').innerText = item.keywords || "없음";
+            document.getElementById('a-text').innerText = item.a;
+            document.getElementById('a-pinyin').innerText = item.aP;
         }
 
         function showAnswer() {
             clearInterval(timerInterval);
             revealHint();
-            const item = currentData[currentIdx];
-            document.getElementById('a-text').innerText = item.a;
-            document.getElementById('a-pinyin').innerText = item.aP;
+            // 답변 확인 시 문제의 병음도 확실히 보여줌
+            const qPinyin = document.getElementById('q-pinyin');
+            qPinyin.classList.add('revealed');
+            
             document.getElementById('answer-area').classList.remove('hidden');
             document.getElementById('feedback-group').classList.remove('hidden');
             document.getElementById('show-btn').classList.add('hidden');
         }
 
         function handleResult(isCorrect) {
+            const currentItem = studyQueue[currentIdx];
             if (isCorrect) {
                 correctCount++;
-                document.getElementById('count-correct').innerText = correctCount;
-                if (currentData[currentIdx].weight > 1) currentData[currentIdx].weight--;
+                if (isRandomMode) studyQueue.splice(currentIdx, 1);
+                else currentIdx++;
             } else {
                 wrongCount++;
-                document.getElementById('count-wrong').innerText = wrongCount;
-                wrongAnswers.add(currentData[currentIdx]);
-                currentData[currentIdx].weight += 3;
+                totalWrongSet.add(currentItem);
+                currentItem.weight = (currentItem.weight || 1) + 3;
+                if (!isRandomMode) currentIdx++;
             }
+            updateScoreUI();
             nextQuestion();
         }
 
-        function playTTS(elementId, callback) {
-            const text = document.getElementById(elementId).innerText;
-            if (!window.speechSynthesis) return;
-            window.speechSynthesis.cancel();
-            
-            // 실시간 슬라이더 값 가져오기
-            const currentSpeed = document.getElementById('speed-range').value;
-            
-            const utterance = new SpeechSynthesisUtterance(text);
-            utterance.lang = 'zh-CN';
-            utterance.rate = parseFloat(currentSpeed); // 속도 적용
-            if(callback) utterance.onend = callback;
-            window.speechSynthesis.speak(utterance);
+        function resetUI() {
+            document.getElementById('answer-area').classList.add('hidden');
+            document.getElementById('feedback-group').classList.add('hidden');
+            document.getElementById('show-btn').classList.remove('hidden');
+            const hintCont = document.getElementById('hint-container');
+            hintCont.classList.remove('revealed');
+            document.getElementById('hint-placeholder').classList.remove('hidden');
+            document.getElementById('hint-content').classList.add('hidden');
+            const qPinyin = document.getElementById('q-pinyin');
+            qPinyin.classList.remove('revealed');
+        }
+
+        function jumpToNumber() {
+            const target = parseInt(document.getElementById('jump-to').value);
+            if (isNaN(target) || target <= (currentIdx + 1) || target > studyQueue.length) return alert(`번호 확인 필요`);
+            correctCount += (target - 1 - currentIdx);
+            currentIdx = target - 1;
+            updateScoreUI(); nextQuestion();
+        }
+
+        function startTimer() {
+            timeLeft = 30;
+            timerInterval = setInterval(() => {
+                timeLeft--;
+                document.getElementById('timer-display').innerText = timeLeft;
+                document.getElementById('timer-bar').style.width = (timeLeft / 30 * 100) + "%";
+                if (timeLeft <= 0) { clearInterval(timerInterval); showAnswer(); }
+            }, 1000);
+        }
+
+        function updateScoreUI() {
+            document.getElementById('count-correct').innerText = correctCount;
+            document.getElementById('count-wrong').innerText = wrongCount;
+        }
+
+        function getWeightedRandomItemFromQueue() {
+            let total = studyQueue.reduce((s, i) => s + (i.weight || 1), 0);
+            let r = Math.random() * total;
+            for (let i = 0; i < studyQueue.length; i++) {
+                if (r < (studyQueue[i].weight || 1)) { currentIdx = i; return studyQueue[i]; }
+                r -= (studyQueue[i].weight || 1);
+            }
+            currentIdx = 0; return studyQueue[0];
+        }
+
+        function finishSequentialSession() {
+            let wrongs = Array.from(totalWrongSet);
+            if (wrongs.length > 0 && confirm(`복습할까요?`)) { studyQueue = wrongs; currentIdx = 0; nextQuestion(); }
+            else confirmExit();
         }
 
         function confirmExit() {
-            if (wrongAnswers.size === 0) {
-                if (confirm("기록된 오답이 없습니다. 메인으로 돌아갈까요?")) location.reload();
-                return;
+            if (totalWrongSet.size > 0 && confirm(`오답 리포트를 다운로드할까요?`)) {
+                let csv = "\uFEFF구분,질문,답변\n";
+                totalWrongSet.forEach(i => csv += `오답,"${i.q}","${i.a}"\n`);
+                const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+                const a = document.createElement("a");
+                a.href = URL.createObjectURL(blob);
+                a.download = `TSC_Report.csv`;
+                a.click();
             }
-            if (confirm(`학습을 종료하시겠습니까?\n기록된 오답 ${wrongAnswers.size}건을 CSV로 다운로드하시겠습니까?`)) {
-                downloadCSV();
-                location.reload();
-            }
-        }
-
-        function downloadCSV() {
-            let csvContent = "\uFEFF"; 
-            csvContent += "구분,질문,질문병음,답변,답변병음,가중치\n";
-            wrongAnswers.forEach(item => {
-                csvContent += `오답,"${item.q}","${item.qP}","${item.a}","${item.aP}",${item.weight}\n`;
-            });
-            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
-            const url = URL.createObjectURL(blob);
-            const link = document.createElement("a");
-            link.href = url;
-            link.download = `TSC_오답리포트_${new Date().toLocaleDateString()}.csv`;
-            link.click();
-        }
-
-        function goHome() { location.reload(); }
-        function updateStats() {
-            document.getElementById('stats-text').innerText = `문항 가중치: ${currentData[currentIdx].weight}`;
+            location.reload();
         }
     </script>
 </body>
