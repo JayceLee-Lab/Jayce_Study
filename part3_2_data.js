@@ -3,7 +3,7 @@ const PART3_2_DATA = [
     {
         "q": "您想买什么?",
         "qP": "Nín xiǎng mǎi shénme?",
-        "a": "今天是我爱인의生日, 我爱人喜欢红色的, 您给我推荐一下。",
+        "a": "今天是我爱人的生日, 我爱人喜欢红色的, 您给我推荐一下。",
         "aP": "Jīntiān shì wǒ àiren de shēngrì, wǒ àiren xǐhuān hóngsè de, nín gěi wǒ tuījiàn yíxià.",
         "hint": "꽃집(花店)에서 판매원(收货员)이 묻는 상황입니다.",
         "keywords": "生日 (shēngrì), 推荐 (tuījiàn)",
@@ -30,7 +30,7 @@ const PART3_2_DATA = [
     {
         "q": "这是今年新出的款式, 您试试吧。",
         "qP": "Zhè shì jīnnián xīn chū de kuǎnshì, nín shìshì ba.",
-        "a": "是吗? 颜色、款式我都喜欢。请给我中号의。",
+        "a": "是吗? 颜色、款式我都喜欢。请给我中号的。",
         "aP": "Shì ma? Yánsè, kuǎnshì wǒ dōu xǐhuān. Qǐng gěi wǒ zhōnghào de.",
         "hint": "의류 매장(服装店)에서 신상을 입어보는 상황입니다.",
         "keywords": "款式 (kuǎnshì), 中号 (zhōnghào)",
