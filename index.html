@@ -156,7 +156,6 @@
         let correctCount = 0;
         let wrongCount = 0;
 
-        // 메인 메뉴 제어
         function showPartMenu(random) {
             isRandomMode = random;
             document.getElementById('mode-selection').classList.add('hidden');
@@ -164,7 +163,6 @@
             document.getElementById('mode-title').innerText = (random ? "랜덤 학습" : "순차 학습") + " - 파트를 선택하세요";
         }
 
-        // 학습 시작 준비
         function startPart(part) {
             let data;
             if(part === 1) data = typeof PART1_DATA !== 'undefined' ? PART1_DATA : null;
@@ -173,18 +171,15 @@
             else if(part === '3_2') data = typeof PART3_2_DATA !== 'undefined' ? PART3_2_DATA : null;
             else if(part === 4) data = typeof PART4_DATA !== 'undefined' ? PART4_DATA : null;
 
-            if(!data) return alert("해당 파트의 데이터 파일을 찾을 수 없습니다.");
-            
+            if(!data) return alert("데이터를 찾을 수 없습니다.");
             difficulty = document.getElementById('difficulty-select').value;
             fullData = [...data];
             fullData.forEach(item => { if(!item.weight) item.weight = 1; });
             studyQueue = [...fullData];
-            
             document.getElementById('main-menu').classList.add('hidden');
             document.getElementById('study-page').classList.remove('hidden');
             document.getElementById('study-page').style.display = 'flex';
             document.getElementById('total-count').innerText = fullData.length;
-            
             if (!isRandomMode) document.getElementById('jump-container').classList.remove('hidden');
             nextQuestion();
         }
@@ -215,7 +210,6 @@
             resetUI();
             if (studyQueue.length === 0) { alert("완수했습니다!"); confirmExit(); return; }
             if (!isRandomMode && currentIdx >= studyQueue.length) { finishSequentialSession(); return; }
-            
             let item = isRandomMode ? getWeightedRandomItemFromQueue() : studyQueue[currentIdx];
             document.getElementById('current-pos').innerText = isRandomMode ? correctCount : (currentIdx + 1);
             renderQuestion(item);
@@ -310,28 +304,27 @@
             } else confirmExit();
         }
 
-        // --- 오답 리포트 CSV 생성 (엑셀 형식 최적화) ---
+        // --- 오답 리포트 CSV 생성 (업데이트 버전) ---
         function confirmExit() {
             if (totalWrongSet.size > 0 && confirm(`오답 리포트(${totalWrongSet.size}건)를 다운로드할까요?`)) {
-                let csv = "\uFEFF"; // BOM 추가 (한글 깨짐 방지)
+                let csv = "\uFEFF"; // BOM (한글 깨짐 방지)
                 csv += "구분,번호,한자,병음,한글 뜻\n";
                 
                 const wrongs = Array.from(totalWrongSet);
                 wrongs.forEach((item, index) => {
                     const no = index + 1;
-                    // 질문 행: hint를 한글 뜻에 매칭
-                    csv += `질문번호,${no},"${item.q}","${item.qP}","${item.hint || ''}"\n`;
-                    // 답변 행
-                    csv += `답변번호,${no},"${item.a}","${item.aP}",""\n`;
-                    // 행 간 구분
-                    csv += ",,,,\n";
+                    // 질문 행: Q로 변경, hint를 한글 뜻으로 사용
+                    csv += `Q,${no},"${item.q}","${item.qP}","${item.hint || ''}"\n`;
+                    // 답변 행: A로 변경, 답변 병음을 통해 해석 유도 (데이터 구조에 따라 다를 수 있음)
+                    csv += `A,${no},"${item.a}","${item.aP}",""\n`;
+                    // 빈 줄 없이 바로 다음 데이터로 연결
                 });
 
                 const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
                 const a = document.createElement("a");
                 const url = URL.createObjectURL(blob);
                 a.href = url;
-                a.download = `TSC_오답리포트_${new Date().toISOString().slice(0,10)}.csv`;
+                a.download = `TSC_오답노트_${new Date().toISOString().slice(0,10)}.csv`;
                 a.click();
                 URL.revokeObjectURL(url);
             }
