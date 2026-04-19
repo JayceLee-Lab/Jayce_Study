@@ -1,5 +1,5 @@
 // TSC 제 3부분 연습용 데이터베이스
-const PART3_DATA = [
+const PART3_1_DATA = [
     {
         "q": "你喜欢去书店买书吗?",
         "qP": "Nǐ xǐhuān qù shūdiàn mǎi shū ma?",
