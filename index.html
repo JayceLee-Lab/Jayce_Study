@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TSC 스피킹 마스터</title>
+    <title>TSC 스피킹 마스터 - 통합 버전</title>
     
+    <script src="part1_data.js"></script>
     <script src="part2_data.js"></script>
-    <script src="part3_data.js"></script>
+    <script src="part3_1_data.js"></script>
+    <script src="part3_2_data.js"></script>
+    <script src="part4_data.js"></script>
 
     <style>
         :root {
@@ -19,50 +22,30 @@
         body { font-family: 'Pretendard', sans-serif; background-color: var(--bg-color); display: flex; flex-direction: column; align-items: center; min-height: 100vh; margin: 0; padding: 20px; }
         .menu-container { text-align: center; max-width: 700px; width: 100%; margin-top: 50px; }
         .part-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px; }
-        .part-card { background: white; padding: 25px; border-radius: 15px; cursor: pointer; transition: 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px solid transparent; }
+        .part-card { background: white; padding: 25px; border-radius: 15px; cursor: pointer; transition: 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px solid transparent; text-align: center; }
         .part-card:hover { transform: translateY(-5px); border-color: var(--primary-color); }
-        .card { background: white; padding: 1.5rem; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 100%; max-width: 500px; text-align: center; }
+        .part-card h3, .part-card h4 { margin: 0; }
         
-        /* 설정 섹션 - 가운데 정렬 강화 */
         .config-section { background: #fff; padding: 20px; border-radius: 12px; margin: 0 auto 25px auto; box-shadow: 0 2px 5px rgba(0,0,0,0.05); width: 100%; max-width: 500px; display: flex; justify-content: center; }
         .config-row { display: flex; align-items: center; gap: 15px; font-size: 1rem; }
-        select { padding: 8px 12px; border-radius: 8px; border: 1px solid #ddd; font-family: inherit; font-weight: bold; cursor: pointer; background-color: #f9f9f9; text-align: center; }
+        select { padding: 8px 12px; border-radius: 8px; border: 1px solid #ddd; font-family: inherit; font-weight: bold; cursor: pointer; background-color: #f9f9f9; }
 
+        .card { background: white; padding: 1.5rem; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 100%; max-width: 500px; text-align: center; }
         .status-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; font-size: 0.9rem; font-weight: bold; background: #eee; padding: 8px 15px; border-radius: 10px; }
         .score-box { display: flex; gap: 10px; }
         .correct { color: var(--success-color); }
         .wrong { color: var(--danger-color); }
-
-        .jump-box { margin-bottom: 15px; display: flex; justify-content: center; gap: 5px; align-items: center; font-size: 0.85rem; }
-        .jump-input { width: 50px; padding: 5px; border: 1px solid #ccc; border-radius: 5px; text-align: center; }
-        .jump-btn { background: #95a5a6; color: white; padding: 5px 10px; border-radius: 5px; font-size: 0.8rem; }
 
         .settings-bar { background: #f8f9fa; padding: 10px; border-radius: 10px; margin-bottom: 15px; font-size: 0.85rem; display: flex; align-items: center; justify-content: center; gap: 10px; }
         #timer-display { font-size: 2rem; font-weight: bold; color: var(--danger-color); }
         .timer-progress { width: 100%; height: 6px; background: #eee; border-radius: 3px; margin: 10px 0 20px; overflow: hidden; }
         #timer-bar { width: 100%; height: 100%; background: var(--danger-color); transition: width 1s linear; }
 
-        /* 힌트 및 병음 가리기 - 확실한 블러 효과 */
         .blur-box { background: #f1f3f5; padding: 15px; border-radius: 10px; margin-bottom: 20px; font-size: 0.9rem; border: 1px dashed #ced4da; text-align: center; cursor: pointer; }
         .blur-box.revealed { background: #fff9db; border: 1px solid #ffe066; text-align: left; cursor: default; }
         
-        /* Hard 모드 전용 병음 가리기 스타일 */
-        .pinyin-blur { 
-            cursor: pointer !important; 
-            background: #e2e8f0 !important; 
-            color: transparent !important; 
-            text-shadow: 0 0 15px rgba(0,0,0,0.6) !important; 
-            border-radius: 8px !important; 
-            padding: 2px 10px !important; 
-            transition: all 0.2s ease;
-            user-select: none;
-        }
-        .pinyin-blur.revealed { 
-            color: #7f8c8d !important; 
-            text-shadow: none !important; 
-            background: transparent !important; 
-            user-select: auto;
-        }
+        .pinyin-blur { cursor: pointer !important; background: #e2e8f0 !important; color: transparent !important; text-shadow: 0 0 15px rgba(0,0,0,0.6) !important; border-radius: 8px !important; padding: 2px 10px !important; transition: 0.2s; user-select: none; }
+        .pinyin-blur.revealed { color: #7f8c8d !important; text-shadow: none !important; background: transparent !important; user-select: auto; }
 
         .audio-btn-wrapper { margin-bottom: 25px; } 
         .chinese { font-size: 1.7rem; font-weight: bold; color: var(--text-dark); margin: 0; }
@@ -74,7 +57,7 @@
         .wrong-btn { background: var(--danger-color); color: white; flex: 1; }
         .exit-btn { background: #636e72; color: white; width: 100%; margin-top: 15px; }
         .home-btn { background: none; border: 1px solid #ccc; margin-bottom: 15px; }
-        .hidden { display: none; }
+        .hidden { display: none !important; }
     </style>
 </head>
 <body>
@@ -93,21 +76,29 @@
             </div>
         </div>
 
-        <h3 style="color: var(--primary-color);">랜덤 학습 (완수 모드)</h3>
-        <div class="part-grid">
-            <div class="part-card" onclick="startStudy(2, true)"><h3>2부분 랜덤</h3></div>
-            <div class="part-card" onclick="startStudy(3, true)"><h3>3부분 랜덤</h3></div>
+        <div id="mode-selection">
+            <h3>학습 방식을 선택하세요</h3>
+            <div class="part-grid">
+                <div class="part-card" onclick="showPartMenu(true)"><h3>랜덤 학습</h3></div>
+                <div class="part-card" onclick="showPartMenu(false)"><h3>순차 학습</h3></div>
+            </div>
         </div>
-        <h3 style="color: var(--text-dark); margin-top: 30px;">순차 학습</h3>
-        <div class="part-grid">
-            <div class="part-card" onclick="startStudy(2, false)"><h3>2부분 순차</h3></div>
-            <div class="part-card" onclick="startStudy(3, false)"><h3>3부분 순차</h3></div>
+
+        <div id="part-selection" class="hidden" style="margin-top: 20px;">
+            <h3 id="mode-title">파트를 선택하세요</h3>
+            <div class="part-grid">
+                <div class="part-card" onclick="startPart(1)"><h4>제 1부분</h4></div>
+                <div class="part-card" onclick="startPart(2)"><h4>제 2부분</h4></div>
+                <div class="part-card" onclick="startPart('3_1')"><h4>제 3부분 - 1</h4></div>
+                <div class="part-card" onclick="startPart('3_2')"><h4>제 3부분 - 2</h4></div>
+                <div class="part-card" onclick="startPart(4)"><h4>제 4부분</h4></div>
+            </div>
+            <button class="home-btn" style="margin-top: 20px;" onclick="location.reload()">처음으로</button>
         </div>
     </div>
 
     <div id="study-page" class="hidden" style="width: 100%; flex-direction: column; align-items: center;">
         <button class="home-btn" onclick="location.reload()">🏠 메인으로</button>
-        
         <div class="card">
             <div class="status-bar">
                 <span class="progress-text">진행: <span id="current-pos">0</span> / <span id="total-count">0</span></span>
@@ -116,21 +107,17 @@
                     <span class="wrong">오답: <span id="count-wrong">0</span></span>
                 </div>
             </div>
-
-            <div id="jump-container" class="jump-box hidden">
-                <input type="number" id="jump-to" class="jump-input" placeholder="No.">
-                <button class="jump-btn" onclick="jumpToNumber()">이동</button>
+            <div id="jump-container" class="jump-box hidden" style="margin-bottom:15px;">
+                <input type="number" id="jump-to" style="width:50px; text-align:center;" placeholder="No.">
+                <button onclick="jumpToNumber()">이동</button>
             </div>
-
             <div class="settings-bar">
                 <span>🐢</span>
                 <input type="range" id="speed-range" min="0.5" max="1.2" step="0.1" value="0.9" onchange="updateSpeedText()">
                 <span>🚀</span> <span id="speed-val">0.9x</span>
             </div>
-
             <div id="timer-display">30</div>
             <div class="timer-progress"><div id="timer-bar"></div></div>
-
             <div id="hint-container" class="blur-box" onclick="revealHint()">
                 <div id="hint-placeholder">🔍 클릭하여 힌트 보기</div>
                 <div id="hint-content" class="hidden">
@@ -138,30 +125,21 @@
                     <strong>🔑 키워드:</strong> <span id="q-keywords"></span>
                 </div>
             </div>
-            
             <div id="question-area">
                 <p class="chinese" id="q-text"></p>
                 <p id="q-pinyin" class="pinyin" onclick="this.classList.add('revealed')"></p>
-                <div class="audio-btn-wrapper">
-                    <button onclick="playTTS('q-text')">🔊 다시듣기</button>
-                </div>
+                <div class="audio-btn-wrapper"><button onclick="playTTS('q-text')">🔊 다시듣기</button></div>
             </div>
-
             <div id="answer-area" class="hidden">
-                <hr>
-                <p class="chinese" id="a-text" style="color:var(--success-color)"></p>
+                <hr><p class="chinese" id="a-text" style="color:var(--success-color)"></p>
                 <p class="pinyin" id="a-pinyin"></p>
-                <div class="audio-btn-wrapper">
-                    <button onclick="playTTS('a-text')">🔊 정답듣기</button>
-                </div>
+                <div class="audio-btn-wrapper"><button onclick="playTTS('a-text')">🔊 정답듣기</button></div>
             </div>
-
             <button class="show-btn" id="show-btn" onclick="showAnswer()">답변 확인</button>
             <div id="feedback-group" class="btn-group hidden">
                 <button class="correct-btn" onclick="handleResult(true)">알아요</button>
                 <button class="wrong-btn" onclick="handleResult(false)">몰라요</button>
             </div>
-
             <button class="exit-btn" onclick="confirmExit()">종료 및 리포트</button>
         </div>
     </div>
@@ -178,6 +156,39 @@
         let correctCount = 0;
         let wrongCount = 0;
 
+        // 메인 메뉴 제어
+        function showPartMenu(random) {
+            isRandomMode = random;
+            document.getElementById('mode-selection').classList.add('hidden');
+            document.getElementById('part-selection').classList.remove('hidden');
+            document.getElementById('mode-title').innerText = (random ? "랜덤 학습" : "순차 학습") + " - 파트를 선택하세요";
+        }
+
+        // 학습 시작 준비
+        function startPart(part) {
+            let data;
+            if(part === 1) data = PART1_DATA;
+            else if(part === 2) data = PART2_DATA;
+            else if(part === '3_1') data = PART3_1_DATA;
+            else if(part === '3_2') data = PART3_2_DATA;
+            else if(part === 4) data = PART4_DATA;
+
+            if(!data) return alert("데이터를 찾을 수 없습니다.");
+            
+            difficulty = document.getElementById('difficulty-select').value;
+            fullData = [...data];
+            fullData.forEach(item => { if(!item.weight) item.weight = 1; });
+            studyQueue = [...fullData];
+            
+            document.getElementById('main-menu').classList.add('hidden');
+            document.getElementById('study-page').classList.remove('hidden');
+            document.getElementById('study-page').style.display = 'flex';
+            document.getElementById('total-count').innerText = fullData.length;
+            
+            if (!isRandomMode) document.getElementById('jump-container').classList.remove('hidden');
+            nextQuestion();
+        }
+
         function playTTS(id, callback) {
             const text = document.getElementById(id).innerText;
             window.speechSynthesis.cancel();
@@ -193,26 +204,6 @@
 
         function updateSpeedText() { document.getElementById('speed-val').innerText = document.getElementById('speed-range').value + "x"; }
 
-        function startStudy(part, randomMode) {
-            difficulty = document.getElementById('difficulty-select').value;
-            isRandomMode = randomMode;
-            fullData = (part === 2) ? [...PART2_DATA] : [...PART3_DATA];
-            fullData.forEach(item => { if(!item.weight) item.weight = 1; });
-            studyQueue = [...fullData];
-            currentIdx = 0; correctCount = 0; wrongCount = 0; totalWrongSet.clear();
-
-            document.getElementById('total-count').innerText = fullData.length;
-            document.getElementById('main-menu').classList.add('hidden');
-            document.getElementById('study-page').classList.remove('hidden');
-            document.getElementById('study-page').style.display = 'flex';
-            
-            if (!isRandomMode) document.getElementById('jump-container').classList.remove('hidden');
-            else document.getElementById('jump-container').classList.add('hidden');
-
-            updateScoreUI();
-            nextQuestion();
-        }
-
         function revealHint() {
             document.getElementById('hint-container').classList.add('revealed');
             document.getElementById('hint-placeholder').classList.add('hidden');
@@ -227,7 +218,6 @@
             
             let item = isRandomMode ? getWeightedRandomItemFromQueue() : studyQueue[currentIdx];
             document.getElementById('current-pos').innerText = isRandomMode ? correctCount : (currentIdx + 1);
-            
             renderQuestion(item);
             if (difficulty === 'easy') revealHint();
             playTTS('q-text', startTimer);
@@ -237,15 +227,8 @@
             document.getElementById('q-text').innerText = item.q;
             const qPinyin = document.getElementById('q-pinyin');
             qPinyin.innerText = item.qP;
-            
-            // Hard 모드 설정: 병음을 숨기고 blur 처리
-            if (difficulty === 'hard') {
-                qPinyin.classList.remove('revealed');
-                qPinyin.classList.add('pinyin-blur');
-            } else {
-                qPinyin.classList.remove('pinyin-blur', 'revealed');
-            }
-
+            if (difficulty === 'hard') { qPinyin.classList.remove('revealed'); qPinyin.classList.add('pinyin-blur'); }
+            else { qPinyin.classList.remove('pinyin-blur', 'revealed'); }
             document.getElementById('q-hint').innerText = item.hint || "없음";
             document.getElementById('q-keywords').innerText = item.keywords || "없음";
             document.getElementById('a-text').innerText = item.a;
@@ -255,10 +238,7 @@
         function showAnswer() {
             clearInterval(timerInterval);
             revealHint();
-            // 답변 확인 시 문제의 병음도 확실히 보여줌
-            const qPinyin = document.getElementById('q-pinyin');
-            qPinyin.classList.add('revealed');
-            
+            document.getElementById('q-pinyin').classList.add('revealed');
             document.getElementById('answer-area').classList.remove('hidden');
             document.getElementById('feedback-group').classList.remove('hidden');
             document.getElementById('show-btn').classList.add('hidden');
@@ -288,8 +268,7 @@
             hintCont.classList.remove('revealed');
             document.getElementById('hint-placeholder').classList.remove('hidden');
             document.getElementById('hint-content').classList.add('hidden');
-            const qPinyin = document.getElementById('q-pinyin');
-            qPinyin.classList.remove('revealed');
+            document.getElementById('q-pinyin').classList.remove('revealed');
         }
 
         function jumpToNumber() {
