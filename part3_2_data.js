@@ -1230,7 +1230,7 @@ const PART3_2_DATA = [
 		"a": "应该没问题吧，最近公司不太忙，周末我去帮你吧。",
 		"aP": "Yīnggāi méi wèntí ba, zuìjìn gōngsī bú tài máng, zhōumò wǒ qù bāng nǐ ba.",
 		"hint": "이사 때문에 휴가를 내는 상황의 대화입니다.",
-		"keywords": "搬家 (bānjiā), 请假 (qǐngjià), 公司 (gōngsī), 帮 (bāng)",
+		"keywords": "应该 (Yīnggāi, 당연히), 搬家 (bānjiā), 请假 (qǐngjià, 휴가를 신청하다.), 公司 (gōngsī), 帮 (bāng)",
 		"weight": 1
 	},
 	{
@@ -1245,10 +1245,10 @@ const PART3_2_DATA = [
 	{
 		"q": "快九点了，什么时候下班？",
 		"qP": "Kuài jiǔ diǎn le, shénme shíhou xiàbān?",
-		"a": "你先下班吧，明天的会议资料我还没做完。",
-		"aP": "Nǐ xiān xiàbān ba, míngtiān de huìyì zīliào wǒ hái méi zuò wán.",
+		"a": "你先下班吧，我正在准备明天的会议资料。",
+		"aP": "Nǐ xiān xiàbān ba, Wǒ zhèngzài zhǔnbèi míngtiān de huìyì zīliào.",
 		"hint": "야근 중인 동료 사이의 대화입니다.",
-		"keywords": "下班 (xiàbān), 会议资料 (huìyì zīliào), 做完 (zuò wán), 九点 (jiǔ diǎn)",
+		"keywords": "下班 (xiàbān), 会议资料 (huìyì zīliào)",
 		"weight": 1
 	},
 	{
@@ -1257,7 +1257,7 @@ const PART3_2_DATA = [
 		"a": "新职员又高又帅，性格也很好。大家都喜欢他。",
 		"aP": "Xīn zhíyuán yòu gāo yòu shuài, xìnggé yě hěn hǎo. Dàjiā dōu xǐhuan tā.",
 		"hint": "새로 온 직원에 대해 이야기하는 회사 대화입니다.",
-		"keywords": "新职员 (xīn zhíyuán), 性格 (xìnggé), 喜欢 (xǐhuan), 部门 (bùmén)",
+		"keywords": "新职员 (xīn zhíyuán, 신입사원), 性格 (xìnggé), 喜欢 (xǐhuan), 部门 (bùmén)",
 		"weight": 1
 	},
 	{
@@ -1266,7 +1266,7 @@ const PART3_2_DATA = [
 		"a": "我和同事的关系很好。我们工作的时候互相帮助。",
 		"aP": "Wǒ hé tóngshì de guānxì hěn hǎo. Wǒmen gōngzuò de shíhou hùxiāng bāngzhù.",
 		"hint": "직장 동료와의 관계에 대해 이야기하는 대화입니다.",
-		"keywords": "同事 (tóngshì), 关系 (guānxì), 工作 (gōngzuò), 帮助 (bāngzhù)",
+		"keywords": "同事 (tóngshì), 关系 (guānxì), 工作 (gōngzuò), 帮助 (bāngzhù, 돕다), 互相 (hùxiāng, 서로)",
 		"weight": 1
 	},
 	{
@@ -1275,7 +1275,7 @@ const PART3_2_DATA = [
 		"a": "好的，没问题。不过我不会修，给售后服务中心打电话吧。",
 		"aP": "Hǎo de, méi wèntí. Búguò wǒ bú huì xiū, gěi shòuhòu fúwù zhōngxīn dǎ diànhuà ba.",
 		"hint": "회사에서 컴퓨터 고장 문제를 이야기하는 상황입니다.",
-		"keywords": "电脑 (diànnǎo), 死机 (sǐjī), 售后服务中心 (shòuhòu fúwù zhōngxīn), 电话 (diànhuà)",
+		"keywords": "电脑 (diànnǎo), 死机 (sǐjī, 고장나다.), 售后服务中心 (shòuhòu fúwù zhōngxīn, 서비스센터), 电话 (diànhuà)",
 		"weight": 1
 	},
 	{
@@ -1284,7 +1284,7 @@ const PART3_2_DATA = [
 		"a": "我们部门的同事们都很热情，气氛也很好，我很满意。",
 		"aP": "Wǒmen bùmén de tóngshìmen dōu hěn rèqíng, qìfēn yě hěn hǎo, wǒ hěn mǎnyì.",
 		"hint": "첫 출근 후 회사 분위기에 대해 이야기하는 대화입니다.",
-		"keywords": "上班 (shàngbān), 同事 (tóngshì), 热情 (rèqíng), 满意 (mǎnyì)",
+		"keywords": "上班 (shàngbān), 同事 (tóngshì), 热情 (rèqíng), 满意 (mǎnyì, 만족하다.)",
 		"weight": 1
 	},
 	{
@@ -1293,14 +1293,14 @@ const PART3_2_DATA = [
 		"a": "我们公司工资高，待遇好。我很满意。",
 		"aP": "Wǒmen gōngsī gōngzī gāo, dàiyù hǎo. Wǒ hěn mǎnyì.",
 		"hint": "회사 급여와 복지에 대해 이야기하는 대화입니다.",
-		"keywords": "工资 (gōngzī), 待遇 (dàiyù), 公司 (gōngsī), 满意 (mǎnyì)",
+		"keywords": "工资 (gōngzī, 급여), 待遇 (dàiyù, 대우), 公司 (gōngsī), 满意 (mǎnyì)",
 		"weight": 1
 	},
 	{
 		"q": "办公用品都买好了吗？",
 		"qP": "Bàngōng yòngpǐn dōu mǎi hǎo le ma?",
-		"a": "上午我参加了一个会议，所以还没买，我现在马上去买。",
-		"aP": "Shàngwǔ wǒ cānjiā le yí ge huìyì, suǒyǐ hái méi mǎi, wǒ xiànzài mǎshàng qù mǎi.",
+		"a": "上午我很忙，我还没买。我马上去买。",
+ 		"aP": "Shàngwǔ wǒ hěn máng, wǒ hái méi mǎi. Wǒ mǎshàng qù mǎi.",
 		"hint": "사무용품 구매 상황을 이야기하는 회사 대화입니다.",
 		"keywords": "办公用品 (bàngōng yòngpǐn), 会议 (huìyì), 买 (mǎi), 上午 (shàngwǔ)",
 		"weight": 1
@@ -1317,8 +1317,8 @@ const PART3_2_DATA = [
 	{
 		"q": "我们现在要回公司，怎么走？",
 		"qP": "Wǒmen xiànzài yào huí gōngsī, zěnme zǒu?",
-		"a": "坐地铁吧，现在是下班时间，堵车堵得厉害，坐地铁不堵车。",
-		"aP": "Zuò dìtiě ba, xiànzài shì xiàbān shíjiān, dǔchē dǔ de lìhai, zuò dìtiě bú dǔchē.",
+		"a": "坐地铁吧，现在是下班时间，坐地铁不堵车。",
+		"aP": "Zuò dìtiě ba, xiànzài shì xiàbān shíjiān, zuò dìtiě bú dǔchē.",
 		"hint": "퇴근 시간 교통 상황에 대해 이야기하는 대화입니다.",
 		"keywords": "公司 (gōngsī), 地铁 (dìtiě), 下班时间 (xiàbān shíjiān), 堵车 (dǔchē)",
 		"weight": 1
@@ -1329,14 +1329,14 @@ const PART3_2_DATA = [
 		"a": "在公司不常用外语，不过我经常去国外出差，出差的时候我要说外语。",
 		"aP": "Zài gōngsī bù cháng yòng wàiyǔ, búguò wǒ jīngcháng qù guówài chūchāi, chūchāi de shíhou wǒ yào shuō wàiyǔ.",
 		"hint": "직장에서 외국어 사용에 대해 이야기하는 대화입니다.",
-		"keywords": "工作 (gōngzuò), 外语 (wàiyǔ), 国外 (guówài), 出差 (chūchāi)",
+		"keywords": "工作 (gōngzuò), 外语 (wàiyǔ, 외국어), 国外 (guówài), 出差 (chūchāi)",
 		"weight": 1
 	},
 	{
 		"q": "暑假的时候，去海外旅行怎么样？",
 		"qP": "Shǔjià de shíhou, qù hǎiwài lǚxíng zěnmeyàng?",
-		"a": "不好意思，暑假我要去打工。你想去哪一个国家旅行？",
-		"aP": "Bù hǎoyìsi, shǔjià wǒ yào qù dǎgōng. Nǐ xiǎng qù nǎ yí ge guójiā lǚxíng?",
+		"a": "不好意思，暑假我要去打工。你找别人吧。",
+		"aP": "Bù hǎoyìsi, shǔjià wǒ yào qù dǎgōng. Nǐ zhǎo biérén ba.",
 		"hint": "暑假旅行计划에 대해 이야기하는 대화입니다.",
 		"keywords": "暑假 (shǔjià), 海外旅行 (hǎiwài lǚxíng), 打工 (dǎgōng)",
 		"weight": 1
@@ -1345,9 +1345,9 @@ const PART3_2_DATA = [
 		"q": "这个假期你有什么特别的计划吗？",
 		"qP": "Zhège jiàqī nǐ yǒu shénme tèbié de jìhuà ma?",
 		"a": "我要去北京旅行，我听说北京有很多名胜古迹，还有很多好吃的菜。",
-		"aP": "Wǒ yào qù Běijīng lǚxíng, wǒ tīngshuō Běijīng yǒu hěnduō míngshèng gǔjì, hái yǒu hěnduō hǎochī de cài.",
+		"aP": "Wǒ yào qù Běijīng lǚxíng, wǒ tīngshuō Běijīng yǒu hěnduō hǎochī de cài.",
 		"hint": "假期计划과 北京 여행에 대해 이야기하는 대화입니다.",
-		"keywords": "假期 (jiàqī), 北京 (Běijīng), 名胜古迹 (míngshèng gǔjì)",
+		"keywords": "计划 (jìhuà, 계획) 假期 (jiàqī), 北京 (Běijīng), 名胜古迹 (míngshèng gǔjì)",
 		"weight": 1
 	},
 	{
@@ -1366,15 +1366,6 @@ const PART3_2_DATA = [
 		"aP": "Shì ma? Nǐ qù nǎr? Gēn shéi yìqǐ qù? Zhēn xiànmù nǐ.",
 		"hint": "여행 계획에 대해 이야기하는 대화입니다.",
 		"keywords": "下个月 (xià ge yuè), 旅行 (lǚxíng), 羡慕 (xiànmù)",
-		"weight": 1
-	},
-	{
-		"q": "在我们宾馆住宿期间过得舒服吗？",
-		"qP": "Zài wǒmen bīnguǎn zhùsù qījiān guò de shūfu ma?",
-		"a": "我过得很舒服，你们宾馆很干净，我非常满意。",
-		"aP": "Wǒ guò de hěn shūfu, nǐmen bīnguǎn hěn gānjìng, wǒ fēicháng mǎnyì.",
-		"hint": "호텔 숙박 만족도에 대해 이야기하는 대화입니다.",
-		"keywords": "宾馆 (bīnguǎn), 舒服 (shūfu), 满意 (mǎnyì)",
 		"weight": 1
 	},
 	{
@@ -1428,7 +1419,7 @@ const PART3_2_DATA = [
 		"a": "昨天做的。怎么样？好看吗？",
 		"aP": "Zuótiān zuò de. Zěnmeyàng? Hǎokàn ma?",
 		"hint": "새로운 헤어스타일에 대해 이야기하는 대화입니다.",
-		"keywords": "发型 (fàxíng), 流行 (liúxíng), 好看 (hǎokàn)",
+		"keywords": "发型 (fàxíng, 헤어스타일), 流行 (liúxíng), 好看 (hǎokàn)",
 		"weight": 1
 	},
 	{
@@ -1437,7 +1428,7 @@ const PART3_2_DATA = [
 		"a": "我要剪一下，最近流行什么，您给我推荐一下。",
 		"aP": "Wǒ yào jiǎn yíxià, zuìjìn liúxíng shénme, nín gěi wǒ tuījiàn yíxià.",
 		"hint": "미용실에서 헤어스타일을 상담하는 대화입니다.",
-		"keywords": "剪发 (jiǎnfà), 烫发 (tàngfà), 推荐 (tuījiàn)",
+		"keywords": "剪发 (jiǎnfà), 烫发 (tàngfà, 파마), 推荐 (tuījiàn)",
 		"weight": 1
 	}	
 	
