@@ -624,8 +624,8 @@ const PART3_2_DATA = [
 	{
 		"q": "我跟女朋友分手了。",
 		"qP": "Wǒ gēn nǚ péngyou fēnshǒu le.",
-		"a": "你很难受吧，别太伤心，我们一起喝酒，我请你。",
-		"aP": "Nǐ hěn nánshòu ba, bié tài shāngxīn, wǒmen yìqǐ hējiǔ, wǒ qǐng nǐ.",
+		"a": "别太伤心，我们一起喝酒，我请你。",
+		"aP": "bié tài shāngxīn, wǒmen yìqǐ hējiǔ, wǒ qǐng nǐ.",
 		"hint": "헤어진 친구를 위로하는 대화입니다.",
 		"keywords": "分手 (fēnshǒu), 难受 (nánshòu), 伤心 (shāngxīn)",
 		"weight": 1
@@ -633,28 +633,28 @@ const PART3_2_DATA = [
 	{
 		"q": "这个周末我给你介绍男朋友，怎么样？",
 		"qP": "Zhège zhōumò wǒ gěi nǐ jièshào nán péngyou, zěnmeyàng?",
-		"a": "好啊，他是做什么的？帅不帅？我有点儿紧张。",
-		"aP": "Hǎo a, tā shì zuò shénme de? Shuài bú shuài? Wǒ yǒudiǎnr jǐnzhāng.",
+		"a": "好啊，他是做什么的？帅不帅？",
+		"aP": "Hǎo a, tā shì zuò shénme de? Shuài bú shuài? ",
 		"hint": "소개팅에 대해 이야기하는 대화입니다.",
-		"keywords": "介绍 (jièshào), 帅 (shuài), 紧张 (jǐnzhāng)",
+		"keywords": "介绍 (jièshào, 소개), 帅 (shuài)",
 		"weight": 1
 	},
 	{
 		"q": "你在看什么书？",
 		"qP": "Nǐ zài kàn shénme shū?",
-		"a": "我在看美国小说，这本书很有意思。我看完以后你也看看吧。",
-		"aP": "Wǒ zài kàn Měiguó xiǎoshuō, zhè běn shū hěn yǒuyìsi. Wǒ kàn wán yǐhòu nǐ yě kànkan ba.",
+		"a": "我在看汉语书。下个星期我有TSC考试。",
+		"aP": "WWǒ zài kàn Hànyǔ shū. Xià ge xīngqī wǒ yǒu TSC kǎoshì.",
 		"hint": "읽고 있는 책에 대해 이야기하는 대화입니다.",
-		"keywords": "小说 (xiǎoshuō), 有意思 (yǒuyìsi), 看完 (kànwán)",
+		"keywords": "汉语书 (Hànyǔ shū), TSC考试 (TSC kǎoshì), 下个星期 (xià ge xīngqī)",
 		"weight": 1
 	},
 	{
 		"q": "这是我送给你的礼物。",
 		"qP": "Zhè shì wǒ sòng gěi nǐ de lǐwù.",
-		"a": "太谢谢了，这是什么？我可以打开看看吗？今天我请你吃中国菜。",
-		"aP": "Tài xièxie le, zhè shì shénme? Wǒ kěyǐ dǎkāi kànkan ma? Jīntiān wǒ qǐng nǐ chī Zhōngguó cài.",
+		"a": "太谢谢了，这是什么？我可以打开看看吗？",
+		"aP": "Tài xièxie le, zhè shì shénme? Wǒ kěyǐ dǎkāi kànkan ma? ",
 		"hint": "선물을 주고받는 상황의 대화입니다.",
-		"keywords": "礼物 (lǐwù), 打开 (dǎkāi), 中国菜 (Zhōngguó cài)",
+		"keywords": "礼物 (lǐwù), 打开 (dǎkāi, 열다)",
 		"weight": 1
 	},
 	{
@@ -663,16 +663,16 @@ const PART3_2_DATA = [
 		"a": "去过，很喜欢旅行，所以我去过很多国家。",
 		"aP": "Qùguo, hěn xǐhuan lǚxíng, suǒyǐ wǒ qùguo hěn duō guójiā.",
 		"hint": "여행 경험에 대해 이야기하는 대화입니다.",
-		"keywords": "外国 (wàiguó), 旅行 (lǚxíng), 国家 (guójiā)",
+		"keywords": "外国 (wàiguó), 旅行 (lǚxíng), 国家 (guójiā, 국가)",
 		"weight": 1
 	},
 	{
 		"q": "一周中你最喜欢星期几？",
 		"qP": "Yì zhōu zhōng nǐ zuì xǐhuan xīngqī jǐ?",
-		"a": "我最喜欢星期五，因为周末可以休息两天。我最不喜欢星期一。",
-		"aP": "Wǒ zuì xǐhuan xīngqīwǔ, yīnwèi zhōumò kěyǐ xiūxi liǎng tiān. Wǒ zuì bù xǐhuan xīngqīyī.",
+		"a": "我最喜欢星期五，我最不喜欢星期一。",
+		"aP": "Wǒ zuì xǐhuan xīngqīwǔ, Wǒ zuì bù xǐhuan xīngqīyī.",
 		"hint": "좋아하는 요일에 대해 이야기하는 대화입니다.",
-		"keywords": "星期五 (xīngqīwǔ), 周末 (zhōumò), 休息 (xiūxi)",
+		"keywords": "星期五 (xīngqīwǔ)",
 		"weight": 1
 	},
 	{
@@ -681,34 +681,34 @@ const PART3_2_DATA = [
 		"a": "定了，打算明年5月结婚，到时候你一定要来啊。",
 		"aP": "Dìng le, dǎsuàn míngnián wǔ yuè jiéhūn, dào shíhou nǐ yídìng yào lái a.",
 		"hint": "결혼 계획에 대해 이야기하는 대화입니다.",
-		"keywords": "结婚 (jiéhūn), 打算 (dǎsuàn), 一定 (yídìng)",
+		"keywords": "结婚 (jiéhūn), 打算 (dǎsuàn, ~할 예정이다.), 到时候 (dào shíhou, 그떄), 一定 (yídìng, 반드시)",
 		"weight": 1
 	},
 	{
 		"q": "你参加小李的婚礼吗？",
 		"qP": "Nǐ cānjiā Xiǎo Lǐ de hūnlǐ ma?",
-		"a": "真不巧，那天我要去中国出差，不能参加，我已经告诉小李了。",
-		"aP": "Zhēn bù qiǎo, nà tiān wǒ yào qù Zhōngguó chūchāi, bù néng cānjiā, wǒ yǐjīng gàosu Xiǎo Lǐ le.",
+		"a": "那天我要去中国出差，不能参加，我已经告诉小李了。",
+		"aP": "nà tiān wǒ yào qù Zhōngguó chūchāi, bù néng cānjiā, wǒ yǐjīng gàosu Xiǎo Lǐ le.",
 		"hint": "결혼식 참석 여부에 대한 대화입니다.",
-		"keywords": "婚礼 (hūnlǐ), 出差 (chūchāi), 参加 (cānjiā)",
+		"keywords": "婚礼 (hūnlǐ), 出差 (chūchāi), 参加 (cānjiā), 告诉 (gàosu, 말했다)",
 		"weight": 1
 	},
 	{
 		"q": "你常来动物园吗？",
 		"qP": "Nǐ cháng lái dòngwùyuán ma?",
-		"a": "常来，我特别喜欢看动物，尤其喜欢长颈鹿和大象。",
-		"aP": "Cháng lái, wǒ tèbié xǐhuan kàn dòngwù, yóuqí xǐhuan chángjǐnglù hé dàxiàng.",
-		"hint": "동물원에서 나누는 대화입니다.",
-		"keywords": "动物园 (dòngwùyuán), 长颈鹿 (chángjǐnglù), 大象 (dàxiàng)",
+		"a": "我常来，因为我儿子喜欢动物。",
+		"aP": "Wǒ cháng lái, yīnwèi wǒ érzi xǐhuan dòngwù.",
+		"hint": "동물원에 자주 오는 이유를 이야기하는 대화입니다.",
+		"keywords": "动物园 (dòngwùyuán), 儿子 (érzi), 动物 (dòngwù), 因为 (yīnwèi, 왜냐하면)",
 		"weight": 1
 	},
 	{
 		"q": "春天和秋天你喜欢什么季节？",
 		"qP": "Chūntiān hé qiūtiān nǐ xǐhuan shénme jìjié?",
-		"a": "我更喜欢春天，春天暖和，有很多花开。你呢？",
-		"aP": "Wǒ gèng xǐhuan chūntiān, chūntiān nuǎnhuo, yǒu hěn duō huā kāi. Nǐ ne?",
+		"a": "我更喜欢秋天。秋天凉快，红叶非常漂亮。",
+		"aP": "Wǒ gèng xǐhuan qiūtiān. Qiūtiān liángkuai, hóngyè fēicháng piàoliang.",
 		"hint": "좋아하는 계절에 대해 이야기하는 대화입니다.",
-		"keywords": "春天 (chūntiān), 季节 (jìjié), 花开 (huā kāi)",
+		"keywords": "秋天 (qiūtiān), 凉快 (liángkuai), 红叶 (hóngyè)",
 		"weight": 1
 	},
 	{
@@ -750,19 +750,28 @@ const PART3_2_DATA = [
 	{
 		"q": "春天到了，我们去哪儿看花？",
 		"qP": "Chūntiān dào le, wǒmen qù nǎr kànhuā?",
-		"a": "我们去爱宝乐园看花吧，听说那儿的花非常美。你喜欢看花吗？",
-		"aP": "Wǒmen qù Àibǎo Lèyuán kànhuā ba, tīngshuō nàr de huā fēicháng měi. Nǐ xǐhuan kànhuā ma?",
-		"hint": "봄꽃 구경에 대해 이야기하는 대화입니다.",
-		"keywords": "春天 (chūntiān), 看花 (kànhuā), 非常美 (fēicháng měi)",
+		"a": "我家附近有一个公园。我们去那儿看花吧。",
+		"aP": "Wǒ jiā fùjìn yǒu yí ge gōngyuán. Wǒmen qù nàr kànhuā ba.",
+		"hint": "집 근처 공원과 꽃구경에 대해 이야기하는 대화입니다.",
+		"keywords": "附近 (fùjìn), 公园 (gōngyuán), 看花 (kànhuā)",
+		"weight": 1
+	},
+	{
+		"q": "外边刮风了，你可以关上窗户吗？",
+		"qP": "Wàibian guāfēng le, nǐ kěyǐ guānshang chuānghu ma?",
+		"a": "当然可以，我帮你关吧。",
+		"aP": "Dāngrán kěyǐ, wǒ bāng nǐ guān ba.",
+		"hint": "바람이 불어 창문을 닫아 달라고 부탁하는 대화입니다.",
+		"keywords": "刮风 (guāfēng), 窗户 (chuānghu), 关上 (guānshang)",
 		"weight": 1
 	},
 	{
 		"q": "这附近有医院吗？",
 		"qP": "Zhè fùjìn yǒu yīyuàn ma?",
-		"a": "有，过马路，银行旁边就是医院。走路分五钟就到，很近。",
-		"aP": "Yǒu, guò mǎlù, yínháng pángbiān jiù shì yīyuàn. Zǒulù wǔ fēnzhōng jiù dào, hěn jìn.",
-		"hint": "병원 위치를 묻는 대화입니다.",
-		"keywords": "医院 (yīyuàn), 银行 (yínháng), 马路 (mǎlù)",
+		"a": "不好意思，我不知道。你问别人吧。",
+		"aP": "Bù hǎoyìsi, wǒ bù zhīdào. Nǐ wèn biéren ba.",
+		"hint": "길을 물어봤지만 모른다고 답하는 상황입니다.",
+		"keywords": "不好意思 (bù hǎoyìsi), 不知道 (bù zhīdào), 别人 (biéren)",
 		"weight": 1
 	},
 	{
@@ -771,23 +780,23 @@ const PART3_2_DATA = [
 		"a": "没关系，我在咖啡厅等你，路上小心。",
 		"aP": "Méiguānxi, wǒ zài kāfēitīng děng nǐ, lùshang xiǎoxīn.",
 		"hint": "교통 체증 때문에 늦는 상황의 대화입니다.",
-		"keywords": "堵车 (dǔchē), 咖啡厅 (kāfēitīng), 小心 (xiǎoxīn)",
+		"keywords": "堵车 (dǔchē, 교통체증), 咖啡厅 (kāfēitīng), 小心 (xiǎoxīn, 조심)",
 		"weight": 1
 	},
 	{
 		"q": "你怎么来晚了？路上出了什么事？",
 		"qP": "Nǐ zěnme lái wǎn le? Lùshang chū le shénme shì?",
-		"a": "真对不起，路上车特别多，堵车堵得厉害，下次一定注意。",
-		"aP": "Zhēn duìbuqǐ, lùshang chē tèbié duō, dǔchē dǔ de lìhai, xià cì yídìng zhùyì.",
+		"a": "真对不起，路上车特别多，下次一定注意。",
+		"aP": "Zhēn duìbuqǐ, lùshang chē tèbié duō, xià cì yídìng zhùyì.",
 		"hint": "늦은 이유를 설명하는 대화입니다.",
-		"keywords": "对不起 (duìbuqǐ), 堵车 (dǔchē), 注意 (zhùyì)",
+		"keywords": "对不起 (duìbuqǐ), 堵车 (dǔchē), 注意 (zhùyì, 주의)",
 		"weight": 1
 	},
 	{
 		"q": "（你）几点从家里出发去公司？",
 		"qP": "(Nǐ) jǐ diǎn cóng jiālǐ chūfā qù gōngsī?",
-		"a": "我一般早上七点，从家出发，公司离我家有点儿远，开车要一个小时。",
-		"aP": "Wǒ yìbān zǎoshang qī diǎn, cóng jiā chūfā, gōngsī lí wǒ jiā yǒudiǎnr yuǎn, kāichē yào yí ge xiǎoshí.",
+		"a": "我一般早上七点，从家出发，公司离我家有点儿远.",
+		"aP": "Wǒ yìbān zǎoshang qī diǎn, cóng jiā chūfā, gōngsī lí wǒ jiā yǒudiǎnr yuǎn.",
 		"hint": "출근 시간과 거리 관련 대화입니다.",
 		"keywords": "出发 (chūfā), 公司 (gōngsī), 开车 (kāichē)",
 		"weight": 1
@@ -807,25 +816,34 @@ const PART3_2_DATA = [
 		"a": "是吗？怎么办？那我们坐出租车去吧。",
 		"aP": "Shì ma? Zěnme bàn? Nà wǒmen zuò chūzūchē qù ba.",
 		"hint": "기차를 놓칠 상황에 대한 대화입니다.",
-		"keywords": "火车 (huǒchē), 出租车 (chūzūchē), 怎么办 (zěnme bàn)",
+		"keywords": "赶不上 (gǎn bu shàng, 늦다), 火车 (huǒchē), 出租车 (chūzūchē), 怎么办 (zěnme bàn)",
 		"weight": 1
 	},
 	{
 		"q": "周末咱们坐火车去旅行怎么样？",
 		"qP": "Zhōumò zánmen zuò huǒchē qù lǚxíng zěnmeyàng?",
-		"a": "好啊，坐火车很快，还不堵车。咱们一起预订火车票吧。",
-		"aP": "Hǎo a, zuò huǒchē hěn kuài, hái bù dǔchē. Zánmen yìqǐ yùdìng huǒchēpiào ba.",
+		"a": "好啊，坐火车又快又方便，而且不堵车。",
+		"aP": "Hǎo a, zuò huǒchē yòu kuài yòu fāngbiàn, érqiě bù dǔchē.",
 		"hint": "주말 여행 계획에 대한 대화입니다.",
-		"keywords": "火车 (huǒchē), 旅行 (lǚxíng), 火车票 (huǒchēpiào)",
+		"keywords": "火车 (huǒchē), 旅行 (lǚxíng)",
+		"weight": 1
+	},
+	{
+		"q": "我们坐船去中国怎么样？",
+		"qP": "Wǒmen zuòchuán qù Zhōngguó zěnmeyàng?",
+		"a": "我觉得坐船太慢了，坐飞机吧，又快又方便。",
+		"aP": "Wǒ juéde zuòchuán tài màn le, zuò fēijī ba, yòu kuài yòu fāngbiàn.",
+		"hint": "중국에 가는 교통수단에 대해 이야기하는 대화입니다.",
+		"keywords": "坐船 (zuòchuán), 飞机 (fēijī), 方便 (fāngbiàn)",
 		"weight": 1
 	},
 	{
 		"q": "公司附近有银行吗？",
 		"qP": "Gōngsī fùjìn yǒu yínháng ma?",
-		"a": "有啊，公司的一楼就是KB银行，你要去银行吗？",
-		"aP": "Yǒu a, gōngsī de yì lóu jiù shì KB yínháng, nǐ yào qù yínháng ma?",
+		"a": "有啊，公司对面有一家银行。",
+		"aP": "Yǒu a, gōngsī duìmiàn yǒu yì jiā yínháng.",
 		"hint": "회사 근처 은행 위치를 묻는 대화입니다.",
-		"keywords": "银行 (yínháng), 公司 (gōngsī), 一楼 (yì lóu)",
+		"keywords": "公司 (gōngsī), 银行 (yínháng), 对面 (duìmiàn)",
 		"weight": 1
 	},
 	{
@@ -964,6 +982,15 @@ const PART3_2_DATA = [
 		"weight": 1
 	},
 	{
+		"q": "体检结果出来了吗？",
+		"qP": "Tǐjiǎn jiéguǒ chūlai le ma?",
+		"a": "已经出来了，体检结果很好，我很高兴。",
+		"aP": "Yǐjīng chūlai le, tǐjiǎn jiéguǒ hěn hǎo, wǒ hěn gāoxìng.",
+		"hint": "건강검진 결과에 대해 이야기하는 대화입니다.",
+		"keywords": "体检 (tǐjiǎn), 结果 (jiéguǒ), 高兴 (gāoxìng)",
+		"weight": 1
+	},
+	{
 		"q": "这周不行，下周怎么样？",
 		"qP": "Zhè zhōu bù xíng, xià zhōu zěnmeyàng?",
 		"a": "真不好意思，下周也不行，我要出差，下下周行吗？",
@@ -1015,6 +1042,15 @@ const PART3_2_DATA = [
 		"aP": "Wǒ yǐjīng zhǔnbèi hǎo le, búguò hěn jǐnzhāng. Nǐ zhǔnbèi hǎo le ma?",
 		"hint": "시험 준비 상태와 긴장감을 이야기하는 대화입니다.",
 		"keywords": "考试 (kǎoshì), 准备 (zhǔnbèi), 紧张 (jǐnzhāng)",
+		"weight": 1
+	},
+	{
+		"q": "这次考试好像不太难，你觉得呢？",
+		"qP": "Zhè cì kǎoshì hǎoxiàng bú tài nán, nǐ juéde ne?",
+		"a": "我也觉得不太难。不过考试的时候很紧张，考得不好。",
+		"aP": "Wǒ yě juéde bú tài nán. Búguò kǎoshì de shíhou hěn jǐnzhāng, kǎo de bù hǎo.",
+		"hint": "시험 난이도와 시험 결과에 대해 이야기하는 대화입니다.",
+		"keywords": "考试 (kǎoshì), 紧张 (jǐnzhāng), 考得不好 (kǎo de bù hǎo)",
 		"weight": 1
 	},
 	{
