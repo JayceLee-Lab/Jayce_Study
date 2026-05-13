@@ -1,14 +1,14 @@
 // TSC 제 3부분 연습용 데이터베이스
 const PART3_2_DATA = [
-    {
-        "q": "您想买什么?",
-        "qP": "Nín xiǎng mǎi shénme?",
-        "a": "今天是我爱인의生日, 我爱人喜欢红色的, 您给我推荐一下。",
-        "aP": "Jīntiān shì wǒ àiren de shēngrì, wǒ àiren xǐhuān hóngsè de, nín gěi wǒ tuījiàn yíxià.",
-        "hint": "꽃집(花店)에서 판매원(收货员)이 묻는 상황입니다.",
-        "keywords": "生日 (shēngrì), 推荐 (tuījiàn)",
-        "weight": 1
-    },
+	{
+		"q": "您想买什么？",
+		"qP": "Nín xiǎng mǎi shénme?",
+		"a": "今天是我爱人的生日，我爱人喜欢红色的，您给我推荐一下。",
+		"aP": "Jīntiān shì wǒ àiren de shēngrì, wǒ àiren xǐhuān hóngsè de, nín gěi wǒ tuījiàn yíxià.",
+		"hint": "꽃집(花店)에서 판매원(售货员)이 묻는 상황입니다.",
+		"keywords": "生日 (shēngrì), 推荐 (tuījiàn), 红色 (hóngsè)",
+		"weight": 1
+	},
     {
         "q": "你要买什么?",
         "qP": "Nǐ yào mǎi shénme?",
@@ -27,24 +27,24 @@ const PART3_2_DATA = [
         "keywords": "黑色 (hēisè), 钱包 (qiánbāo)",
         "weight": 1
     },
-    {
-        "q": "这是今年新出的款式, 您试试吧。",
-        "qP": "Zhè shì jīnnián xīn chū de kuǎnshì, nín shìshì ba.",
-        "a": "是吗? 颜色、款式我都喜欢。请给我中号의。",
-        "aP": "Shì ma? Yánsè, kuǎnshì wǒ dōu xǐhuān. Qǐng gěi wǒ zhōnghào de.",
-        "hint": "의류 매장(服装店)에서 신상을 입어보는 상황입니다.",
-        "keywords": "款式 (kuǎnshì), 中号 (zhōnghào)",
-        "weight": 1
-    },
-    {
-        "q": "对不起, 这种款式小号的已经卖완了。",
-        "qP": "Duìbuqǐ, zhèzhǒng kuǎnshì xiǎohào de yǐjīng màiwán le.",
-        "a": "是吗? 太可惜了, 那我去别的地方看看。",
-        "aP": "Shì ma? Tài kěxī le, nà wǒ qù bié de dìfang kànkan.",
-        "hint": "신발 가게(鞋店)에서 작은 사이즈가 품절된 상황입니다.",
-        "keywords": "小号 (xiǎohào), 卖完 (màiwán)",
-        "weight": 1
-    },
+	{
+		"q": "这是今年新出的款式，您试试吧。",
+		"qP": "Zhè shì jīnnián xīn chū de kuǎnshì, nín shìshì ba.",
+		"a": "是吗？颜色、款式我都喜欢。请给我中号的。",
+		"aP": "Shì ma? Yánsè, kuǎnshì wǒ dōu xǐhuān. Qǐng gěi wǒ zhōnghào de.",
+		"hint": "의류 매장(服装店)에서 신상을 입어보는 상황입니다.",
+		"keywords": "款式 (kuǎnshì, 디자인), 中号 (zhōnghào), 颜色 (yánsè, 색상)",
+		"weight": 1
+	},
+	{
+		"q": "对不起，这种款式小号的已经卖完了。",
+		"qP": "Duìbuqǐ, zhèzhǒng kuǎnshì xiǎohào de yǐjīng màiwán le.",
+		"a": "是吗？太可惜了，那我去别的地方看看。",
+		"aP": "Shì ma? Tài kěxī le, nà wǒ qù bié de dìfang kànkan.",
+		"hint": "신발 가게(鞋店)에서 작은 사이즈가 품절된 상황입니다.",
+		"keywords": "小号 (xiǎohào), 卖完 (màiwán), 款式 (kuǎnshì)",
+		"weight": 1
+	},
     {
         "q": "对不起, 没有您要的号码。",
         "qP": "Duìbuqǐ, méiyǒu nín yào de hàomǎ.",
@@ -108,24 +108,24 @@ const PART3_2_DATA = [
         "keywords": "冰箱 (bīngxiāng), 送到 (sòngdào)",
         "weight": 1
     },
-    {
-        "q": "这张桌子送到哪儿?",
-        "qP": "Zhè zhāng zhuōzi sòngdào nǎr?",
-        "a": "送到这里吧。这是我家의 地址。",
-        "aP": "Sòngdào zhèlǐ ba. Zhè shì wǒ jiā de dìzhǐ.",
-        "hint": "탁자를 배달할 주소를 알려주는 상황입니다.",
-        "keywords": "桌子 (zhuōzi), 地址 (dìzhǐ)",
-        "weight": 1
-    },
-    {
-        "q": "你的手表很适合你。",
-        "qP": "Nǐ de shǒubiǎo hěn shìhé nǐ.",
-        "a": "谢谢! 这是我爱인给我买的生日礼物, 我很喜欢。",
-        "aP": "Xièxie! Zhè shì wǒ àiren gěi wǒ mǎi de shēngrì lǐwù, wǒ hěn xǐhuān.",
-        "hint": "두 친구가 서로의 물건에 대해 이야기하는 상황입니다.",
-        "keywords": "适合 (shìhé), 礼物 (lǐwù)",
-        "weight": 1
-    },
+	{
+		"q": "这张桌子送到哪儿？",
+		"qP": "Zhè zhāng zhuōzi sòngdào nǎr?",
+		"a": "送到这里吧。这是我家的地址。",
+		"aP": "Sòngdào zhèlǐ ba. Zhè shì wǒ jiā de dìzhǐ.",
+		"hint": "탁자를 배달할 주소를 알려주는 상황입니다.",
+		"keywords": "桌子 (zhuōzi), 地址 (dìzhǐ), 送到 (sòngdào)",
+		"weight": 1
+	},
+	{
+		"q": "你的手表很适合你。",
+		"qP": "Nǐ de shǒubiǎo hěn shìhé nǐ.",
+		"a": "谢谢！这是我爱人给我买的生日礼物，我很喜欢。",
+		"aP": "Xièxie! Zhè shì wǒ àiren gěi wǒ mǎi de shēngrì lǐwù, wǒ hěn xǐhuān.",
+		"hint": "두 친구가 서로의 물건에 대해 이야기하는 상황입니다.",
+		"keywords": "适合 (shìhé), 礼物 (lǐwù), 手表 (shǒubiǎo)",
+		"weight": 1
+	},
     {
         "q": "这是昨天新买的衣服, 你觉得怎么样?",
         "qP": "Zhè shì zuótiān xīn mǎi de yīfu, nǐ juéde zěnmeyàng?",
@@ -171,31 +171,31 @@ const PART3_2_DATA = [
         "keywords": "自行车 (zìxíngchē), 推荐 (tuījiàn)",
         "weight": 1
     },
-    {
-        "q": "您新买包了, 真漂亮!",
-        "qP": "Nín xīn mǎi bāo le, zhēn piàoliang!",
-        "a": "谢谢, 昨天去百货商店买의。百货商店的东西正在打折。你也去看看吧。",
-        "aP": "Xièxie, zuótiān qù bǎihuò shāngdiàn mǎi de. Bǎihuò shāngdiàn de dōngxi zhèngzài dǎzhé. Nǐ yě qù kànkan ba.",
-        "hint": "친구와 가방과 백화점 할인 정보에 대해 이야기하는 상황입니다.",
-        "keywords": "百货商店 (bǎihuò shāngdiàn), 打折 (dǎzhé)",
-        "weight": 1
-    },
-    {
-        "q": "我们商店的帽子正在打折。",
-        "qP": "Wǒmen shāngdiàn de màozi zhèngzài dǎzhé.",
-        "a": "我想买一顶棒球帽, 有白색의吗? 可以试试吗?",
-        "aP": "Wǒ xiǎng mǎi yì dǐng bàngqiúmào, yǒu báisè de ma? Kěyǐ shìshì ma?",
-        "hint": "입구에서 손님을 부르는 판매원에게 특정 모자를 찾는 상황입니다.",
-        "keywords": "棒球帽 (bàngqiúmào), 试试 (shìshì)",
-        "weight": 1
-    },
+	{
+		"q": "您新买包了，真漂亮！",
+		"qP": "Nín xīn mǎi bāo le, zhēn piàoliang!",
+		"a": "谢谢，昨天去百货商店买的。百货商店的东西正在打折。你也去看看吧。",
+		"aP": "Xièxie, zuótiān qù bǎihuò shāngdiàn mǎi de. Bǎihuò shāngdiàn de dōngxi zhèngzài dǎzhé. Nǐ yě qù kànkan ba.",
+		"hint": "친구와 가방과 백화점 할인 정보에 대해 이야기하는 상황입니다.",
+		"keywords": "百货商店 (bǎihuò shāngdiàn), 打折 (dǎzhé), 包 (bāo)",
+		"weight": 1
+	},
+	{
+		"q": "我们商店的帽子正在打折。",
+		"qP": "Wǒmen shāngdiàn de màozi zhèngzài dǎzhé.",
+		"a": "我想买一顶棒球帽，有白色的吗？可以试试吗？",
+		"aP": "Wǒ xiǎng mǎi yì dǐng bàngqiúmào, yǒu báisè de ma? Kěyǐ shìshì ma?",
+		"hint": "입구에서 손님을 부르는 판매원에게 특정 모자를 찾는 상황입니다.",
+		"keywords": "棒球帽 (bàngqiúmào), 试试 (shìshì), 白色 (báisè)",
+		"weight": 1
+	},
     {
         "q": "这个戒指真好看, 你觉得呢?",
         "qP": "Zhège jièzhi zhēn hǎokàn, nǐ juéde ne?",
         "a": "我也觉得很漂亮, 你喜欢的话我给你买。你要看看吗?",
         "aP": "Wǒ yě juéde hěn piàoliang, nǐ xǐhuān dehuà wǒ gěi nǐ mǎi. Nǐ yào kànkan ma?",
         "hint": "백화점에서 남녀가 반지를 구경하며 대화하는 상황입니다.",
-        "keywords": "戒指 (jièzhi), 漂亮 (piàoliang)",
+        "keywords": "戒指 (jièzhi), 漂亮 (piàoliang), 你喜欢的话 (nǐ xǐhuān dehuà, 너가 좋아한다면)",
         "weight": 1
     },
     {
@@ -205,15 +205,6 @@ const PART3_2_DATA = [
         "aP": "Wǒ bù cháng lái bǎihuò shāngdiàn, wǒ juéde zhèr de dōngxi tài guì le, wǒ xǐhuān wǎnggòu.",
         "hint": "쇼핑 습관(백화점 vs 온라인 쇼핑)에 대해 대화하는 상황입니다.",
         "keywords": "贵 (guì), 网购 (wǎnggòu)",
-        "weight": 1
-    },
-	{
-        "q": "你吃早饭了吗?",
-        "qP": "Nǐ chī zǎofàn le ma?",
-        "a": "吃了, 在公司食堂吃的. 我每天在公司食堂吃早饭, 你呢?",
-        "aP": "Chī le, zài gōngsī shítáng chī de. Wǒ měitiān zài gōngsī shítáng chī zǎofàn, nǐ ne?",
-        "hint": "사무실 안에서 두 사람이 나누는 대화입니다.",
-        "keywords": "早饭 (zǎofàn), 食堂 (shítáng)",
         "weight": 1
     },
 	{
@@ -231,7 +222,7 @@ const PART3_2_DATA = [
 		"a": "是的，这家餐厅服务很好，而且菜也好吃，我经常来吃。",
 		"aP": "Shì de, zhè jiā cāntīng fúwù hěn hǎo, érqiě cài yě hǎochī, wǒ jīngcháng lái chī.",
 		"hint": "식당 서비스와 음식 맛에 대해 이야기하는 대화입니다.",
-		"keywords": "餐厅 (cāntīng), 服务 (fúwù), 好吃 (hǎochī)",
+		"keywords": "餐厅 (cāntīng), 服务 (fúwù), 好吃 (hǎochī), 而且 (érqiě, 그리고)",
 		"weight": 1
 	},
 	{
@@ -249,7 +240,7 @@ const PART3_2_DATA = [
 		"a": "好的，公司附近有一家中餐厅，那儿的麻辣香锅特别好吃，我们一起去怎么样?",
 		"aP": "Hǎo de, gōngsī fùjìn yǒu yì jiā zhōngcāntīng, nàr de málàxiāngguō tèbié hǎochī, wǒmen yìqǐ qù zěnmeyàng?",
 		"hint": "점심시간에 같이 식사하며 이야기하자는 직장 동료 간의 대화입니다.",
-		"keywords": "午饭 (wǔfàn), 麻辣香锅 (málàxiāngguō), 一起 (yìqǐ)",
+		"keywords": "午饭 (wǔfàn), 麻辣香锅 (málàxiāngguō), 一起 (yìqǐ), 边吃边谈 (biān chī biān tán, 먹으면서 얘기하다), 特别 (tèbié, 특별히)",
 		"weight": 1
 	},
 	{
@@ -258,25 +249,25 @@ const PART3_2_DATA = [
 		"a": "我最近长胖了，正在减肥，你多吃点儿吧。",
 		"aP": "Wǒ zuìjìn zhǎng pàng le, zhèngzài jiǎnféi, nǐ duō chī diǎnr ba.",
 		"hint": "식당에서 다이어트 때문에 적게 먹는 이유를 설명하는 대화입니다.",
-		"keywords": "长胖 (zhǎng pàng), 减肥 (jiǎnféi), 多吃点儿 (duō chī diǎnr)",
+		"keywords": "长胖 (zhǎng pàng), 减肥 (jiǎnféi, 다이어트), 多吃点儿 (duō chī diǎnr, 많이 드세요)",
 		"weight": 1
 	},
 	{
 		"q": "这是谁做的？真好吃。",
 		"qP": "Zhè shì shuí zuò de? Zhēn hǎochī.",
-		"a": "当然是我做的，这是我的拿手菜，好吃的话多吃点儿。",
-		"aP": "Dāngrán shì wǒ zuò de, zhè shì wǒ de náshǒucài, hǎochī de huà duō chī diǎnr.",
+		"a": "当然是我做的，好吃的话多吃点儿。",
+		"aP": "Dāngrán shì wǒ zuò de, hǎochī de huà duō chī diǎnr.",
 		"hint": "식사 자리에서 음식이 누구의 요리인지 묻는 대화입니다.",
-		"keywords": "拿手菜 (náshǒucài), 好吃 (hǎochī), 多吃点儿 (duō chī diǎnr)",
+		"keywords": "拿手菜 (náshǒucài), 好吃 (hǎochī), 好吃的话 (hǎochī de huà, 맛있다면), 多吃点儿 (duō chī diǎnr)",
 		"weight": 1
 	},
 	{
 		"q": "这家餐厅的服务态度太差了。",
 		"qP": "Zhè jiā cāntīng de fúwù tàidù tài chà le.",
-		"a": "是啊，服务很差，真不像话，我们去别的餐厅吧。",
-		"aP": "Shì a, fúwù hěn chà, zhēn bú xiànghuà, wǒmen qù bié de cāntīng ba.",
+		"a": "是啊，服务很差，我们去别的餐厅吧。",
+		"aP": "Shì a, fúwù hěn chà, wǒmen qù bié de cāntīng ba.",
 		"hint": "식당 서비스에 불만을 이야기하는 대화입니다.",
-		"keywords": "服务态度 (fúwù tàidù), 差 (chà), 不像话 (bú xiànghuà)",
+		"keywords": "服务态度 (fúwù tàidù, 복무 태도), 差 (chà, 떨어지다)",
 		"weight": 1
 	},
 	{
@@ -285,7 +276,7 @@ const PART3_2_DATA = [
 		"a": "哦，那我们可以等吗？要等多长时间？",
 		"aP": "Ó, nà wǒmen kěyǐ děng ma? Yào děng duō cháng shíjiān?",
 		"hint": "식당에서 자리가 없어서 기다릴 수 있는지 묻는 상황입니다.",
-		"keywords": "座位 (zuòwèi), 等 (děng), 多长时间 (duō cháng shíjiān)",
+		"keywords": "座位 (zuòwèi, 자리), 等 (děng), 多长时间 (duō cháng shíjiān)",
 		"weight": 1
 	},
 	{
@@ -294,7 +285,7 @@ const PART3_2_DATA = [
 		"a": "我一个人住，经常去外边吃饭，不常做菜。",
 		"aP": "Wǒ yí gèrén zhù, jīngcháng qù wàibian chīfàn, bù cháng zuò cài.",
 		"hint": "혼자 사는 사람이 요리를 자주 하는지 묻는 대화입니다.",
-		"keywords": "自己做菜 (zìjǐ zuò cài), 外边 (wàibian), 一个人住 (yí gèrén zhù)",
+		"keywords": "自己做菜 (zìjǐ zuò cài, 스스로 요리), 外边 (wàibian), 一个人住 (yí gèrén zhù)",
 		"weight": 1
 	},
 	{
@@ -303,7 +294,7 @@ const PART3_2_DATA = [
 		"a": "哇！真好喝。怎么做的，你教我吧。",
 		"aP": "Wa! Zhēn hǎohē. Zěnme zuò de, nǐ jiāo wǒ ba.",
 		"hint": "직접 만든 과일주스를 권하며 이야기하는 대화입니다.",
-		"keywords": "果汁 (guǒzhī), 好喝 (hǎohē), 教 (jiāo)",
+		"keywords": "果汁 (guǒzhī), 好喝 (hǎohē), 教 (jiāo, 알려주다)",
 		"weight": 1
 	},
 	{
@@ -312,7 +303,7 @@ const PART3_2_DATA = [
 		"a": "不用，谢谢，您家的咖啡很好喝。",
 		"aP": "Bú yòng, xièxie, nín jiā de kāfēi hěn hǎohē.",
 		"hint": "카페에서 손님과 직원이 커피에 설탕을 넣을지 대화하는 상황입니다.",
-		"keywords": "加糖 (jiā táng), 咖啡 (kāfēi), 好喝 (hǎohē)",
+		"keywords": "加糖 (jiā táng, 설탕 추가), 咖啡 (kāfēi), 好喝 (hǎohē)",
 		"weight": 1
 	},
 	{
@@ -321,16 +312,16 @@ const PART3_2_DATA = [
 		"a": "我喜欢吃甜的，特别喜欢吃蛋糕和巧克力。你喜欢甜食吗?",
 		"aP": "Wǒ xǐhuan chī tián de, tèbié xǐhuan chī dàngāo hé qiǎokèlì. Nǐ xǐhuan tiánshí ma?",
 		"hint": "음식 취향에 대해 이야기하는 대화입니다.",
-		"keywords": "酸 (suān), 甜 (tián), 蛋糕 (dàngāo), 巧克力 (qiǎokèlì)",
+		"keywords": "酸 (suān, 시다), 甜 (tián, 달다), 蛋糕 (dàngāo), 巧克力 (qiǎokèlì)",
 		"weight": 1
 	},
 	{
 		"q": "你喜欢吃鱼吗?",
 		"qP": "Nǐ xǐhuan chī yú ma?",
-		"a": "喜欢，我听说吃鱼对身体好，所以经常吃。你喜欢吗?",
-		"aP": "Xǐhuan, wǒ tīngshuō chī yú duì shēntǐ hǎo, suǒyǐ jīngcháng chī. Nǐ xǐhuan ma?",
+		"a": "喜欢，我听说吃鱼对身体好，你喜欢吗?",
+		"aP": "Xǐhuan, wǒ tīngshuō chī yú duì shēntǐ hǎo, Nǐ xǐhuan ma?",
 		"hint": "생선이 건강에 좋다는 이야기를 하는 대화입니다.",
-		"keywords": "鱼 (yú), 身体 (shēntǐ), 经常 (jīngcháng)",
+		"keywords": "鱼 (yú, 생선), 身体 (shēntǐ), 经常 (jīngcháng)",
 		"weight": 1
 	},
 	{
@@ -339,7 +330,7 @@ const PART3_2_DATA = [
 		"a": "好的，我们去附近的公园散散步吧。那儿风景很美。",
 		"aP": "Hǎo de, wǒmen qù fùjìn de gōngyuán sànsanbù ba. Nàr fēngjǐng hěn měi.",
 		"hint": "날씨가 좋아서 밖에 나가자는 제안입니다.",
-		"keywords": "天气 (tiānqì), 公园 (gōngyuán), 散步 (sànbù)",
+		"keywords": "天气 (tiānqì), 公园 (gōngyuán), 散步 (sànbù), 风景 (fēngjǐng, 풍경), 美 (měi, 아름답다)",
 		"weight": 1
 	},
 	{
@@ -357,7 +348,7 @@ const PART3_2_DATA = [
 		"a": "好的，我喜欢川菜。听说那儿的麻辣香锅特别好吃，咱们去尝尝吧。",
 		"aP": "Hǎo de, wǒ xǐhuan chuāncài. Tīngshuō nàr de málàxiāngguō tèbié hǎochī, zánmen qù chángchang ba.",
 		"hint": "새로 생긴 사천요리 식당에 가자는 제안입니다.",
-		"keywords": "川菜馆 (chuāncàiguǎn), 麻辣香锅 (málàxiāngguō), 尝尝 (chángchang)",
+		"keywords": "川菜馆 (chuāncàiguǎn, 사천요리집), 麻辣香锅 (málàxiāngguō), 尝尝 (chángchang)",
 		"weight": 1
 	},
 	{
@@ -366,7 +357,16 @@ const PART3_2_DATA = [
 		"a": "不好意思，我最近很忙，每天都加班，累死了。",
 		"aP": "Bù hǎoyìsi, wǒ zuìjìn hěn máng, měitiān dōu jiābān, lèi sǐ le.",
 		"hint": "영화 제안을 바빠서 거절하는 대화입니다.",
-		"keywords": "电影票 (diànyǐngpiào), 加班 (jiābān), 累死了 (lèi sǐ le)",
+		"keywords": "电影票 (diànyǐngpiào), 加班 (jiābān, 야근), 累死了 (lèi sǐ le, 힘들어죽겠다)",
+		"weight": 1
+	},
+	{
+		"q": "你可以把上次说的那本书借给我吗？",
+		"qP": "Nǐ kěyǐ bǎ shàng cì shuō de nà běn shū jiè gěi wǒ ma?",
+		"a": "没问题，那本书在家里，我明天给你。",
+		"aP": "Méi wèntí, nà běn shū zài jiālǐ, wǒ míngtiān gěi nǐ.",
+		"hint": "두 친구가 책을 빌리는 상황의 대화입니다.",
+		"keywords": "书 (shū), 借给 (jiè gěi), 明天 (míngtiān)",
 		"weight": 1
 	},
 	{
@@ -384,7 +384,7 @@ const PART3_2_DATA = [
 		"a": "不好意思，我现在要去参加会议，会议结束以后我帮你吧。",
 		"aP": "Bù hǎoyìsi, wǒ xiànzài yào qù cānjiā huìyì, huìyì jiéshù yǐhòu wǒ bāng nǐ ba.",
 		"hint": "회의 때문에 바로 도와주지 못하는 상황의 대화입니다.",
-		"keywords": "资料 (zīliào), 会议 (huìyì), 参加 (cānjiā), 结束 (jiéshù)",
+		"keywords": "资料 (zīliào, 자료), 会议 (huìyì), 参加 (cānjiā), 结束 (jiéshù)",
 		"weight": 1
 	},
 	{
@@ -393,7 +393,7 @@ const PART3_2_DATA = [
 		"a": "好的，没问题。我明天寄给您。然后，我给您发短信。",
 		"aP": "Hǎo de, méiwèntí. Wǒ míngtiān jì gěi nín. Ránhòu, wǒ gěi nín fā duǎnxìn.",
 		"hint": "신제품 자료를 보내달라고 요청하는 전화 대화입니다.",
-		"keywords": "寄 (jì), 新产品 (xīn chǎnpǐn), 资料 (zīliào), 短信 (duǎnxìn)",
+		"keywords": "寄 (jì), 新产品 (xīn chǎnpǐn, 신제품), 资料 (zīliào, 자료), 然后 (Ránhòu, 그리고), 短信 (duǎnxìn)",
 		"weight": 1
 	},
 	{
@@ -402,7 +402,7 @@ const PART3_2_DATA = [
 		"a": "不好意思，周六我要去打工。你找别人吧。",
 		"aP": "Bù hǎoyìsi, zhōuliù wǒ yào qù dǎgōng. Nǐ zhǎo biérén ba.",
 		"hint": "시험 후 영화 제안을 아르바이트 때문에 거절하는 대화입니다.",
-		"keywords": "考试 (kǎoshì), 周六 (zhōuliù), 打工 (dǎgōng), 电影 (diànyǐng)",
+		"keywords": "考试 结束 (kǎoshì jiéshù, 시험 종료), 周六 (zhōuliù, 토요일), 打工 (dǎgōng, 아르바이트)",
 		"weight": 1
 	},
 	{
@@ -420,7 +420,7 @@ const PART3_2_DATA = [
 		"a": "好啊，吃汉堡又好吃又方便，而且省时。",
 		"aP": "Hǎo a, chī hànbǎo yòu hǎochī yòu fāngbiàn, érqiě shěngshí.",
 		"hint": "점심에 햄버거를 먹으러 가자는 대화입니다.",
-		"keywords": "汉堡包 (hànbǎobāo), 方便 (fāngbiàn), 省时 (shěngshí)",
+		"keywords": "汉堡包 (hànbǎobāo), 方便 (fāngbiàn), 省时 (shěngshí, 시간 절약)",
 		"weight": 1
 	},
 	{
@@ -438,7 +438,7 @@ const PART3_2_DATA = [
 		"a": "我下班以后经常去健身房运动，周末去打高尔夫球，运动对身体好。",
 		"aP": "Wǒ xiàbān yǐhòu jīngcháng qù jiànshēnfáng yùndòng, zhōumò qù dǎ gāo'ěrfūqiú, yùndòng duì shēntǐ hǎo.",
 		"hint": "평소 운동 습관에 대해 이야기하는 대화입니다.",
-		"keywords": "运动 (yùndòng), 健身房 (jiànshēnfáng), 高尔夫球 (gāo'ěrfūqiú)",
+		"keywords": "运动 (yùndòng), 健身房 (jiànshēnfáng, 헬스장), 高尔夫球 (gāo'ěrfūqiú, 골프치다)",
 		"weight": 1
 	},
 	{
@@ -447,7 +447,7 @@ const PART3_2_DATA = [
 		"a": "我家附近有一个大公园，那儿有羽毛球场，我们去那儿打吧。",
 		"aP": "Wǒ jiā fùjìn yǒu yí ge dà gōngyuán, nàr yǒu yǔmáoqiúchǎng, wǒmen qù nàr dǎ ba.",
 		"hint": "배드민턴 칠 장소를 정하는 대화입니다.",
-		"keywords": "羽毛球 (yǔmáoqiú), 公园 (gōngyuán), 球场 (qiúchǎng)",
+		"keywords": "羽毛球 (yǔmáoqiú, 배드민턴), 公园 (gōngyuán), 球场 (qiúchǎng)",
 		"weight": 1
 	},
 	{
@@ -462,10 +462,10 @@ const PART3_2_DATA = [
 	{
 		"q": "你会游泳吗？",
 		"qP": "Nǐ huì yóuyǒng ma?",
-		"a": "我不会游泳，我是个旱鸭子，所以我想学游泳。你会吗？",
-		"aP": "Wǒ bú huì yóuyǒng, wǒ shì ge hànyāzi, suǒyǐ wǒ xiǎng xué yóuyǒng. Nǐ huì ma?",
+		"a": "我不会游泳，我想学游泳。你会吗？",
+		"aP": "Wǒ bú huì yóuyǒng, wǒ xiǎng xué yóuyǒng. Nǐ huì ma?",
 		"hint": "수영을 배우고 싶다고 말하는 대화입니다.",
-		"keywords": "游泳 (yóuyǒng), 旱鸭子 (hànyāzi), 学 (xué)",
+		"keywords": "游泳 (yóuyǒng), 学 (xué)",
 		"weight": 1
 	},
 	{
@@ -492,7 +492,7 @@ const PART3_2_DATA = [
 		"a": "昨天我很忙，没看新闻。怎么了？有什么特别的新闻吗？",
 		"aP": "Zuótiān wǒ hěn máng, méi kàn xīnwén. Zěnme le? Yǒu shénme tèbié de xīnwén ma?",
 		"hint": "뉴스를 봤는지 묻는 대화입니다.",
-		"keywords": "新闻 (xīnwén), 昨天 (zuótiān), 特别 (tèbié)",
+		"keywords": "新闻 (xīnwén, 뉴스), 昨天 (zuótiān), 特别 (tèbié)",
 		"weight": 1
 	},
 	{
@@ -501,23 +501,14 @@ const PART3_2_DATA = [
 		"a": "我不喜欢养动物，我喜欢养花草。所以我家里有很多花。",
 		"aP": "Wǒ bù xǐhuan yǎng dòngwù, wǒ xǐhuan yǎng huācǎo. Suǒyǐ wǒ jiālǐ yǒu hěn duō huā.",
 		"hint": "동물 대신 화초를 좋아한다고 말하는 대화입니다.",
-		"keywords": "动物 (dòngwù), 花草 (huācǎo), 家里 (jiālǐ)",
-		"weight": 1
-	},
-	{
-		"q": "我现在养着一只狗，我家的小狗又聪明又可爱。",
-		"qP": "Wǒ xiànzài yǎngzhe yì zhī gǒu, wǒ jiā de xiǎogǒu yòu cōngming yòu kě'ài.",
-		"a": "真的吗？它叫什么名字？",
-		"aP": "Zhēn de ma? Tā jiào shénme míngzi?",
-		"hint": "반려견에 대해 이야기하는 대화입니다.",
-		"keywords": "狗 (gǒu), 聪明 (cōngming), 可爱 (kě'ài)",
+		"keywords": "动物 (dòngwù), 花草 (huācǎo), 家里 (jiālǐ), 所以 (Suǒyǐ, 그래서)",
 		"weight": 1
 	},
 	{
 		"q": "你常常拍照吗？",
 		"qP": "Nǐ chángcháng pāizhào ma?",
-		"a": "我喜欢拍照，特别是去旅行的时候，拍很多照片。所以我的手机里有很多照片。",
-		"aP": "Wǒ xǐhuan pāizhào, tèbié shì qù lǚxíng de shíhou, pāi hěn duō zhàopiàn. Suǒyǐ wǒ de shǒujī lǐ yǒu hěn duō zhàopiàn.",
+		"a": "我喜欢拍照，特别是去旅行的时候，常常拍照。所以我的手机里有很多照片。",
+		"aP": "Wǒ xǐhuan pāizhào, tèbié shì qù lǚxíng de shíhou, chángcháng pāizhào. Suǒyǐ wǒ de shǒujī lǐ yǒu hěn duō zhàopiàn.",
 		"hint": "사진 찍는 취미에 대해 이야기하는 대화입니다.",
 		"keywords": "拍照 (pāizhào), 旅行 (lǚxíng), 照片 (zhàopiàn), 手机 (shǒujī)",
 		"weight": 1
@@ -528,16 +519,7 @@ const PART3_2_DATA = [
 		"a": "我会打一点儿，但是打得不太好。你打得怎么样？有空咱们一起去打吧。",
 		"aP": "Wǒ huì dǎ yìdiǎnr, dànshì dǎ de bú tài hǎo. Nǐ dǎ de zěnmeyàng? Yǒu kòng zánmen yìqǐ qù dǎ ba.",
 		"hint": "탁구나 볼링 실력에 대해 이야기하는 대화입니다.",
-		"keywords": "乒乓球 (pīngpāngqiú), 保龄球 (bǎolíngqiú), 有空 (yǒu kòng)",
-		"weight": 1
-	},
-	{
-		"q": "我会打一点儿，我喜欢打保龄球，有空咱们一起去打吧。",
-		"qP": "Wǒ huì dǎ yìdiǎnr, wǒ xǐhuan dǎ bǎolíngqiú, yǒu kòng zánmen yìqǐ qù dǎ ba.",
-		"a": "好啊，周末怎么样？",
-		"aP": "Hǎo a, zhōumò zěnmeyàng?",
-		"hint": "볼링을 함께 치자고 제안하는 대화입니다.",
-		"keywords": "保龄球 (bǎolíngqiú), 周末 (zhōumò), 一起 (yìqǐ)",
+		"keywords": "乒乓球 (pīngpāngqiú), 保龄球 (bǎolíngqiú), 有空 (yǒu kòng, 시간이 있다.)",
 		"weight": 1
 	},
 	{
@@ -546,7 +528,7 @@ const PART3_2_DATA = [
 		"a": "最近我特别忙，每天加班，累死了。我很想休息休息。",
 		"aP": "Zuìjìn wǒ tèbié máng, měitiān jiābān, lèi sǐ le. Wǒ hěn xiǎng xiūxi xiūxi.",
 		"hint": "피곤한 일상에 대해 이야기하는 대화입니다.",
-		"keywords": "累 (lèi), 加班 (jiābān), 休息 (xiūxi)",
+		"keywords": "看起来 (kàn qǐlái, 보기에), 累 (lèi), 加班 (jiābān), 休息 (xiūxi)",
 		"weight": 1
 	},
 	{
@@ -555,7 +537,7 @@ const PART3_2_DATA = [
 		"a": "是的，我每天早上六点起床，七点上班。早睡早起对身体好。",
 		"aP": "Shì de, wǒ měitiān zǎoshang liù diǎn qǐchuáng, qī diǎn shàngbān. Zǎoshuì zǎoqǐ duì shēntǐ hǎo.",
 		"hint": "일찍 자고 일찍 일어나는 습관에 대한 대화입니다.",
-		"keywords": "早起 (zǎoqǐ), 起床 (qǐchuáng), 上班 (shàngbān), 身体好 (shēntǐ hǎo)",
+		"keywords": "早起 (zǎoqǐ, 일찍 일어나다.), 起床 (qǐchuáng), 上班 (shàngbān), 身体好 (shēntǐ hǎo)",
 		"weight": 1
 	},
 	{
@@ -564,16 +546,7 @@ const PART3_2_DATA = [
 		"a": "不，我一个人住。我觉得一个人住比较自由。",
 		"aP": "Bù, wǒ yí ge rén zhù. Wǒ juéde yí ge rén zhù bǐjiào zìyóu.",
 		"hint": "혼자 사는 생활에 대해 이야기하는 대화입니다.",
-		"keywords": "家人 (jiārén), 一个人住 (yí ge rén zhù), 自由 (zìyóu)",
-		"weight": 1
-	},
-	{
-		"q": "对，我现在跟家人一起住。不过我打算明年搬出来自己住。",
-		"qP": "Duì, wǒ xiànzài gēn jiārén yìqǐ zhù. Búguò wǒ dǎsuàn míngnián bān chūlái zìjǐ zhù.",
-		"a": "为什么？你想一个人生活吗？",
-		"aP": "Wèi shénme? Nǐ xiǎng yí ge rén shēnghuó ma?",
-		"hint": "독립 계획에 대해 이야기하는 대화입니다.",
-		"keywords": "家人 (jiārén), 搬出来 (bān chūlái), 自己住 (zìjǐ zhù)",
+		"keywords": "家人 (jiārén), 一个人住 (yí ge rén zhù), 自由 (zìyóu, 자유)",
 		"weight": 1
 	},
 	{
@@ -586,19 +559,10 @@ const PART3_2_DATA = [
 		"weight": 1
 	},
 	{
-		"q": "在北京拍的，去年我跟家人一起去北京旅行的时候拍的。",
-		"qP": "Zài Běijīng pāi de, qùnián wǒ gēn jiārén yìqǐ qù Běijīng lǚxíng de shíhou pāi de.",
-		"a": "北京怎么样？",
-		"aP": "Běijīng zěnmeyàng?",
-		"hint": "베이징 여행 사진에 대한 대화입니다.",
-		"keywords": "北京 (Běijīng), 旅行 (lǚxíng), 照片 (zhàopiàn)",
-		"weight": 1
-	},
-	{
 		"q": "她很可爱，她是谁。",
 		"qP": "Tā hěn kě'ài, tā shì shéi.",
-		"a": "这是我女儿，今年六岁了。你觉得她像爸爸我吗？",
-		"aP": "Zhè shì wǒ nǚ'ér, jīnnián liù suì le. Nǐ juéde tā xiàng bàba wǒ ma?",
+		"a": "这是我女儿，今年六岁了。",
+		"aP": "Zhè shì wǒ nǚ'ér, jīnnián liù suì le.",
 		"hint": "사진 속 아이에 대해 이야기하는 대화입니다.",
 		"keywords": "可爱 (kě'ài), 女儿 (nǚ'ér), 六岁 (liù suì)",
 		"weight": 1
@@ -606,10 +570,10 @@ const PART3_2_DATA = [
 	{
 		"q": "告诉你一个好消息，我买新房子了。",
 		"qP": "Gàosu nǐ yí ge hǎo xiāoxi, wǒ mǎi xīn fángzi le.",
-		"a": "恭喜恭喜，在哪儿买的？一定很贵吧？",
-		"aP": "Gōngxǐ gōngxǐ, zài nǎr mǎi de? Yídìng hěn guì ba?",
+		"a": "恭喜恭喜，在哪儿买的？一定很贵吧？ 我也想买房子。",
+		"aP": "Gōngxǐ gōngxǐ, zài nǎr mǎi de? Yídìng hěn guì ba? wǒ yě xiǎng mǎi fángzi.",
 		"hint": "새 집을 산 것을 축하하는 대화입니다.",
-		"keywords": "好消息 (hǎo xiāoxi), 新房子 (xīn fángzi), 恭喜 (gōngxǐ)",
+		"keywords": "好消息 (hǎo xiāoxi, 좋은 소식), 新房子 (xīn fángzi, 새 집), 恭喜 (gōngxǐ 축하)",
 		"weight": 1
 	},
 	{
@@ -618,7 +582,7 @@ const PART3_2_DATA = [
 		"a": "是吗？男孩儿还是女孩儿？周末我们去看她吧。",
 		"aP": "Shì ma? Nánháir háishi nǚháir? Zhōumò wǒmen qù kàn tā ba.",
 		"hint": "출산 소식에 대해 이야기하는 대화입니다.",
-		"keywords": "生孩子 (shēng háizi), 男孩儿 (nánháir), 女孩儿 (nǚháir)",
+		"keywords": "生孩子 (shēng háizi, 출산), 男孩儿 (nánháir), 女孩儿 (nǚháir)",
 		"weight": 1
 	},
 	{
@@ -633,10 +597,10 @@ const PART3_2_DATA = [
 	{
 		"q": "我的手机又坏（出毛病/出故障）了。",
 		"qP": "Wǒ de shǒujī yòu huài (chū máobìng / chū gùzhàng) le.",
-		"a": "是吗？怎么回事？你买一个新手机吧。听说三星的新款手机价格比较好。",
-		"aP": "Shì ma? Zěnme huíshì? Nǐ mǎi yí ge xīn shǒujī ba. Tīngshuō Sānxīng de xīnkuǎn shǒujī jiàgé bǐjiào hǎo.",
+		"a": "是吗？你买一个新手机吧。听说三星的新款手机性价比很好。",
+		"aP": "Shì ma? Nǐ mǎi yí ge xīn shǒujī ba. Tīngshuō Sānxīng de xīn kuǎn shǒujī xìngjiàbǐ hěn hǎo.",
 		"hint": "휴대폰 고장에 대해 이야기하는 대화입니다.",
-		"keywords": "手机 (shǒujī), 坏 (huài), 新款 (xīnkuǎn), 价格 (jiàgé)",
+		"keywords": "手机 (shǒujī), 坏 (huài), 新款 (xīnkuǎn, 새로 출시된), 价格 (jiàgé)",
 		"weight": 1
 	},
 	{
@@ -649,21 +613,12 @@ const PART3_2_DATA = [
 		"weight": 1
 	},
 	{
-		"q": "我拿进来了，在洗手间里，你去看看吧。",
-		"qP": "Wǒ ná jìnlái le, zài xǐshǒujiān lǐ, nǐ qù kànkan ba.",
-		"a": "好的，我知道了。",
-		"aP": "Hǎo de, wǒ zhīdào le.",
-		"hint": "신문 위치를 알려주는 대화입니다.",
-		"keywords": "洗手间 (xǐshǒujiān), 知道 (zhīdào)",
-		"weight": 1
-	},
-	{
 		"q": "我老公升职当部长了。",
 		"qP": "Wǒ lǎogōng shēngzhí dāng bùzhǎng le.",
 		"a": "真的吗？太好了！恭喜恭喜，今天你请客。",
 		"aP": "Zhēn de ma? Tài hǎo le! Gōngxǐ gōngxǐ, jīntiān nǐ qǐngkè.",
 		"hint": "승진 소식을 축하하는 대화입니다.",
-		"keywords": "升职 (shēngzhí), 部长 (bùzhǎng), 请客 (qǐngkè)",
+		"keywords": "升职 (shēngzhí, 승진), 部长 (bùzhǎng), 请客 (qǐngkè, 한턱내다.)",
 		"weight": 1
 	},
 	{
