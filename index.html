@@ -594,7 +594,7 @@
                 <button class="save-edit-btn" onclick="saveCurrentEdit()">수정 내용 누적 저장</button>
                 <button class="cancel-edit-btn" onclick="closeEditModal()">취소</button>
             </div>
-            <p class="help-text">저장하면 현재 테스트 세션의 수정 목록에 누적됩니다. 종료 시 현재 Part 기준 예: part2_mod.json 파일로 한 번에 다운로드할 수 있습니다.</p>
+            <p class="help-text">저장하면 현재 테스트 세션의 수정 목록에 누적됩니다. 종료 시 현재 Part 기준 예: part2_mod.js 파일로 한 번에 다운로드할 수 있습니다.</p>
         </div>
     </div>
 
@@ -788,7 +788,26 @@
         }
 
         function getPartKey(part = currentPart) {
-            return `part${String(part).replace('_', '_')}`;
+            return `part${String(part)}`;
+        }
+
+        function getPartVariableName(part = currentPart) {
+            const key = String(part);
+            if (key === '1') return 'PART1_DATA';
+            if (key === '2') return 'PART2_DATA';
+            if (key === '3_1') return 'PART3_1_DATA';
+            if (key === '3_2') return 'PART3_2_DATA';
+            if (key === '4') return 'PART4_DATA';
+            return `PART${key}_DATA`;
+        }
+
+        function getPartModFileName(part = currentPart) {
+            return `${getPartKey(part)}_mod.js`;
+        }
+
+        function buildPartDataJs(part, items) {
+            const variableName = getPartVariableName(part);
+            return `const ${variableName} = ${JSON.stringify(items, null, 4)};\n`;
         }
 
         function getItemModKey(item) {
@@ -847,33 +866,67 @@
                 no: currentItem.originalNo || itemKey,
                 q: currentItem.q,
                 qP: currentItem.qP,
+                a: currentItem.a,
+                aP: currentItem.aP,
                 hint: currentItem.hint,
                 keywords: currentItem.keywords,
-                a: currentItem.a,
-                aP: currentItem.aP
+                weight: currentItem.weight || 1
             };
 
             persistModifications();
             renderQuestion(currentItem);
             closeEditModal();
-            alert("수정사항을 현재 테스트 세션에 누적 저장했습니다. 종료 시 JSON으로 다운로드할 수 있습니다.");
+            alert("수정사항을 현재 테스트 세션에 누적 저장했습니다. 종료 시 원본 data.js 전체를 복사한 뒤, 수정된 문항만 반영된 mod.js 파일로 다운로드됩니다.");
         }
 
         function downloadModificationJSON(part) {
             const partKey = getPartKey(part);
-            const items = Object.values(modifiedItems[partKey] || {});
-            const payload = {
-                part: String(part),
-                updatedAt: new Date().toISOString(),
-                items
-            };
-            const json = JSON.stringify(payload, null, 2);
-            const blob = new Blob([json], { type: 'application/json;charset=utf-8;' });
+            const modifications = modifiedItems[partKey] || {};
+
+            // 원본 전체 데이터를 복사
+            const originalData = fullData.map(item => ({
+                q: item.q || "",
+                qP: item.qP || "",
+                a: item.a || "",
+                aP: item.aP || "",
+                hint: item.hint || "",
+                keywords: item.keywords || "",
+                weight: item.weight || 1
+            }));
+
+            // 수정된 항목만 원본에 덮어쓰기
+            Object.keys(modifications).forEach(key => {
+                const modItem = modifications[key];
+                const targetIndex = parseInt(key, 10) - 1;
+
+                if (targetIndex >= 0 && targetIndex < originalData.length) {
+                    originalData[targetIndex] = {
+                        q: modItem.q || "",
+                        qP: modItem.qP || "",
+                        a: modItem.a || "",
+                        aP: modItem.aP || "",
+                        hint: modItem.hint || "",
+                        keywords: modItem.keywords || "",
+                        weight: modItem.weight || 1
+                    };
+                }
+            });
+
+            const js = buildPartDataJs(part, originalData);
+
+            const blob = new Blob(
+                [js],
+                { type: 'application/javascript;charset=utf-8;' }
+            );
+
             const a = document.createElement("a");
             const url = URL.createObjectURL(blob);
+
             a.href = url;
-            a.download = `${partKey}_mod.json`;
+            a.download = getPartModFileName(part);
+
             a.click();
+
             URL.revokeObjectURL(url);
         }
 
@@ -1084,7 +1137,7 @@
             clearInterval(timerInterval);
             window.speechSynthesis.cancel();
 
-            if (hasModifiedItems(currentPart) && confirm(`${getPartKey(currentPart)}_mod.json 수정 파일을 다운로드할까요?`)) {
+            if (hasModifiedItems(currentPart) && confirm(`${getPartKey(currentPart)}_mod.js 수정 파일을 다운로드할까요?`)) {
                 downloadModificationJSON(currentPart);
             }
 
