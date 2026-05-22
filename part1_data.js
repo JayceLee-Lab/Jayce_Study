@@ -21,8 +21,8 @@ const PART1_DATA = [
   {
     "q": "你家有几口人？",
     "qP": "Nǐ jiā yǒu jǐ kǒu rén?",
-    "a": "我家有四口人。我爱人和两个孩子。",
-    "aP": "Wǒ jiā yǒu sì kǒu rén. Wǒ àiren hé liǎng gè háizi.",
+    "a": "我家有四口人。我和爱人，还有两个孩子。",
+    "aP": "Wǒ jiā yǒu sì kǒu rén. Wǒ hé àiren, hái yǒu liǎng gè háizi.",
     "hint": "가족 수를 말하는 표현",
     "keywords": "네 식구 (四口人)",
     "weight": 1
