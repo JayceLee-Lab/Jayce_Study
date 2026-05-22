@@ -236,6 +236,9 @@
             document.getElementById('answer-area').classList.remove('hidden');
             document.getElementById('feedback-group').classList.remove('hidden');
             document.getElementById('show-btn').classList.add('hidden');
+        
+            // ✅ 답안 확인 시 정답 음성 자동 재생
+            playTTS('a-text');
         }
 
         function handleResult(isCorrect) {
