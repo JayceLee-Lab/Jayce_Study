@@ -118,5 +118,61 @@ const WORD_DATA = [
         "a": "服务态度太差了",
         "aP": "fúwù tàidù tài chà le",
         "weight": 1
+    },
+        {
+        "hanzi": "酸",
+        "pinyin": "suān",
+        "meaning": "시다.",
+        "a": "你喜欢吃酸的还是甜的?",
+        "aP": "Nǐ xǐhuan chī suān de háishi tián de?",
+        "weight": 1
+    },
+    {
+        "hanzi": "甜",
+        "pinyin": "tián",
+        "meaning": "달다.",
+        "a": "你喜欢吃酸的还是甜的?",
+        "aP": "Nǐ xǐhuan chī suān de háishi tián de?",
+        "weight": 1
+    },
+    {
+        "hanzi": "散散步",
+        "pinyin": "sànsanbù",
+        "meaning": "산책하다.",
+        "a": "我们去附近的公园散散步吧",
+        "aP": "wǒmen qù fùjìn de gōngyuán sànsanbù ba",
+        "weight": 1
+    },
+    {
+        "hanzi": "加班",
+        "pinyin": "jiābān",
+        "meaning": "초과근무 (야근)",
+        "a": "每天都加班",
+        "aP": "měitiān dōu jiābān",
+        "weight": 1
+    },
+    {
+        "hanzi": "会议 结束",
+        "pinyin": "huìyì jiéshù",
+        "meaning": "회의를 마치다.",
+        "a": "会议结束以后我帮你吧",
+        "aP": "huìyì jiéshù yǐhòu wǒ bāng nǐ ba.",
+        "weight": 1
+    },
+    {
+        "hanzi": "资料",
+        "pinyin": "zīliào",
+        "meaning": "자료, 재료",
+        "a": "你帮我写资料可以吗？",
+        "aP": "Nǐ bāng wǒ xiě zīliào kěyǐ ma?",
+        "weight": 1
+    },
+    {
+        "hanzi": "新产品",
+        "pinyin": "xīn chǎnpǐn",
+        "meaning": "신제품",
+        "a": "您能寄给我新产品的资料吗？",
+        "aP": "Nín néng jì gěi wǒ xīn chǎnpǐn de zīliào ma?",
+        "weight": 1
     }
 ];
