@@ -18,14 +18,6 @@ const WORD_DATA = [
     {
         "hanzi": "不过",
         "pinyin": "Búguò",
-        "meaning": "",
-        "a": "不过我不喜欢这个颜色, 这款车有黑色吗?",
-        "aP": "Búguò wǒ bù xǐhuān zhège yánsè, zhè kuǎn chē yǒu hēisè ma?",
-        "weight": 1
-    },
-    {
-        "hanzi": "不过",
-        "pinyin": "Búguò",
         "meaning": "하지만",
         "a": "不过我不喜欢这个颜色",
         "aP": "Búguò wǒ bù xǐhuān zhège yánsè",
