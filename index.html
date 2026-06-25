@@ -218,7 +218,15 @@ function downloadModificationJS(part){const partKey=getPartKey(part);const mods=
       if(target&&target.closest&&target.closest('input,textarea,select,button,.modal-backdrop'))return;
       if(!/[\u3400-\u9fff]/.test(selected))return;
       e.preventDefault();
-      selectedWordContext=guessWordPrefillFromSelection(selected);
+      let sourceArea='auto';
+
+      if(target&&target.closest&&target.closest('#question-area')){
+        sourceArea='question';
+      }else if(target&&target.closest&&target.closest('#answer-area')){
+        sourceArea='answer';
+      }
+      
+      selectedWordContext=guessWordPrefillFromSelection(selected,sourceArea);
       showWordContextMenu(e.clientX,e.clientY);
     });
     document.addEventListener('click',e=>{
