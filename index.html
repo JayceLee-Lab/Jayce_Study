@@ -17,7 +17,7 @@
 <body>
   <div id="main-menu" class="menu-container">
     <h1>🇨🇳 TSC 스피킹 마스터</h1>
-    <p class="help-text" style="margin-top:0;margin-bottom:24px">Ver2.3</p>
+    <p class="help-text" style="margin-top:0;margin-bottom:24px">Ver2.4</p>
     <div class="config-section">
       <div class="config-row"><strong>🔥 난이도 설정:</strong><select id="difficulty-select"><option value="easy">Easy (힌트 자동공개)</option><option value="medium" selected>Medium (기본)</option><option value="hard">Hard (병음 가리기)</option></select></div>
       <div class="config-row"><strong>🎙️ 목소리 선택:</strong><select id="voice-select" onclick="event.stopPropagation()" onmousedown="event.stopPropagation()" onchange="event.stopPropagation(); saveVoiceSetting();"><option value="">기본 목소리</option></select></div>
@@ -81,6 +81,7 @@
     function guessWordPrefillFromSelection(rawText,sourceArea='auto'){
       const hanzi=cleanSelectedText(rawText);
       if(!hanzi||!currentItem)return {hanzi,pinyin:'',meaning:'',a:'',aP:''};
+
       const q=currentItem.q||'';
       const qP=currentItem.qP||'';
       const ans=currentItem.a||'';
@@ -186,3 +187,62 @@ function downloadModificationJS(part){const partKey=getPartKey(part);const mods=
       let chartDates=getAnalyticsDates(daily,period);
 
       // 선택된 최근 기간에 기록이 없으면 그래프는 전체 기록으로 fallback
+      if(!chartDates.some(d=>getTotalAttempts(daily[d])>0||(daily[d]?.seconds||0)>0)){
+        chartDates=dates;
+      }
+
+      const caption=document.getElementById('period-caption');
+      if(caption){
+        caption.innerText=period==='all'?'전체 기간 기준':`최근 ${period}일 기준`;
+      }
+
+      const today=todayKey();
+      const todayData=daily[today]||{seconds:0,correct:0,wrong:0};
+
+      document.getElementById('streak-days').innerText=calcStreak(dates)+'일';
+
+      // 핵심 수정: 최근 정답률 카드는 날짜 배열에 의존하지 않고 저장된 전체 daily 합계로 계산
+      const allCorrect=dates.reduce((sum,d)=>sum+safeNum(daily[d]?.correct),0);
+      const allWrong=dates.reduce((sum,d)=>sum+safeNum(daily[d]?.wrong),0);
+      const allAttempts=allCorrect+allWrong;
+
+      document.getElementById('recent-accuracy').innerText=
+        allAttempts?Math.round(allCorrect/allAttempts*100)+'%':'0%';
+
+      document.getElementById('today-time').innerText=formatMinutes(todayData.seconds||0);
+
+      const weak=Object.values(learningState.weakItems||{})
+        .filter(i=>safeNum(i.wrong)>safeNum(i.correct));
+
+      document.getElementById('weak-count').innerText=weak.length+'개';
+
+      renderAccuracyChart(chartDates,daily);
+      renderTimeChart(chartDates,daily);
+      renderWeakList(weak);
+    }
+    function calcStreak(dates){let streak=0,d=new Date(todayKey()+'T00:00:00');const set=new Set(dates.filter(x=>getTotalAttempts(learningState.daily[x])>0));while(set.has(d.toISOString().slice(0,10))){streak++;d.setDate(d.getDate()-1)}return streak}function formatMinutes(sec){const m=Math.round((sec||0)/60);return m<60?m+'분':Math.floor(m/60)+'시간 '+(m%60)+'분'}function getAnalyticsDates(daily,period){const keys=Object.keys(daily||{}).sort();if(period==='all')return keys;if(!keys.length)return [];const n=parseInt(period,10)||7;const dates=[];const d=new Date(todayKey()+'T00:00:00');d.setDate(d.getDate()-n+1);for(let i=0;i<n;i++){dates.push(d.toISOString().slice(0,10));d.setDate(d.getDate()+1)}return dates}function svgDateLabel(d,total,i){if(total>45&&i%Math.ceil(total/12)!==0&&i!==total-1)return '';return d.slice(5)}function renderAccuracyChart(dates,daily){const el=document.getElementById('accuracy-chart');const active=dates.filter(d=>getTotalAttempts(daily[d])>0);if(!active.length){el.innerHTML='<div class="empty-state">학습 기록이 쌓이면 정답률 그래프가 표시됩니다.</div>';return}const w=Math.max(520,dates.length*28),h=230,pad={l:42,r:18,t:20,b:42},plotW=w-pad.l-pad.r,plotH=h-pad.t-pad.b;const vals=dates.map(d=>getAccuracyPercent(daily[d]));const points=vals.map((v,i)=>v==null?null:[pad.l+(dates.length===1?plotW/2:(plotW*i/(dates.length-1))),pad.t+plotH-(v/100*plotH),v]).filter(Boolean);const line=points.map(p=>p[0]+','+p[1]).join(' ');const labels=dates.map((d,i)=>{const x=pad.l+(dates.length===1?plotW/2:(plotW*i/(dates.length-1))),lbl=svgDateLabel(d,dates.length,i);return lbl?`<text class="axis-label" x="${x}" y="${h-16}" text-anchor="middle">${lbl}</text>`:''}).join('');el.innerHTML=`<div class="graph-wrap"><svg class="analytics-svg" viewBox="0 0 ${w} ${h}" role="img" aria-label="정답률 추이 그래프"><line class="grid-line" x1="${pad.l}" y1="${pad.t}" x2="${w-pad.r}" y2="${pad.t}"/><line class="grid-line" x1="${pad.l}" y1="${pad.t+plotH/2}" x2="${w-pad.r}" y2="${pad.t+plotH/2}"/><line class="grid-line" x1="${pad.l}" y1="${pad.t+plotH}" x2="${w-pad.r}" y2="${pad.t+plotH}"/><text class="axis-label" x="10" y="${pad.t+4}">100%</text><text class="axis-label" x="16" y="${pad.t+plotH/2+4}">50%</text><text class="axis-label" x="23" y="${pad.t+plotH+4}">0%</text><polyline class="accuracy-line" points="${line}"/>${points.map(p=>`<circle class="accuracy-dot" cx="${p[0]}" cy="${p[1]}" r="4"><title>${p[2]}%</title></circle>`).join('')}${labels}</svg></div>`}function renderTimeChart(dates,daily){const el=document.getElementById('time-chart');const active=dates.filter(d=>(daily[d]?.seconds||0)>0);if(!active.length){el.innerHTML='<div class="empty-state">학습 시간이 쌓이면 날짜별 시간 그래프가 표시됩니다.</div>';return}const w=Math.max(520,dates.length*28),h=230,pad={l:42,r:18,t:20,b:42},plotW=w-pad.l-pad.r,plotH=h-pad.t-pad.b;const max=Math.max(...dates.map(d=>daily[d]?.seconds||0),1);const vals=dates.map(d=>daily[d]?.seconds||0);const points=vals.map((v,i)=>[pad.l+(dates.length===1?plotW/2:(plotW*i/(dates.length-1))),pad.t+plotH-(v/max*plotH),v]);const line=points.map(p=>p[0]+','+p[1]).join(' ');const labels=dates.map((d,i)=>{const x=pad.l+(dates.length===1?plotW/2:(plotW*i/(dates.length-1))),lbl=svgDateLabel(d,dates.length,i);return lbl?`<text class="axis-label" x="${x}" y="${h-16}" text-anchor="middle">${lbl}</text>`:''}).join('');el.innerHTML=`<div class="graph-wrap"><svg class="analytics-svg" viewBox="0 0 ${w} ${h}" role="img" aria-label="날짜별 학습 시간 그래프"><line class="grid-line" x1="${pad.l}" y1="${pad.t}" x2="${w-pad.r}" y2="${pad.t}"/><line class="grid-line" x1="${pad.l}" y1="${pad.t+plotH/2}" x2="${w-pad.r}" y2="${pad.t+plotH/2}"/><line class="grid-line" x1="${pad.l}" y1="${pad.t+plotH}" x2="${w-pad.r}" y2="${pad.t+plotH}"/><text class="axis-label" x="8" y="${pad.t+4}">${formatMinutes(max)}</text><text class="axis-label" x="18" y="${pad.t+plotH+4}">0분</text><polyline class="time-line" points="${line}"/>${points.map(p=>`<circle class="time-dot" cx="${p[0]}" cy="${p[1]}" r="4"><title>${formatMinutes(p[2])}</title></circle>`).join('')}${labels}</svg></div>`}function renderWeakList(weak){const el=document.getElementById('weak-list');const items=weak.sort((a,b)=>(b.wrong-b.correct)-(a.wrong-a.correct)).slice(0,10);if(!items.length){el.innerHTML='<div class="empty-state">아직 약한 표현이 없습니다. 오답이 생기면 자동으로 추가됩니다.</div>';return}el.innerHTML=items.map(i=>`<div class="weak-item"><span class="pill">오답 ${i.wrong}회</span><span class="pill">정답 ${i.correct}회</span><strong>${escapeHTML(i.a||i.q||'(답변 없음)')}</strong><div class="weak-meta">${escapeHTML(i.aP||i.qP||'')} · ${getPartLabel(i.part)} ${i.originalNo?`#${i.originalNo}`:''}</div><div class="weak-meta">${escapeHTML(i.hint||i.keywords||'')}</div></div>`).join('')}function escapeHTML(str){return String(str||'').replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]))}
+    function exportLearningHistory(){downloadText(`tsc_learning_history_${todayKey()}.json`,JSON.stringify(loadLearningState(),null,2),'application/json;charset=utf-8;')}function importLearningHistory(event){const file=event.target.files&&event.target.files[0];event.target.value='';if(!file)return;const reader=new FileReader();reader.onload=function(){try{const imported=JSON.parse(reader.result);if(!imported||typeof imported!=='object')throw new Error('invalid');if(!imported.daily||typeof imported.daily!=='object')throw new Error('missing daily');if(!imported.weakItems||typeof imported.weakItems!=='object')imported.weakItems={};if(!imported.sessions||!Array.isArray(imported.sessions))imported.sessions=[];const current=loadLearningState();const mode=confirm('확인을 누르면 기존 이력에 합치고, 취소를 누르면 가져온 이력으로 교체합니다.');let next=imported;if(mode){next=mergeLearningHistory(current,imported)}localStorage.setItem(HISTORY_KEY,JSON.stringify(next));learningState=loadLearningState();renderAnalytics();alert('이력 가져오기가 완료되었습니다.');}catch(e){alert('가져오기 실패: 올바른 학습 이력 JSON 파일인지 확인해주세요.')}};reader.readAsText(file)}function mergeLearningHistory(base,imported){const merged={daily:{...(base.daily||{})},weakItems:{...(base.weakItems||{})},sessions:[...(base.sessions||[])]};Object.entries(imported.daily||{}).forEach(([date,day])=>{if(!merged.daily[date]){merged.daily[date]=day;return}const target=merged.daily[date];target.attempts=(target.attempts||0)+(day.attempts||0);target.correct=(target.correct||0)+(day.correct||0);target.wrong=(target.wrong||0)+(day.wrong||0);target.seconds=(target.seconds||0)+(day.seconds||0);target.parts=mergeStatMap(target.parts,day.parts);target.types=mergeStatMap(target.types,day.types)});Object.entries(imported.weakItems||{}).forEach(([key,item])=>{if(!merged.weakItems[key]){merged.weakItems[key]=item;return}const target=merged.weakItems[key];target.wrong=(target.wrong||0)+(item.wrong||0);target.correct=(target.correct||0)+(item.correct||0);target.lastWrong=maxIso(target.lastWrong,item.lastWrong);target.lastSeen=maxIso(target.lastSeen,item.lastSeen);['q','qP','a','aP','hint','keywords','part','originalNo'].forEach(k=>{if(!target[k]&&item[k])target[k]=item[k]})});merged.sessions=merged.sessions.concat(imported.sessions||[]);return merged}function mergeStatMap(a,b){const out={...(a||{})};Object.entries(b||{}).forEach(([k,v])=>{if(!out[k])out[k]={attempts:0,correct:0,wrong:0};out[k].attempts=(out[k].attempts||0)+(v.attempts||0);out[k].correct=(out[k].correct||0)+(v.correct||0);out[k].wrong=(out[k].wrong||0)+(v.wrong||0)});return out}function maxIso(a,b){if(!a)return b||null;if(!b)return a;return new Date(a)>new Date(b)?a:b}function resetLearningHistory(){if(confirm('학습 이력, 약한 표현, 날짜별 통계를 모두 삭제할까요?')){localStorage.removeItem(HISTORY_KEY);learningState=loadLearningState();renderAnalytics()}}function triggerDownload(filename,text,type){const blob=new Blob([text],{type});const a=document.createElement('a');const url=URL.createObjectURL(blob);a.href=url;a.download=filename;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(url);a.remove()},1200)}function downloadText(filename,text,type){triggerDownload(filename,text,type)}function scheduleDownload(filename,text,type,delay=0){setTimeout(()=>triggerDownload(filename,text,type),delay)}
+    document.addEventListener('contextmenu',e=>{
+      if(document.getElementById('study-page').classList.contains('hidden'))return;
+      const selected=String(window.getSelection?window.getSelection().toString():'').trim();
+      if(!selected)return;
+      const target=e.target;
+      if(target&&target.closest&&target.closest('input,textarea,select,button,.modal-backdrop'))return;
+      if(!/[\u3400-\u9fff]/.test(selected))return;
+      e.preventDefault();
+      let sourceArea='auto';
+      if(target&&target.closest&&target.closest('#question-area'))sourceArea='question';
+      else if(target&&target.closest&&target.closest('#answer-area'))sourceArea='answer';
+      selectedWordContext=guessWordPrefillFromSelection(selected,sourceArea);
+      showWordContextMenu(e.clientX,e.clientY);
+    });
+    document.addEventListener('click',e=>{
+      const menu=document.getElementById('word-context-menu');
+      if(menu&&menu.style.display==='block'&&!(e.target.closest&&e.target.closest('#word-context-menu')))hideWordContextMenu();
+    });
+    window.addEventListener('scroll',hideWordContextMenu,true);
+    window.addEventListener('popstate',()=>{if(!document.getElementById('study-page').classList.contains('hidden')){try{history.pushState({study:true},'',location.href)}catch(e){}confirmExit();}});document.addEventListener('visibilitychange',()=>{if(document.hidden)addStudySeconds();else lastActiveAt=Date.now()});window.addEventListener('beforeunload',addStudySeconds);window.onload=()=>{updateSpeedText();loadVoices();if(window.speechSynthesis)window.speechSynthesis.onvoiceschanged=loadVoices;renderAnalytics()};
+  </script>
+</body>
+</html>
+ 
