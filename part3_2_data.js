@@ -793,8 +793,8 @@ const PART3_2_DATA = [
 		"weight": 1
 	},
 	{
-		"q": "（你）几点从家里出发去公司？",
-		"qP": "(Nǐ) jǐ diǎn cóng jiālǐ chūfā qù gōngsī?",
+		"q": "你几点从家里出发去公司？",
+		"qP": "Nǐ jǐ diǎn cóng jiālǐ chūfā qù gōngsī?",
 		"a": "我一般早上七点，从家出发，公司离我家有点儿远.",
 		"aP": "Wǒ yìbān zǎoshang qī diǎn, cóng jiā chūfā, gōngsī lí wǒ jiā yǒudiǎnr yuǎn.",
 		"hint": "출근 시간과 거리 관련 대화입니다.",
