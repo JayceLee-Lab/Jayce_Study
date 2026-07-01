@@ -643,7 +643,7 @@ const PART3_2_DATA = [
 		"q": "你在看什么书？",
 		"qP": "Nǐ zài kàn shénme shū?",
 		"a": "我在看汉语书。下个星期我有TSC考试。",
-		"aP": "WWǒ zài kàn Hànyǔ shū. Xià ge xīngqī wǒ yǒu TSC kǎoshì.",
+		"aP": "Wǒ zài kàn Hànyǔ shū. Xià ge xīngqī wǒ yǒu TSC kǎoshì.",
 		"hint": "읽고 있는 책에 대해 이야기하는 대화입니다.",
 		"keywords": "汉语书 (Hànyǔ shū), TSC考试 (TSC kǎoshì), 下个星期 (xià ge xīngqī)",
 		"weight": 1
