@@ -414,5 +414,253 @@ const WORD_DATA = [
         "a": "这个周末我给你介绍男朋友，怎么样？",
         "aP": "Zhège zhōumò wǒ gěi nǐ jièshào nán péngyou, zěnmeyàng?",
         "weight": 1
+    },
+    {
+        "hanzi": "打开",
+        "pinyin": "dǎkāi",
+        "meaning": "열다",
+        "a": "太谢谢了，这是什么？我可以打开看看吗？",
+        "aP": "Tài xièxie le, zhè shì shénme? Wǒ kěyǐ dǎkāi kànkan ma?",
+        "weight": 1
+    },
+    {
+        "hanzi": "所以",
+        "pinyin": "suǒyǐ",
+        "meaning": "그래서",
+        "a": "去过，很喜欢旅行，所以我去过很多国家。",
+        "aP": "Qùguo, hěn xǐhuan lǚxíng, suǒyǐ wǒ qùguo hěn duō guójiā.",
+        "weight": 1
+    },
+    {
+        "hanzi": "国家",
+        "pinyin": "guójiā.",
+        "meaning": "국가",
+        "a": "去过，很喜欢旅行，所以我去过很多国家。",
+        "aP": "Qùguo, hěn xǐhuan lǚxíng, suǒyǐ wǒ qùguo hěn duō guójiā.",
+        "weight": 1
+    },
+    {
+        "hanzi": "一定",
+        "pinyin": "yídìng",
+        "meaning": "반드시",
+        "a": "定了，打算明年5月结婚，到时候你一定要来啊。",
+        "aP": "Dìng le, dǎsuàn míngnián wǔ yuè jiéhūn, dào shíhou nǐ yídìng yào lái a.",
+        "weight": 1
+    },
+    {
+        "hanzi": "到时候",
+        "pinyin": "dào shíhou",
+        "meaning": "그때가 되면",
+        "a": "定了，打算明年5月结婚，到时候你一定要来啊。",
+        "aP": "Dìng le, dǎsuàn míngnián wǔ yuè jiéhūn, dào shíhou nǐ yídìng yào lái a.",
+        "weight": 1
+    },
+    {
+        "hanzi": "参加",
+        "pinyin": "cānjiā",
+        "meaning": "참석하다",
+        "a": "你参加小李的婚礼吗？",
+        "aP": "Nǐ cānjiā Xiǎo Lǐ de hūnlǐ ma?",
+        "weight": 1
+    },
+    {
+        "hanzi": "告诉",
+        "pinyin": "gàosu",
+        "meaning": "말하다",
+        "a": "那天我要去中国出差，不能参加，我已经告诉小李了。",
+        "aP": "nà tiān wǒ yào qù Zhōngguó chūchāi, bù néng cānjiā, wǒ yǐjīng gàosu Xiǎo Lǐ le.",
+        "weight": 1
+    },
+    {
+        "hanzi": "因为",
+        "pinyin": "yīnwèi",
+        "meaning": "왜냐하면",
+        "a": "我常来，因为我儿子喜欢动物。",
+        "aP": "Wǒ cháng lái, yīnwèi wǒ érzi xǐhuan dòngwù.",
+        "weight": 1
+    },
+    {
+        "hanzi": "凉快",
+        "pinyin": "liángkuai",
+        "meaning": "시원하다.",
+        "a": "我更喜欢秋天。秋天凉快，红叶非常漂亮。",
+        "aP": "Wǒ gèng xǐhuan qiūtiān. Qiūtiān liángkuai, hóngyè fēicháng piàoliang.",
+        "weight": 1
+    },
+    {
+        "hanzi": "不过",
+        "pinyin": "búguò",
+        "meaning": "하지만",
+        "a": "今天天气很好，不过有点儿热，天气预报说今天最高气温32度。",
+        "aP": "Jīntiān tiānqì hěn hǎo, búguò yǒudiǎnr rè, tiānqì yùbào shuō jīntiān zuìgāo qìwēn sānshí'èr dù.",
+        "weight": 1
+    },
+    {
+        "hanzi": "会下雨",
+        "pinyin": "huì xiàyǔ.",
+        "meaning": "비가 올 것이다.",
+        "a": "听说今天晚上会下雨。",
+        "aP": "Tīngshuō jīntiān wǎnshang huì xiàyǔ.",
+        "weight": 1
+    },
+    {
+        "hanzi": "注意",
+        "pinyin": "zhùyì",
+        "meaning": "주의하다.",
+        "a": "天冷了，你要注意感冒。",
+        "aP": "Tiān lěng le, nǐ yào zhùyì gǎnmào.",
+        "weight": 1
+    },
+    {
+        "hanzi": "堵车",
+        "pinyin": "Dǔchē",
+        "meaning": "교통 체증",
+        "a": "堵车了，我可能要晚了。",
+        "aP": "Dǔchē le, wǒ kěnéng yào wǎn le.",
+        "weight": 1
+    },
+    {
+        "hanzi": "路上小心",
+        "pinyin": "lùshang xiǎoxīn",
+        "meaning": "가시는 길 조심하세요.",
+        "a": "没关系，我在咖啡厅等你，路上小心。",
+        "aP": "Méiguānxi, wǒ zài kāfēitīng děng nǐ, lùshang xiǎoxīn.",
+        "weight": 1
+    },
+    {
+        "hanzi": "路上",
+        "pinyin": "Lùshang",
+        "meaning": "가는 길에",
+        "a": "你怎么来晚了？路上出了什么事？",
+        "aP": "Nǐ zěnme lái wǎn le? Lùshang chū le shénme shì?",
+        "weight": 1
+    },
+    {
+        "hanzi": "好像赶不上",
+        "pinyin": "hǎoxiàng gǎn bu shàng",
+        "meaning": "도저히 따라잡을 수 없다.",
+        "a": "我们好像赶不上火车了。",
+        "aP": "Wǒmen hǎoxiàng gǎn bu shàng huǒchē le.",
+        "weight": 1
+    },
+    {
+        "hanzi": "坐船",
+        "pinyin": "zuòchuán",
+        "meaning": "배를 타다.",
+        "a": "我觉得坐船太慢了，坐飞机吧，又快又方便。",
+        "aP": "Wǒ juéde zuòchuán tài màn le, zuò fēijī ba, yòu kuài yòu fāngbiàn.",
+        "weight": 1
+    },
+    {
+        "hanzi": "开车",
+        "pinyin": "kāichē",
+        "meaning": "운전하다.",
+        "a": "你一般什么时候开车？",
+        "aP": "Nǐ yìbān shénme shíhou kāichē?",
+        "weight": 1
+    },
+    {
+        "hanzi": "一个小时",
+        "pinyin": "yí ge xiǎoshí.",
+        "meaning": "한 시간",
+        "a": "我每天开车上下班。我家离公司比较远，开车要一个小时。",
+        "aP": "Wǒ měitiān kāichē shàngxiàbān. Wǒ jiā lí gōngsī bǐjiào yuǎn, kāichē yào yí ge xiǎoshí.",
+        "weight": 1
+    },
+    {
+        "hanzi": "有空的时",
+        "pinyin": "yǒu kòng de shíhou",
+        "meaning": "시간이 날 때",
+        "a": "是啊，我买了新房子，有空的时候来我家玩吧。",
+        "aP": "Shì a, wǒ mǎi le xīn fángzi, yǒu kòng de shíhou lái wǒ jiā wán ba.",
+        "weight": 1
+    },
+    {
+        "hanzi": "玩吧",
+        "pinyin": "wán ba.",
+        "meaning": "놀자",
+        "a": "是啊，我买了新房子，有空的时候来我家玩吧。",
+        "aP": "Shì a, wǒ mǎi le xīn fángzi, yǒu kòng de shíhou lái wǒ jiā wán ba.",
+        "weight": 1
+    },
+    {
+        "hanzi": "预订",
+        "pinyin": "yùdìng",
+        "meaning": "예약하다.",
+        "a": "你预订什么时候的火车票？",
+        "aP": "Nǐ yùdìng shénme shíhou de huǒchēpiào?",
+        "weight": 1
+    },
+    {
+        "hanzi": "刷卡",
+        "pinyin": "shuākǎ",
+        "meaning": "카드 결제",
+        "a": "我要两张明天上午8点的，可以刷卡吗？",
+        "aP": "Wǒ yào liǎng zhāng míngtiān shàngwǔ bā diǎn de, kěyǐ shuākǎ ma?",
+        "weight": 1
+    },
+    {
+        "hanzi": "感觉怎么样",
+        "pinyin": "gǎnjué zěnmeyàng?",
+        "meaning": "느낌이 어때요?",
+        "a": "你第一次坐船，感觉怎么样？",
+        "aP": "Nǐ dì yí cì zuò chuán, gǎnjué zěnmeyàng?",
+        "weight": 1
+    },
+    {
+        "hanzi": "睡",
+        "pinyin": "shuì",
+        "meaning": "수면",
+        "a": "最近睡得怎么样？",
+        "aP": "Zuìjìn shuì de zěnmeyàng?",
+        "weight": 1
+    },
+    {
+        "hanzi": "失眠",
+        "pinyin": "shīmián",
+        "meaning": "불면증",
+        "a": "我最近睡得不好，常常失眠，所以白天很累。",
+        "aP": "Wǒ zuìjìn shuì de bù hǎo, chángcháng shīmián, suǒyǐ báitiān hěn lèi.",
+        "weight": 1
+    },
+    {
+        "hanzi": "白天",
+        "pinyin": "báitiān",
+        "meaning": "낮에",
+        "a": "我最近睡得不好，常常失眠，所以白天很累。",
+        "aP": "Wǒ zuìjìn shuì de bù hǎo, chángcháng shīmián, suǒyǐ báitiān hěn lèi.",
+        "weight": 1
+    },
+    {
+        "hanzi": "脸色",
+        "pinyin": "liǎnsè",
+        "meaning": "얼굴",
+        "a": "你的脸色不太好。",
+        "aP": "Nǐ de liǎnsè bú tài hǎo.",
+        "weight": 1
+    },
+    {
+        "hanzi": "发烧",
+        "pinyin": "fāshāo",
+        "meaning": "발열",
+        "a": "我头疼、发烧，全身不舒服，我要去医院看看。",
+        "aP": "Wǒ tóuténg, fāshāo, quánshēn bù shūfu, wǒ yào qù yīyuàn kànkan.",
+        "weight": 1
+    },
+    {
+        "hanzi": "全身",
+        "pinyin": "quánshēn",
+        "meaning": "전신",
+        "a": "我头疼、发烧，全身不舒服，我要去医院看看。",
+        "aP": "Wǒ tóuténg, fāshāo, quánshēn bù shūfu, wǒ yào qù yīyuàn kànkan.",
+        "weight": 1
+    },
+    {
+        "hanzi": "看过医生",
+        "pinyin": "kàn guò yīshēng",
+        "meaning": "의사의 진찰을 받았다.",
+        "a": "你最近去医院看过医生吗？",
+        "aP": "Nǐ zuìjìn qù yīyuàn kàn guò yīshēng ma?",
+        "weight": 1
     }
 ];
