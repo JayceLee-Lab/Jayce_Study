@@ -286,5 +286,133 @@ const WORD_DATA = [
         "a": "我觉得一个人住比较自由。",
         "aP": "Wǒ juéde yí ge rén zhù bǐjiào zìyóu.",
         "weight": 1
+    },
+    {
+        "hanzi": "早起",
+        "pinyin": "zǎoqǐ",
+        "meaning": "일찍 일어나다.",
+        "a": "你每天早起吗？",
+        "aP": "Nǐ měitiān zǎoqǐ ma?",
+        "weight": 1
+    },
+    {
+        "hanzi": "早睡早起",
+        "pinyin": "Zǎoshuì zǎoqǐ",
+        "meaning": "일찍 자고, 일찍 일어나다.",
+        "a": "早睡早起对身体好。",
+        "aP": "Zǎoshuì zǎoqǐ duì shēntǐ hǎo.",
+        "weight": 1
+    },
+    {
+        "hanzi": "自由",
+        "pinyin": "zìyóu.",
+        "meaning": "자유롭다.",
+        "a": "我觉得一个人住比较自由。",
+        "aP": "Wǒ juéde yí ge rén zhù bǐjiào zìyóu.",
+        "weight": 1
+    },
+    {
+        "hanzi": "上个月",
+        "pinyin": "shàng ge yuè",
+        "meaning": "지난 달",
+        "a": "我上个月跟家人一起去济州岛旅行了.",
+        "aP": "wǒ shàng ge yuè gēn jiārén yìqǐ qù Jìzhōudǎo lǚxíng le.",
+        "weight": 1
+    },
+    {
+        "hanzi": "可爱",
+        "pinyin": "kě'ài",
+        "meaning": "귀엽다.",
+        "a": "她很可爱，她是谁。",
+        "aP": "Tā hěn kě'ài, tā shì shéi.",
+        "weight": 1
+    },
+    {
+        "hanzi": "好消息",
+        "pinyin": "hǎo xiāoxi",
+        "meaning": "좋은 소식",
+        "a": "告诉你一个好消息，我买新房子了。",
+        "aP": "Gàosu nǐ yí ge hǎo xiāoxi, wǒ mǎi xīn fángzi le.",
+        "weight": 1
+    },
+    {
+        "hanzi": "新房子",
+        "pinyin": "xīn fángzi",
+        "meaning": "새 집",
+        "a": "我买新房子了。",
+        "aP": "wǒ mǎi xīn fángzi le.",
+        "weight": 1
+    },
+    {
+        "hanzi": "告诉",
+        "pinyin": "Gàosu",
+        "meaning": "말하다.",
+        "a": "告诉你一个好消息.",
+        "aP": "Gàosu nǐ yí ge hǎo xiāoxi.",
+        "weight": 1
+    },
+    {
+        "hanzi": "不见了",
+        "pinyin": "bújiàn le.",
+        "meaning": "사라졌다.",
+        "a": "我的钱包不见了。",
+        "aP": "Wǒ de qiánbāo bújiàn le.",
+        "weight": 1
+    },
+    {
+        "hanzi": "好好想想",
+        "pinyin": "Hǎohǎo xiǎngxiang",
+        "meaning": "잘 생각해보세요.",
+        "a": "好好想想，我帮你找。",
+        "aP": "Hǎohǎo xiǎngxiang, wǒ bāng nǐ zhǎo.",
+        "weight": 1
+    },
+    {
+        "hanzi": "又坏",
+        "pinyin": "yòu huài",
+        "meaning": "또 고장나다.",
+        "a": "我的手机又坏（出毛病/出故障）了。",
+        "aP": "Wǒ de shǒujī yòu huài (chū máobìng / chū gùzhàng) le.",
+        "weight": 1
+    },
+    {
+        "hanzi": "升职",
+        "pinyin": "shēngzhí",
+        "meaning": "승진",
+        "a": "我老公升职当部长了。",
+        "aP": "Wǒ lǎogōng shēngzhí dāng bùzhǎng le.",
+        "weight": 1
+    },
+    {
+        "hanzi": "请客",
+        "pinyin": "qǐngkè.",
+        "meaning": "한턱내다.",
+        "a": "真的吗？太好了！恭喜恭喜，今天你请客。",
+        "aP": "Zhēn de ma? Tài hǎo le! Gōngxǐ gōngxǐ, jīntiān nǐ qǐngkè.",
+        "weight": 1
+    },
+    {
+        "hanzi": "分手了",
+        "pinyin": "fēnshǒu le.",
+        "meaning": "헤어졌다.",
+        "a": "我跟女朋友分手了。",
+        "aP": "Wǒ gēn nǚ péngyou fēnshǒu le.",
+        "weight": 1
+    },
+    {
+        "hanzi": "别太伤心",
+        "pinyin": "bié tài shāngxīn",
+        "meaning": "너무 슬퍼하지 마세요.",
+        "a": "别太伤心，我们一起喝酒，我请你。",
+        "aP": "bié tài shāngxīn, wǒmen yìqǐ hējiǔ, wǒ qǐng nǐ.",
+        "weight": 1
+    },
+    {
+        "hanzi": "介绍",
+        "pinyin": "jièshào",
+        "meaning": "소개하다.",
+        "a": "这个周末我给你介绍男朋友，怎么样？",
+        "aP": "Zhège zhōumò wǒ gěi nǐ jièshào nán péngyou, zěnmeyàng?",
+        "weight": 1
     }
 ];
