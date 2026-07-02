@@ -855,7 +855,7 @@ const WORD_DATA = [
         "aP": "Jīntiān nǐ yǒu jǐ jié kè?",
         "weight": 1
     },
-        {
+    {
         "hanzi": "兴趣",
         "pinyin": "xìngqù",
         "meaning": "관심",
