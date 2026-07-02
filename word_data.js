@@ -662,5 +662,197 @@ const WORD_DATA = [
         "a": "你最近去医院看过医生吗？",
         "aP": "Nǐ zuìjìn qù yīyuàn kàn guò yīshēng ma?",
         "weight": 1
+    },
+    {
+        "hanzi": "出院",
+        "pinyin": "chūyuàn",
+        "meaning": "퇴원",
+        "a": "你什么时候能出院？",
+        "aP": "Nǐ shénme shíhou néng chūyuàn?",
+        "weight": 1
+    },
+    {
+        "hanzi": "担心",
+        "pinyin": "dānxīn",
+        "meaning": "걱정하다.",
+        "a": "你不用担心。现在好多了。",
+        "aP": "nǐ bú yòng dānxīn. Xiànzài hǎoduō le.",
+        "weight": 1
+    },
+    {
+        "hanzi": "好像",
+        "pinyin": "hǎoxiàng",
+        "meaning": "~ 한 것 같다.",
+        "a": "我的狗好像感冒了",
+        "aP": "Wǒ de gǒu hǎoxiàng gǎnmào le.",
+        "weight": 1
+    },
+    {
+        "hanzi": "看起来",
+        "pinyin": "kànqǐlái",
+        "meaning": "~ 한 것 처럼 보이다.",
+        "a": "小李看起来很累，他怎么了？",
+        "aP": "Xiǎo Lǐ kànqǐlái hěn lèi, tā zěnme le?",
+        "weight": 1
+    },
+    {
+        "hanzi": "加班",
+        "pinyin": "jiābān",
+        "meaning": "야근",
+        "a": "小李最近每天加班",
+        "aP": "Xiǎo Lǐ zuìjìn měitiān jiābān",
+        "weight": 1
+    },
+    {
+        "hanzi": "劳累过度",
+        "pinyin": "láolèi guòdù.",
+        "meaning": "과로하다.",
+        "a": "很晚才回家，他可能劳累过度。",
+        "aP": "hěn wǎn cái huí jiā, tā kěnéng láolèi guòdù.",
+        "weight": 1
+    },
+    {
+        "hanzi": "很晚才",
+        "pinyin": "hěn wǎn cái",
+        "meaning": "아주 늦게서야 비로소",
+        "a": "很晚才回家，他可能劳累过度。",
+        "aP": "hěn wǎn cái huí jiā, tā kěnéng láolèi guòdù.",
+        "weight": 1
+    },
+    {
+        "hanzi": "体检 结果",
+        "pinyin": "Tǐjiǎn jiéguǒ",
+        "meaning": "건강검진 결과",
+        "a": "体检结果出来了吗？",
+        "aP": "Tǐjiǎn jiéguǒ chūlai le ma?",
+        "weight": 1
+    },
+    {
+        "hanzi": "不行",
+        "pinyin": "bù xíng",
+        "meaning": "불가능하다.",
+        "a": "这周不行，下周怎么样？",
+        "aP": "Zhè zhōu bù xíng, xià zhōu zěnmeyàng?",
+        "weight": 1
+    },
+    {
+        "hanzi": "定期",
+        "pinyin": "dìngqī",
+        "meaning": "정기적으로",
+        "a": "你定期去检查身体吗？",
+        "aP": "Nǐ dìngqī qù jiǎnchá shēntǐ ma?",
+        "weight": 1
+    },
+    {
+        "hanzi": "检查身体",
+        "pinyin": "jiǎnchá shēntǐ",
+        "meaning": "건강검진",
+        "a": "你定期去检查身体吗？",
+        "aP": "Nǐ dìngqī qù jiǎnchá shēntǐ ma?",
+        "weight": 1
+    },
+    {
+        "hanzi": "通过面试",
+        "pinyin": "tōngguò miànshì",
+        "meaning": "면접 합격",
+        "a": "我通过面试了吗？太好了，谢谢您，我明天就可以上班。",
+        "aP": "Wǒ tōngguò miànshì le ma? Tài hǎo le, xièxie nín, wǒ míngtiān jiù kěyǐ shàngbān.",
+        "weight": 1
+    },
+    {
+        "hanzi": "方法",
+        "pinyin": "fāngfǎ",
+        "meaning": "방법",
+        "a": "你学习汉语的好方法是什么？",
+        "aP": "Nǐ xuéxí Hànyǔ de hǎo fāngfǎ shì shénme?",
+        "weight": 1
+    },
+    {
+        "hanzi": "重要",
+        "pinyin": "zhòngyào",
+        "meaning": "중요하다.",
+        "a": "我觉得学习汉语会话最重要",
+        "aP": "Wǒ juéde xuéxí Hànyǔ huìhuà zuì zhòngyào",
+        "weight": 1
+    },
+    {
+        "hanzi": "聊天",
+        "pinyin": "liáotiān.",
+        "meaning": "채팅",
+        "a": "所以我常常找中国朋友聊天。",
+        "aP": "suǒyǐ wǒ chángcháng zhǎo Zhōngguó péngyou liáotiān.",
+        "weight": 1
+    },
+    {
+        "hanzi": "考试准备",
+        "pinyin": "Kǎoshì zhǔnbèi",
+        "meaning": "시험 준비",
+        "a": "考试准备得怎么样？",
+        "aP": "Kǎoshì zhǔnbèi de zěnmeyàng?",
+        "weight": 1
+    },
+    {
+        "hanzi": "紧张",
+        "pinyin": "jǐnzhāng",
+        "meaning": "긴장하다.",
+        "a": "我已经准备好了，不过很紧张",
+        "aP": "Wǒ yǐjīng zhǔnbèi hǎo le, búguò hěn jǐnzhāng.",
+        "weight": 1
+    },
+    {
+        "hanzi": "好像不太难",
+        "pinyin": "hǎoxiàng bú tài nán",
+        "meaning": "어렵지 않은 것 같다.",
+        "a": "这次考试好像不太难，你觉得呢？",
+        "aP": "Zhè cì kǎoshì hǎoxiàng bú tài nán, nǐ juéde ne?",
+        "weight": 1
+    },
+    {
+        "hanzi": "面试",
+        "pinyin": "miànshì",
+        "meaning": "면접",
+        "a": "你面试准备得怎么样？",
+        "aP": "Nǐ miànshì zhǔnbèi de zěnmeyàng?",
+        "weight": 1
+    },
+    {
+        "hanzi": "成功",
+        "pinyin": "chénggōng",
+        "meaning": "성공",
+        "a": "我面试成功了。",
+        "aP": "Wǒ miànshì chénggōng le.",
+        "weight": 1
+    },
+    {
+        "hanzi": "请客",
+        "pinyin": "Jīntiān nǐ qǐngkè.",
+        "meaning": "한턱내다.",
+        "a": "今天你请客。",
+        "aP": "Jīntiān nǐ qǐngkè.",
+        "weight": 1
+    },
+    {
+        "hanzi": "努力",
+        "pinyin": "nǔlì",
+        "meaning": "노력",
+        "a": "别紧张，你每天努力学习，一定没问题。",
+        "aP": "Bié jǐnzhāng, nǐ měitiān nǔlì xuéxí, yídìng méi wèntí.",
+        "weight": 1
+    },
+    {
+        "hanzi": "一定没问题",
+        "pinyin": "yídìng méi wèntí.",
+        "meaning": "분명히 문제가 없을 것이다.",
+        "a": "一定没问题。",
+        "aP": "yídìng méi wèntí.",
+        "weight": 1
+    },
+    {
+        "hanzi": "节课",
+        "pinyin": "jié kè?",
+        "meaning": "수업",
+        "a": "今天你有几节课？",
+        "aP": "Jīntiān nǐ yǒu jǐ jié kè?",
+        "weight": 1
     }
 ];
