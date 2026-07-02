@@ -878,5 +878,69 @@ const WORD_DATA = [
         "a": "你要借的书，现在没有。",
         "aP": "Nǐ yào jiè de shū, xiànzài méiyǒu.",
         "weight": 1
+    },
+    
+        "hanzi": "第一次",
+        "pinyin": "dì yī cì",
+        "meaning": "첫번째",
+        "a": "今天是第一次报名吗？",
+        "aP": "Jīntiān shì dì yī cì bàomíng ma?",
+        "weight": 1
+    },
+    {
+        "hanzi": "报名",
+        "pinyin": "bàomíng",
+        "meaning": "방문",
+        "a": "今天是第一次报名吗？",
+        "aP": "Jīntiān shì dì yī cì bàomíng ma?",
+        "weight": 1
+    },
+    {
+        "hanzi": "报告",
+        "pinyin": "bàogào",
+        "meaning": "보고서",
+        "a": "你的报告有很多错误。",
+        "aP": "Nǐ de bàogào yǒu hěn duō cuòwù.",
+        "weight": 1
+    },
+    {
+        "hanzi": "错误",
+        "pinyin": "cuòwù",
+        "meaning": "실수",
+        "a": "你的报告有很多错误。",
+        "aP": "Nǐ de bàogào yǒu hěn duō cuòwù.",
+        "weight": 1
+    },
+    {
+        "hanzi": "改",
+        "pinyin": "gǎi",
+        "meaning": "변화, 수정",
+        "a": "对不起，我马上改",
+        "aP": "Duìbuqǐ, wǒ mǎshàng gǎi",
+        "weight": 1
+    },
+    {
+        "hanzi": "这么长时间",
+        "pinyin": "zhème cháng shíjiān",
+        "meaning": "그렇게 오랫동안",
+        "a": "为什么开了这么长时间的会议？",
+        "aP": "Wèishénme kāi le zhème cháng shíjiān de huìyì?",
+        "weight": 1
+    },
+    {
+        "hanzi": "还没",
+        "pinyin": "hái méi",
+        "meaning": "아직 아니다.",
+        "a": "会议还没结束。",
+        "aP": "huìyì hái méi jiéshù.",
+        "weight": 1
+    },
+    {
+        "hanzi": "复杂",
+        "pinyin": "fùzá,",
+        "meaning": "복잡하다.",
+        "a": "工作计划很复杂",
+        "aP": "gōngzuò jìhuà hěn fùzá",
+        "weight": 1
     }
 ];
