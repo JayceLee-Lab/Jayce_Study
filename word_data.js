@@ -854,5 +854,29 @@ const WORD_DATA = [
         "a": "今天你有几节课？",
         "aP": "Jīntiān nǐ yǒu jǐ jié kè?",
         "weight": 1
+    },
+        {
+        "hanzi": "兴趣",
+        "pinyin": "xìngqù",
+        "meaning": "관심",
+        "a": "你对中国文化感兴趣吗？",
+        "aP": "Nǐ duì Zhōngguó wénhuà gǎn xìngqù ma?",
+        "weight": 1
+    },
+    {
+        "hanzi": "感兴趣吗?",
+        "pinyin": "gǎn xìngqù ma?",
+        "meaning": "관심 있나요?",
+        "a": "你对中国文化感兴趣吗？",
+        "aP": "Nǐ duì Zhōngguó wénhuà gǎn xìngqù ma?",
+        "weight": 1
+    },
+    {
+        "hanzi": "借的书",
+        "pinyin": "jiè de shū",
+        "meaning": "대출한 책",
+        "a": "你要借的书，现在没有。",
+        "aP": "Nǐ yào jiè de shū, xiànzài méiyǒu.",
+        "weight": 1
     }
 ];
