@@ -66,7 +66,7 @@ const WORD_DATA = [
     {
         "hanzi": "试试",
         "pinyin": "shìshì",
-        "meaning": "시험삼아 해보다. (입어보다.)",
+        "meaning": "시험삼아 해보다.",
         "a": "可以试试吗?",
         "aP": "Kěyǐ shìshì ma?",
         "weight": 1
