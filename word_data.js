@@ -942,5 +942,45 @@ const WORD_DATA = [
         "a": "工作计划很复杂",
         "aP": "gōngzuò jìhuà hěn fùzá",
         "weight": 1
+    },
+    {
+        "hanzi": "参加",
+        "pinyin": "cānjiā",
+        "meaning": "참가하다.",
+        "a": "我去上海参加一个重要的会议",
+        "aP": "Wǒ qù Shànghǎi cānjiā yí ge zhòngyào de huìyì",
+        "weight": 1
+    },
+    {
+        "hanzi": "放心",
+        "pinyin": "fàngxīn",
+        "meaning": "안심하다.",
+        "a": "我跟金部长一起去，金部长的汉语很好，我很放心。",
+        "aP": "Wǒ gēn Jīn bùzhǎng yìqǐ qù, Jīn bùzhǎng de Hànyǔ hěn hǎo, wǒ hěn fàngxīn.",
+        "weight": 1
+    },
+    {
+        "hanzi": "心情",
+        "pinyin": "xīnqíng",
+        "meaning": "심정, 기분",
+        "a": "你第一次去海外出差，心情怎么样？",
+        "aP": "Nǐ dì yī cì qù hǎiwài chūchāi, xīnqíng zěnmeyàng?",
+        "weight": 1
+    },
+    {
+        "hanzi": "但是",
+        "pinyin": "dànshì",
+        "meaning": "하지만",
+        "a": "但是也很高兴，因为可以了解外国文化。",
+        "aP": "dànshì yě hěn gāoxìng, yīnwèi kěyǐ liǎojiě wàiguó wénhuà.",
+        "weight": 1
+    },
+    {
+        "hanzi": "因为",
+        "pinyin": "yīnwèi",
+        "meaning": "왜냐하면",
+        "a": "因为可以了解外国文化。",
+        "aP": "yīnwèi kěyǐ liǎojiě wàiguó wénhuà.",
+        "weight": 1
     }
 ];
