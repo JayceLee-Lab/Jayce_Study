@@ -879,7 +879,7 @@ const WORD_DATA = [
         "aP": "Nǐ yào jiè de shū, xiànzài méiyǒu.",
         "weight": 1
     },
-    
+    {
         "hanzi": "第一次",
         "pinyin": "dì yī cì",
         "meaning": "첫번째",
