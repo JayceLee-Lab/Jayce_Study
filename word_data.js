@@ -982,5 +982,141 @@ const WORD_DATA = [
         "a": "因为可以了解外国文化。",
         "aP": "yīnwèi kěyǐ liǎojiě wàiguó wénhuà.",
         "weight": 1
+    },
+    {
+        "hanzi": "了解",
+        "pinyin": "liǎojiě",
+        "meaning": "배우다.",
+        "a": "因为可以了解外国文化。",
+        "aP": "yīnwèi kěyǐ liǎojiě wàiguó wénhuà.",
+        "weight": 1
+    },
+    {
+        "hanzi": "客户开会",
+        "pinyin": "kèhù kāihuì",
+        "meaning": "고객 미팅",
+        "a": "明天跟客户开会，订好会议室了吗？",
+        "aP": "Míngtiān gēn kèhù kāihuì, dìng hǎo huìyìshì le ma?",
+        "weight": 1
+    },
+    {
+        "hanzi": "订好",
+        "pinyin": "dìng hǎo",
+        "meaning": "예약 확정",
+        "a": "明天跟客户开会，订好会议室了吗？",
+        "aP": "Míngtiān gēn kèhù kāihuì, dìng hǎo huìyìshì le ma?",
+        "weight": 1
+    },
+    {
+        "hanzi": "有空的话",
+        "pinyin": "yǒu kòng de huà",
+        "meaning": "시간이 있으시다면",
+        "a": "已经准备好了，您有空的话帮我看看，好吗？",
+        "aP": "Yǐjīng zhǔnbèi hǎo le, nín yǒu kòng de huà bāng wǒ kànkan, hǎo ma?",
+        "weight": 1
+    },
+    {
+        "hanzi": "客户",
+        "pinyin": "kèhù.",
+        "meaning": "고객",
+        "a": "我明天上午要去见客户。",
+        "aP": "Wǒ míngtiān shàngwǔ yào qù jiàn kèhù.",
+        "weight": 1
+    },
+    {
+        "hanzi": "请假",
+        "pinyin": "qǐngjià.",
+        "meaning": "휴가를 신청하다.",
+        "a": "下周五我要搬家，我打算下星期请假。",
+        "aP": "Xià zhōu wǔ wǒ yào bānjiā, wǒ dǎsuàn xià xīngqī qǐngjià.",
+        "weight": 1
+    },
+    {
+        "hanzi": "应该",
+        "pinyin": "Yīnggāi",
+        "meaning": "~ 해야한다.",
+        "a": "应该没问题吧",
+        "aP": "Yīnggāi méi wèntí ba",
+        "weight": 1
+    },
+    {
+        "hanzi": "打印",
+        "pinyin": "dǎyìn",
+        "meaning": "인쇄하다.",
+        "a": "金科长去打印资料了",
+        "aP": "Jīn kēzhǎng qù dǎyìn zīliào le",
+        "weight": 1
+    },
+    {
+        "hanzi": "快",
+        "pinyin": "Kuài",
+        "meaning": "거의",
+        "a": "快九点了，什么时候下班？",
+        "aP": "Kuài jiǔ diǎn le, shénme shíhou xiàbān?",
+        "weight": 1
+    },
+    {
+        "hanzi": "新职员",
+        "pinyin": "xīn zhíyuán",
+        "meaning": "신입사원",
+        "a": "听说你们部门来了一个新职员，他怎么样？",
+        "aP": "Tīngshuō nǐmen bùmén lái le yí ge xīn zhíyuán, tā zěnmeyàng?",
+        "weight": 1
+    },
+    {
+        "hanzi": "互相帮助",
+        "pinyin": "hùxiāng bāngzhù.",
+        "meaning": "서로 돕는다.",
+        "a": "我们工作的时候互相帮助。",
+        "aP": "Wǒmen gōngzuò de shíhou hùxiāng bāngzhù.",
+        "weight": 1
+    },
+    {
+        "hanzi": "突然死机",
+        "pinyin": "tūrán sǐjī",
+        "meaning": "갑작스러운 시스템 충돌",
+        "a": "我的电脑突然死机了，麻烦你帮我看一下。",
+        "aP": "Wǒ de diànnǎo tūrán sǐjī le, máfan nǐ bāng wǒ kàn yíxià.",
+        "weight": 1
+    },
+    {
+        "hanzi": "售后服务中心",
+        "pinyin": "shòuhòu fúwù zhōngxīn",
+        "meaning": "AS 센터",
+        "a": "好的，没问题。不过我不会修，给售后服务中心打电话吧。",
+        "aP": "Hǎo de, méi wèntí. Búguò wǒ bú huì xiū, gěi shòuhòu fúwù zhōngxīn dǎ diànhuà ba.",
+        "weight": 1
+    },
+    {
+        "hanzi": "心情",
+        "pinyin": "xīnqíng",
+        "meaning": "기분, 심정",
+        "a": "今天第一天上班，心情怎么样？",
+        "aP": "Jīntiān dì yī tiān shàngbān, xīnqíng zěnmeyàng?",
+        "weight": 1
+    },
+    {
+        "hanzi": "部门",
+        "pinyin": "bùmén",
+        "meaning": "부서",
+        "a": "我们部门的同事们都很热情",
+        "aP": "Wǒmen bùmén de tóngshìmen dōu hěn rèqíng",
+        "weight": 1
+    },
+    {
+        "hanzi": "热情",
+        "pinyin": "rèqíng",
+        "meaning": "열광하다.",
+        "a": "我们部门的同事们都很热情",
+        "aP": "Wǒmen bùmén de tóngshìmen dōu hěn rèqíng",
+        "weight": 1
+    },
+    {
+        "hanzi": "满意",
+        "pinyin": "mǎnyì.",
+        "meaning": "만족하다.",
+        "a": "气氛也很好，我很满意。",
+        "aP": "qìfēn yě hěn hǎo, wǒ hěn mǎnyì.",
+        "weight": 1
     }
 ];
