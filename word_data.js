@@ -1118,5 +1118,141 @@ const WORD_DATA = [
         "a": "气氛也很好，我很满意。",
         "aP": "qìfēn yě hěn hǎo, wǒ hěn mǎnyì.",
         "weight": 1
+    },
+    {
+        "hanzi": "工资",
+        "pinyin": "gōngzī",
+        "meaning": "샐러리",
+        "a": "我们公司工资高，待遇好。我很满意。",
+        "aP": "Wǒmen gōngsī gōngzī gāo, dàiyù hǎo. Wǒ hěn mǎnyì.",
+        "weight": 1
+    },
+    {
+        "hanzi": "办公用品",
+        "pinyin": "Bàngōng yòngpǐn",
+        "meaning": "사무용품",
+        "a": "办公用品都买好了吗？",
+        "aP": "Bàngōng yòngpǐn dōu mǎi hǎo le ma?",
+        "weight": 1
+    },
+    {
+        "hanzi": "还没",
+        "pinyin": "hái méi",
+        "meaning": "아직 안했어요.",
+        "a": "上午我很忙，我还没买。我马上去买。",
+        "aP": "Shàngwǔ wǒ hěn máng, wǒ hái méi mǎi. Wǒ mǎshàng qù mǎi.",
+        "weight": 1
+    },
+    {
+        "hanzi": "工作的时候",
+        "pinyin": "Gōngzuò de shíhou",
+        "meaning": "일하는 시간",
+        "a": "工作的时候，你常用外语吗？",
+        "aP": "Gōngzuò de shíhou, nǐ cháng yòng wàiyǔ ma?",
+        "weight": 1
+    },
+    {
+        "hanzi": "暑假的时候",
+        "pinyin": "Shǔjià de shíhou",
+        "meaning": "여름방학동안",
+        "a": "暑假的时候，去海外旅行怎么样？",
+        "aP": "Shǔjià de shíhou, qù hǎiwài lǚxíng zěnmeyàng?",
+        "weight": 1
+    },
+    {
+        "hanzi": "假期",
+        "pinyin": "jiàqī",
+        "meaning": "휴일",
+        "a": "这个假期你有什么特别的计划吗？",
+        "aP": "Zhège jiàqī nǐ yǒu shénme tèbié de jìhuà ma?",
+        "weight": 1
+    },
+    {
+        "hanzi": "计划",
+        "pinyin": "jìhuà",
+        "meaning": "계획",
+        "a": "这个假期你有什么特别的计划吗？",
+        "aP": "Zhège jiàqī nǐ yǒu shénme tèbié de jìhuà ma?",
+        "weight": 1
+    },
+    {
+        "hanzi": "这个假期",
+        "pinyin": "Zhège jiàqī",
+        "meaning": "이번 연휴",
+        "a": "这个假期你有什么特别的计划吗？",
+        "aP": "Zhège jiàqī nǐ yǒu shénme tèbié de jìhuà ma?",
+        "weight": 1
+    },
+    {
+        "hanzi": "假期",
+        "pinyin": "jiàqī",
+        "meaning": "휴일",
+        "a": "今年假期你去哪儿旅行了？",
+        "aP": "Jīnnián jiàqī nǐ qù nǎr lǚxíng le?",
+        "weight": 1
+    },
+    {
+        "hanzi": "真羡慕你",
+        "pinyin": "Zhēn xiànmù nǐ.",
+        "meaning": "진짜 부럽다.",
+        "a": "是吗？你去哪儿？跟谁一起去？真羡慕你。",
+        "aP": "Shì ma? Nǐ qù nǎr? Gēn shéi yìqǐ qù? Zhēn xiànmù nǐ.",
+        "weight": 1
+    },
+    {
+        "hanzi": "宾馆",
+        "pinyin": "bīnguǎn",
+        "meaning": "호텔",
+        "a": "你想住什么样的宾馆？",
+        "aP": "Nǐ xiǎng zhù shénme yàng de bīnguǎn?",
+        "weight": 1
+    },
+    {
+        "hanzi": "干净",
+        "pinyin": "gānjìng",
+        "meaning": "깨끗하다.",
+        "a": "我想住五星级的宾馆，因为五星级的宾馆很干净，服务也很好。",
+        "aP": "Wǒ xiǎng zhù wǔxīngjí de bīnguǎn, yīnwèi wǔxīngjí de bīnguǎn hěn gānjìng, fúwù yě hěn hǎo.",
+        "weight": 1
+    },
+    {
+        "hanzi": "现金",
+        "pinyin": "Xiànjīn",
+        "meaning": "현금",
+        "a": "现金怎么样？这样奶奶可以自己买自己喜欢的。",
+        "aP": "Xiànjīn zěnmeyàng? Zhèyàng nǎinai kěyǐ zìjǐ mǎi zìjǐ xǐhuan de.",
+        "weight": 1
+    },
+    {
+        "hanzi": "自己",
+        "pinyin": "zìjǐ",
+        "meaning": "자기",
+        "a": "现金怎么样？这样奶奶可以自己买自己喜欢的。",
+        "aP": "Xiànjīn zěnmeyàng? Zhèyàng nǎinai kěyǐ zìjǐ mǎi zìjǐ xǐhuan de.",
+        "weight": 1
+    },
+    {
+        "hanzi": "毕业",
+        "pinyin": "bìyè",
+        "meaning": "졸업하다.",
+        "a": "我哥哥要大学毕业了，送他什么礼物好呢？",
+        "aP": "Wǒ gēge yào dàxué bìyè le, sòng tā shénme lǐwù hǎo ne?",
+        "weight": 1
+    },
+    {
+        "hanzi": "发型",
+        "pinyin": "fàxíng.",
+        "meaning": "헤어스타일",
+        "a": "哇！你做了最流行的发型。",
+        "aP": "Wa! Nǐ zuò le zuì liúxíng de fàxíng.",
+        "weight": 1
+    },
+    {
+        "hanzi": "发还",
+        "pinyin": "jiǎnfà",
+        "meaning": "이발하다.",
+        "a": "你要做什么？你要剪发还是烫发？",
+        "aP": "Nǐ yào zuò shénme? Nǐ yào jiǎnfà háishì tàngfà?",
+        "weight": 1
     }
 ];
