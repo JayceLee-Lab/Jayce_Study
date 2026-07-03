@@ -1344,7 +1344,7 @@ const PART3_2_DATA = [
 	{
 		"q": "这个假期你有什么特别的计划吗？",
 		"qP": "Zhège jiàqī nǐ yǒu shénme tèbié de jìhuà ma?",
-		"a": "我要去北京旅行，我听说北京有很多名胜古迹，还有很多好吃的菜。",
+		"a": "我要去北京旅行，我听说北京有很多好吃的菜。",
 		"aP": "Wǒ yào qù Běijīng lǚxíng, wǒ tīngshuō Běijīng yǒu hěnduō hǎochī de cài.",
 		"hint": "假期计划과 北京 여행에 대해 이야기하는 대화입니다.",
 		"keywords": "计划 (jìhuà, 계획) 假期 (jiàqī), 北京 (Běijīng), 名胜古迹 (míngshèng gǔjì)",
