@@ -1254,5 +1254,205 @@ const WORD_DATA = [
         "a": "你要做什么？你要剪发还是烫发？",
         "aP": "Nǐ yào zuò shénme? Nǐ yào jiǎnfà háishì tàngfà?",
         "weight": 1
+    },
+    {
+        "hanzi": "拿着",
+        "pinyin": "názhe",
+        "meaning": "보유하다.",
+        "a": "他手里拿着两个苹果。",
+        "aP": "Tā shǒulǐ názhe liǎng gè píngguǒ.",
+        "weight": 1
+    },
+    {
+        "hanzi": "下午",
+        "pinyin": "xiàwǔ",
+        "meaning": "오후",
+        "a": "我下午六点下班。",
+        "aP": "Wǒ xiàwǔ liù diǎn xiàbān.",
+        "weight": 1
+    },
+    {
+        "hanzi": "超市",
+        "pinyin": "chāoshì",
+        "meaning": "상점",
+        "a": "我去超市买东西。",
+        "aP": "Wǒ qù chāoshì mǎi dōngxi.",
+        "weight": 1
+    },
+    {
+        "hanzi": "桌子",
+        "pinyin": "zhuōzi",
+        "meaning": "책상",
+        "a": "杯子在桌子上面。",
+        "aP": "Bēizi zài zhuōzi shàngmiàn.",
+        "weight": 1
+    },
+    {
+        "hanzi": "嗓子疼",
+        "pinyin": "sǎngzi téng.",
+        "meaning": "목아픔",
+        "a": "我嗓子疼。",
+        "aP": "Wǒ sǎngzi téng.",
+        "weight": 1
+    },
+    {
+        "hanzi": "晚上",
+        "pinyin": "wǎnshang",
+        "meaning": "저녁",
+        "a": "我晚上给妈妈打电话。",
+        "aP": "Wǒ wǎnshang gěi māma dǎ diànhuà.",
+        "weight": 1
+    },
+    {
+        "hanzi": "休息",
+        "pinyin": "xiūxi.",
+        "meaning": "휴식하다.",
+        "a": "他在家休息。",
+        "aP": "Tā zàijiā xiūxi.",
+        "weight": 1
+    },
+    {
+        "hanzi": "玩电脑游戏",
+        "pinyin": "wán diànnǎo yóuxì.",
+        "meaning": "PC 게임을 하다.",
+        "a": "他在玩电脑游戏。",
+        "aP": "Tā zài wán diànnǎo yóuxì.",
+        "weight": 1
+    },
+    {
+        "hanzi": "商场",
+        "pinyin": "shāngchǎng",
+        "meaning": "쇼핑몰",
+        "a": "我要去商场买东西。",
+        "aP": "Wǒ yào qù shāngchǎng mǎi dōngxi.",
+        "weight": 1
+    },
+    {
+        "hanzi": "洗衣服",
+        "pinyin": "xǐ yīfu",
+        "meaning": "세탁하다.",
+        "a": "我在洗衣服呢。",
+        "aP": "Wǒ zài xǐ yīfu ne.",
+        "weight": 1
+    },
+    {
+        "hanzi": "电视",
+        "pinyin": "diànshì.",
+        "meaning": "TV",
+        "a": "他在家看电视。",
+        "aP": "Tā zàijiā kàn diànshì.",
+        "weight": 1
+    },
+    {
+        "hanzi": "打扫卫生",
+        "pinyin": "dǎsǎo wèishēng.",
+        "meaning": "청소하다.",
+        "a": "他在家打扫卫生。",
+        "aP": "Tā zàijiā dǎsǎo wèishēng.",
+        "weight": 1
+    },
+    {
+        "hanzi": "果汁",
+        "pinyin": "guǒzhī.",
+        "meaning": "주스",
+        "a": "我想喝果汁。",
+        "aP": "Wǒ xiǎng hē guǒzhī.",
+        "weight": 1
+    },
+    {
+        "hanzi": "瘦",
+        "pinyin": "shòu",
+        "meaning": "날렵하다.",
+        "a": "谁比他瘦？",
+        "aP": "Shéi bǐ tā shòu?",
+        "weight": 1
+    },
+    {
+        "hanzi": "洗澡",
+        "pinyin": "xǐzǎo",
+        "meaning": "샤워하다.",
+        "a": "他在洗澡。",
+        "aP": "Tā zài xǐzǎo.",
+        "weight": 1
+    },
+    {
+        "hanzi": "出租车",
+        "pinyin": "chūzūchē.",
+        "meaning": "택시",
+        "a": "是的，我在等出租车。",
+        "aP": "Shì de, wǒ zài děng chūzūchē.",
+        "weight": 1
+    },
+    {
+        "hanzi": "跑步",
+        "pinyin": "pǎobù",
+        "meaning": "달리기",
+        "a": "他在跑步。",
+        "aP": "Tā zài pǎobù.",
+        "weight": 1
+    },
+    {
+        "hanzi": "甜的面包",
+        "pinyin": "tián de miànbāo.",
+        "meaning": "달콤한 빵",
+        "a": "我想吃甜的面包。",
+        "aP": "Wǒ xiǎng chī tián de miànbāo.",
+        "weight": 1
+    },
+    {
+        "hanzi": "照相",
+        "pinyin": "zhàoxiàng.",
+        "meaning": "사진을 찍다.",
+        "a": "他在照相。",
+        "aP": "Tā zài zhàoxiàng.",
+        "weight": 1
+    },
+    {
+        "hanzi": "洗碗",
+        "pinyin": "xǐwǎn.",
+        "meaning": "설거지하다.",
+        "a": "他在家洗碗。",
+        "aP": "Tā zàijiā xǐwǎn.",
+        "weight": 1
+    },
+    {
+        "hanzi": "走着",
+        "pinyin": "zǒuzhe",
+        "meaning": "도보로, 걸어서",
+        "a": "他走着去饭店。",
+        "aP": "Tā zǒuzhe qù fàndiàn.",
+        "weight": 1
+    },
+    {
+        "hanzi": "电视节目",
+        "pinyin": "diànshì jiémù",
+        "meaning": "TV 프로그램",
+        "a": "你在看什么电视节目？",
+        "aP": "Nǐ zài kàn shénme diànshì jiémù?",
+        "weight": 1
+    },
+    {
+        "hanzi": "刷牙",
+        "pinyin": "shuāyá.",
+        "meaning": "양치질하다.",
+        "a": "他在刷牙。",
+        "aP": "Tā zài shuāyá.",
+        "weight": 1
+    },
+    {
+        "hanzi": "散步",
+        "pinyin": "sànbù.",
+        "meaning": "산책하다.",
+        "a": "男的在散步。",
+        "aP": "Nán de zài sànbù.",
+        "weight": 1
+    },
+    {
+        "hanzi": "裤子",
+        "pinyin": "kùzi.",
+        "meaning": "바지",
+        "a": "床上有裤子。",
+        "aP": "Chuángshàng yǒu kùzi.",
+        "weight": 1
     }
 ];
