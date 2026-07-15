@@ -144,14 +144,6 @@ const WORD_DATA = [
         "weight": 1
     },
     {
-        "hanzi": "加班",
-        "pinyin": "jiābān",
-        "meaning": "초과근무 (야근)",
-        "a": "每天都加班",
-        "aP": "měitiān dōu jiābān",
-        "weight": 1
-    },
-    {
         "hanzi": "会议 结束",
         "pinyin": "huìyì jiéshù",
         "meaning": "회의를 마치다.",
@@ -264,14 +256,6 @@ const WORD_DATA = [
         "weight": 1
     },
     {
-        "hanzi": "看起来",
-        "pinyin": "kàn qǐlái",
-        "meaning": "보기에",
-        "a": "你看起来很累。",
-        "aP": "Nǐ kàn qǐlái hěn lèi.",
-        "weight": 1
-    },
-    {
         "hanzi": "早睡早起",
         "pinyin": "Zǎoshuì zǎoqǐ",
         "meaning": "일찍 자고 일찍 일어나다.",
@@ -283,30 +267,6 @@ const WORD_DATA = [
         "hanzi": "自由",
         "pinyin": "zìyóu",
         "meaning": "자유롭다",
-        "a": "我觉得一个人住比较自由。",
-        "aP": "Wǒ juéde yí ge rén zhù bǐjiào zìyóu.",
-        "weight": 1
-    },
-    {
-        "hanzi": "早起",
-        "pinyin": "zǎoqǐ",
-        "meaning": "일찍 일어나다.",
-        "a": "你每天早起吗？",
-        "aP": "Nǐ měitiān zǎoqǐ ma?",
-        "weight": 1
-    },
-    {
-        "hanzi": "早睡早起",
-        "pinyin": "Zǎoshuì zǎoqǐ",
-        "meaning": "일찍 자고, 일찍 일어나다.",
-        "a": "早睡早起对身体好。",
-        "aP": "Zǎoshuì zǎoqǐ duì shēntǐ hǎo.",
-        "weight": 1
-    },
-    {
-        "hanzi": "自由",
-        "pinyin": "zìyóu.",
-        "meaning": "자유롭다.",
         "a": "我觉得一个人住比较自由。",
         "aP": "Wǒ juéde yí ge rén zhù bǐjiào zìyóu.",
         "weight": 1
@@ -568,7 +528,7 @@ const WORD_DATA = [
         "weight": 1
     },
     {
-        "hanzi": "有空的时",
+        "hanzi": "有空的时候",
         "pinyin": "yǒu kòng de shíhou",
         "meaning": "시간이 날 때",
         "a": "是啊，我买了新房子，有空的时候来我家玩吧。",
@@ -685,14 +645,6 @@ const WORD_DATA = [
         "meaning": "~ 한 것 같다.",
         "a": "我的狗好像感冒了",
         "aP": "Wǒ de gǒu hǎoxiàng gǎnmào le.",
-        "weight": 1
-    },
-    {
-        "hanzi": "看起来",
-        "pinyin": "kànqǐlái",
-        "meaning": "~ 한 것 처럼 보이다.",
-        "a": "小李看起来很累，他怎么了？",
-        "aP": "Xiǎo Lǐ kànqǐlái hěn lèi, tā zěnme le?",
         "weight": 1
     },
     {
@@ -824,14 +776,6 @@ const WORD_DATA = [
         "weight": 1
     },
     {
-        "hanzi": "请客",
-        "pinyin": "Jīntiān nǐ qǐngkè.",
-        "meaning": "한턱내다.",
-        "a": "今天你请客。",
-        "aP": "Jīntiān nǐ qǐngkè.",
-        "weight": 1
-    },
-    {
         "hanzi": "努力",
         "pinyin": "nǔlì",
         "meaning": "노력",
@@ -941,14 +885,6 @@ const WORD_DATA = [
         "meaning": "복잡하다.",
         "a": "工作计划很复杂",
         "aP": "gōngzuò jìhuà hěn fùzá",
-        "weight": 1
-    },
-    {
-        "hanzi": "参加",
-        "pinyin": "cānjiā",
-        "meaning": "참가하다.",
-        "a": "我去上海参加一个重要的会议",
-        "aP": "Wǒ qù Shànghǎi cānjiā yí ge zhòngyào de huìyì",
         "weight": 1
     },
     {
@@ -1136,14 +1072,6 @@ const WORD_DATA = [
         "weight": 1
     },
     {
-        "hanzi": "还没",
-        "pinyin": "hái méi",
-        "meaning": "아직 안했어요.",
-        "a": "上午我很忙，我还没买。我马上去买。",
-        "aP": "Shàngwǔ wǒ hěn máng, wǒ hái méi mǎi. Wǒ mǎshàng qù mǎi.",
-        "weight": 1
-    },
-    {
         "hanzi": "工作的时候",
         "pinyin": "Gōngzuò de shíhou",
         "meaning": "일하는 시간",
@@ -1248,7 +1176,7 @@ const WORD_DATA = [
         "weight": 1
     },
     {
-        "hanzi": "发还",
+        "hanzi": "剪发",
         "pinyin": "jiǎnfà",
         "meaning": "이발하다.",
         "a": "你要做什么？你要剪发还是烫发？",
