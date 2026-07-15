@@ -25,7 +25,7 @@ const WORD_DATA = [
     },
     {
         "hanzi": "家具",
-        "pinyin": "家具",
+        "pinyin": "Jiājù",
         "meaning": "가구",
         "a": "您买的家具",
         "aP": "Nín mǎi de jiājù",
