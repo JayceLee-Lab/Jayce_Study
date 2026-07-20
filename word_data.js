@@ -753,7 +753,7 @@ const WORD_DATA = [
     },
     {
         "hanzi": "节课",
-        "pinyin": "jié kè?",
+        "pinyin": "jié kè",
         "meaning": "수업",
         "a": "今天你有几节课？",
         "aP": "Jīntiān nǐ yǒu jǐ jié kè?",
