@@ -1152,7 +1152,7 @@ const PART3_2_DATA = [
         "keywords": "日语 (Rìyǔ), 英语 (Yīngyǔ), 汉语 (Hànyǔ), 最近 (zuìjìn)",
         "weight": 1
     },
-	{
+		{
 		"q": "为什么开了这么长时间的会议？",
 		"qP": "Wèishénme kāi le zhème cháng shíjiān de huìyì?",
 		"a": "我们开会讨论了明年的工作计划，工作计划很复杂，会议还没结束。",
@@ -1162,15 +1162,6 @@ const PART3_2_DATA = [
 		"weight": 1
 	},
 	{
-		"q": "你的报告有很多错误。",
-		"qP": "Nǐ de bàogào yǒu hěn duō cuòwù.",
-		"a": "对不起，我马上改，下次一定注意。",
-		"aP": "Duìbuqǐ, wǒ mǎshàng gǎi, xià cì yídìng zhùyì.",
-		"hint": "회사에서 보고서 실수에 대해 이야기하는 상황입니다.",
-		"keywords": "报告 (bàogào), 错误 (cuòwù), 改 (gǎi), 注意 (zhùyì)",
-		"weight": 1
-	},
-		{
 		"q": "为什么出差？",
 		"qP": "Wèishénme chūchāi?",
 		"a": "我去上海参加一个重要的会议，明天出发，跟金部长一起去。",
