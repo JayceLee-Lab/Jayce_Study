@@ -928,7 +928,7 @@ const PART3_1_DATA = [
         "weight": 1
     },
     {
-        "q": "你现在有시간的话, 能帮我一下吧。",
+        "q": "你现在有时间的话，能帮我一下吧。",
         "qP": "Nǐ xiànzài yǒu shíjiān dehuà, néng bāng wǒ yíxià ba.",
         "a": "当然可以, 我帮你。",
         "aP": "Dāngrán kěyǐ, wǒ bāng nǐ.",
