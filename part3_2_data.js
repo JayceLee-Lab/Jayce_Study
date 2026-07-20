@@ -1,4 +1,4 @@
-// TSC 제 3부분 연습용 데이터베이스 - 3급 대비 핵심 단어 유지 간소화 버전 v4 context checked
+// TSC 제 3부분 연습용 데이터베이스 - 3급 대비 핵심 단어 유지 간소화 버전 v7 full context fixed
 const PART3_2_DATA = [
     {
         "q": "您想买什么？",
@@ -759,9 +759,9 @@ const PART3_2_DATA = [
     {
         "q": "外边刮风了，你可以关上窗户吗？",
         "qP": "Wàibian guāfēng le, nǐ kěyǐ guānshang chuānghu ma?",
-        "a": "是啊，风很大。我们别出去了。",
-        "aP": "Shì a, fēng hěn dà. Wǒmen bié chūqù le.",
-        "hint": "[카테고리: 날씨] 바람이 불어 창문을 닫아 달라고 부탁하는 대화입니다.",
+        "a": "好的。我马上关窗户。",
+        "aP": "Hǎo de. Wǒ mǎshàng guān chuānghu.",
+        "hint": "[카테고리: 부탁 수락] 바람이 불어 창문을 닫아 달라고 부탁하는 대화입니다.",
         "keywords": "刮风 (guāfēng), 窗户 (chuānghu), 关上 (guānshang)",
         "weight": 1
     },
@@ -777,9 +777,9 @@ const PART3_2_DATA = [
     {
         "q": "堵车了，我可能要晚了。",
         "qP": "Dǔchē le, wǒ kěnéng yào wǎn le.",
-        "a": "坐地铁吧。又快又方便。",
-        "aP": "Zuò dìtiě ba. Yòu kuài yòu fāngbiàn.",
-        "hint": "[카테고리: 교통] 교통 체증 때문에 늦는 상황의 대화입니다.",
+        "a": "没关系。我等你。路上小心。",
+        "aP": "Méi guānxi. Wǒ děng nǐ. Lùshang xiǎoxīn.",
+        "hint": "[카테고리: 교통 지연] 교통 체증 때문에 늦는 상황의 대화입니다.",
         "keywords": "堵车 (dǔchē, 교통체증), 咖啡厅 (kāfēitīng), 小心 (xiǎoxīn, 조심)",
         "weight": 1
     },
@@ -903,9 +903,9 @@ const PART3_2_DATA = [
     {
         "q": "怎么去机场？",
         "qP": "Zěnme qù jīchǎng?",
-        "a": "我不太舒服。我要去医院看看。",
-        "aP": "Wǒ bú tài shūfu. Wǒ yào qù yīyuàn kànkan.",
-        "hint": "[카테고리: 건강] 공항 가는 교통수단에 대한 대화입니다.",
+        "a": "坐地铁去吧。又快又方便。",
+        "aP": "Zuò dìtiě qù ba. Yòu kuài yòu fāngbiàn.",
+        "hint": "[카테고리: 교통] 공항 가는 교통수단에 대한 대화입니다.",
         "keywords": "机场 (jīchǎng), 地铁 (dìtiě), 方便 (fāngbiàn)",
         "weight": 1
     },
@@ -939,9 +939,9 @@ const PART3_2_DATA = [
     {
         "q": "我好像感冒了，你能帮我买药回来吗？",
         "qP": "Wǒ hǎoxiàng gǎnmào le, nǐ néng bāng wǒ mǎi yào huílai ma?",
-        "a": "我的牙疼。我要去看医生。",
-        "aP": "Wǒ de yá téng. Wǒ yào qù kàn yīshēng.",
-        "hint": "[카테고리: 건강] 감기약을 부탁하는 상황의 대화입니다.",
+        "a": "好的。我马上去买药。",
+        "aP": "Hǎo de. Wǒ mǎshàng qù mǎi yào.",
+        "hint": "[카테고리: 부탁 수락/건강] 감기약을 부탁하는 상황의 대화입니다.",
         "keywords": "感冒 (gǎnmào), 发烧 (fāshāo), 药店 (yàodiàn)",
         "weight": 1
     },
@@ -957,8 +957,8 @@ const PART3_2_DATA = [
     {
         "q": "你什么时候能出院？",
         "qP": "Nǐ shénme shíhou néng chūyuàn?",
-        "a": "我要去医院体检。你一起去吗？",
-        "aP": "Wǒ yào qù yīyuàn tǐjiǎn. Nǐ yìqǐ qù ma?",
+        "a": "下周可以出院。你不用担心。",
+        "aP": "Xià zhōu kěyǐ chūyuàn. Nǐ bú yòng dānxīn.",
         "hint": "[카테고리: 건강] 퇴원 시기에 대해 이야기하는 대화입니다.",
         "keywords": "出院 (chūyuàn), 担心 (dānxīn), 星期 (xīngqī)",
         "weight": 1
@@ -975,9 +975,9 @@ const PART3_2_DATA = [
     {
         "q": "小李看起来很累，他怎么了？",
         "qP": "Xiǎo Lǐ kànqǐlái hěn lèi, tā zěnme le?",
-        "a": "我已经好多了。你不用担心。",
-        "aP": "Wǒ yǐjīng hǎo duō le. Nǐ bú yòng dānxīn.",
-        "hint": "[카테고리: 건강] 과로 상태에 대해 이야기하는 대화입니다.",
+        "a": "他最近很忙。每天都加班。",
+        "aP": "Tā zuìjìn hěn máng. Měitiān dōu jiābān.",
+        "hint": "[카테고리: 건강/상태] 과로 상태에 대해 이야기하는 대화입니다.",
         "keywords": "加班 (jiābān), 回家 (huí jiā), 劳累过度 (láolèi guòdù)",
         "weight": 1
     },
@@ -1074,9 +1074,9 @@ const PART3_2_DATA = [
     {
         "q": "我面试成功了。",
         "qP": "Wǒ miànshì chénggōng le.",
-        "a": "我喜欢学汉语。汉语很有意思。",
-        "aP": "Wǒ xǐhuan xué Hànyǔ. Hànyǔ hěn yǒuyìsi.",
-        "hint": "[카테고리: 공부/시험] 면접 합격을 축하하는 대화입니다.",
+        "a": "真的吗？太好了！恭喜恭喜。",
+        "aP": "Zhēn de ma? Tài hǎo le! Gōngxǐ gōngxǐ.",
+        "hint": "[카테고리: 축하] 면접 합격을 축하하는 대화입니다.",
         "keywords": "成功 (chénggōng), 恭喜 (gōngxǐ), 请客 (qǐngkè)",
         "weight": 1
     },
@@ -1137,9 +1137,9 @@ const PART3_2_DATA = [
     {
         "q": "图书馆现在没有座位。",
         "qP": "Túshūguǎn xiànzài méiyǒu zuòwèi.",
-        "a": "我喜欢中国文化。所以学汉语。",
-        "aP": "Wǒ xǐhuan Zhōngguó wénhuà. Suǒyǐ xué Hànyǔ.",
-        "hint": "[카테고리: 공부/시험] 도서관에 자리가 없어 다른 장소를 찾는 대화입니다.",
+        "a": "那我们等一会儿吧。",
+        "aP": "Nà wǒmen děng yíhuìr ba.",
+        "hint": "[카테고리: 대기/문의] 도서관에 자리가 없어 다른 장소를 찾는 대화입니다.",
         "keywords": "图书馆 (túshūguǎn), 座位 (zuòwèi), 学习 (xuéxí), 咖啡厅 (kāfēitīng)",
         "weight": 1
     },
@@ -1173,9 +1173,9 @@ const PART3_2_DATA = [
     {
         "q": "为什么出差？",
         "qP": "Wèishénme chūchāi?",
-        "a": "明天出发。去上海出差。",
-        "aP": "Míngtiān chūfā. Qù Shànghǎi chūchāi.",
-        "hint": "[카테고리: 회사] 출장 이유와 일정을 설명하는 대화입니다.",
+        "a": "因为要讨论工作计划。",
+        "aP": "Yīnwèi yào tǎolùn gōngzuò jìhuà.",
+        "hint": "[카테고리: 회사/이유] 출장 이유와 일정을 설명하는 대화입니다.",
         "keywords": "出差 (chūchāi), 上海 (Shànghǎi), 会议 (huìyì), 出发 (chūfā)",
         "weight": 1
     },
@@ -1227,9 +1227,9 @@ const PART3_2_DATA = [
     {
         "q": "下周五我要搬家，我打算下星期请假。",
         "qP": "Xià zhōu wǔ wǒ yào bānjiā, wǒ dǎsuàn xià xīngqī qǐngjià.",
-        "a": "应该没问题。周末我帮你吧。",
-        "aP": "Yīnggāi méi wèntí. Zhōumò wǒ bāng nǐ ba.",
-        "hint": "[카테고리: 부탁 수락] 이사 때문에 휴가를 내는 상황의 대화입니다.",
+        "a": "应该没问题。你跟部长说吧。",
+        "aP": "Yīnggāi méi wèntí. Nǐ gēn bùzhǎng shuō ba.",
+        "hint": "[카테고리: 회사/휴가] 이사 때문에 휴가를 내는 상황의 대화입니다.",
         "keywords": "应该 (Yīnggāi, 당연히), 搬家 (bānjiā), 请假 (qǐngjià, 휴가를 신청하다.), 公司 (gōngsī), 帮 (bāng)",
         "weight": 1
     },
@@ -1317,9 +1317,9 @@ const PART3_2_DATA = [
     {
         "q": "我们现在要回公司，怎么走？",
         "qP": "Wǒmen xiànzài yào huí gōngsī, zěnme zǒu?",
-        "a": "我要发邮件。资料已经准备好了。",
-        "aP": "Wǒ yào fā yóujiàn. Zīliào yǐjīng zhǔnbèi hǎo le.",
-        "hint": "[카테고리: 회사] 퇴근 시간 교통 상황에 대해 이야기하는 대화입니다.",
+        "a": "一直往前走。公司就在前边。",
+        "aP": "Yìzhí wǎng qián zǒu. Gōngsī jiù zài qiánbian.",
+        "hint": "[카테고리: 교통/길 안내] 퇴근 시간 교통 상황에 대해 이야기하는 대화입니다.",
         "keywords": "公司 (gōngsī), 地铁 (dìtiě), 下班时间 (xiàbān shíjiān), 堵车 (dǔchē)",
         "weight": 1
     },
