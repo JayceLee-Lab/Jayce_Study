@@ -919,60 +919,6 @@ const PART3_1_DATA = [
         "weight": 1
     },
     {
-        "q": "这家餐厅的菜很好吃, 尝一尝吧。",
-        "qP": "Zhè jiā cāntīng de cài hěn hǎochī, cháng yì cháng ba.",
-        "a": "好, 尝一尝吧。",
-        "aP": "Hǎo, cháng yì cháng ba.",
-        "hint": "동사를 중첩(尝一尝)하여 '한 번 해보다'라는 의미를 전달합니다.",
-        "keywords": "餐厅 (cāntīng), 尝 (cháng)",
-        "weight": 1
-    },
-    {
-        "q": "你汉语说得真棒!",
-        "qP": "Nǐ Hànyǔ shuō de zhēn bàng!",
-        "a": "没有啊, 我说得不太好。",
-        "aP": "Méiyǒu a, wǒ shuō de bú tài hǎo.",
-        "hint": "정도를 나타내는 보어 '得'와 겸손한 대답 '没有'가 핵심입니다.",
-        "keywords": "汉语 (Hànyǔ), 真棒 (zhēn bàng)",
-        "weight": 1
-    },
-    {
-        "q": "我觉得这个帽子很好看。",
-        "qP": "Wǒ juéde zhège màozi hěn hǎokàn.",
-        "a": "你说得对, 我也觉得这个帽子很好看。",
-        "aP": "Nǐ shuō de duì, wǒ yě juéde zhège màozi hěn hǎokàn.",
-        "hint": "자신의 의견(我觉得)을 말하고 상대방에게 동의하는 표현입니다.",
-        "keywords": "觉得 (juéde), 帽子 (màozi)",
-        "weight": 1
-    },
-    {
-        "q": "家人过生日时, 你一般送什么礼物?",
-        "qP": "Jiārén guò shēngrì shí, nǐ yìbān sòng shénme lǐwù?",
-        "a": "家人过生日时, 我一般送衣服。",
-        "aP": "Jiārén guò shēngrì shí, wǒ yìbān sòng yīfu.",
-        "hint": "~할 때(~时)를 사용하여 특정 상황의 습관을 묻습니다.",
-        "keywords": "生日 (shēngrì), 礼物 (lǐwù)",
-        "weight": 1
-    },
-    {
-        "q": "对不起, 现在我们超市没有猪肉。",
-        "qP": "Duìbuqǐ, xiànzài wǒmen chāoshì méiyǒu zhūròu.",
-        "a": "什么? 怎么又没有?",
-        "aP": "Shénme? Zěnme yòu méiyǒu?",
-        "hint": "부정문 '没有'와 반복을 나타내는 '又'가 포함된 당황스러운 상황입니다.",
-        "keywords": "超市 (chāoshì), 猪肉 (zhūròu)",
-        "weight": 1
-    },
-    {
-        "q": "你最近写过信吗?",
-        "qP": "Nǐ zuìjìn xiěguò xìn ma?",
-        "a": "我最近写过信.",
-        "aP": "Wǒ zuìjìn xiěguò xìn.",
-        "hint": "경험을 나타내는 '过'를 사용하여 과거의 경험을 묻습니다.",
-        "keywords": "最近 (zuìjìn), 写信 (xiě xìn)",
-        "weight": 1
-    },
-    {
         "q": "这是我做的菜, 怎么样?",
         "qP": "Zhè shì wǒ zuò de cài, zěnmeyàng?",
         "a": "我觉得你做的菜很不错。",
