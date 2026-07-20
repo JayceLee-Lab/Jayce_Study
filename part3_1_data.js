@@ -919,33 +919,6 @@ const PART3_1_DATA = [
         "weight": 1
     },
     {
-        "q": "百货商店已经关门了。",
-        "qP": "Bǎihuò shāngdiàn yǐjīng guānmén le.",
-        "a": "百货商店已经关门了? 那怎么办?",
-        "aP": "Bǎihuò shāngdiàn yǐjīng guānmén le? Nà zěnmebàn?",
-        "hint": "이미 일어난 상황(已经~了)에 대한 대처를 묻는 표현입니다.",
-        "keywords": "百货商店 (bǎihuò shāngdiàn), 怎么办 (zěnmebàn)",
-        "weight": 1
-    },
-    {
-        "q": "你多长时间换一次手机?",
-        "qP": "Nǐ duō cháng shíjiān huàn yí cì shǒujī?",
-        "a": "我一年换一次手机。",
-        "aP": "Wǒ yì nián huàn yí cì shǒujī.",
-        "hint": "주기나 빈도(多长时间~一次)를 묻고 답하는 문장입니다.",
-        "keywords": "换 (huàn), 手机 (shǒujī)",
-        "weight": 1
-    },
-    {
-        "q": "你通常在哪儿锻炼身体?",
-        "qP": "Nǐ tōngcháng zài nǎr duànliàn shēntǐ?",
-        "a": "我通常在家锻炼身体。",
-        "aP": "Wǒ tōngcháng zài jiā duànliàn shēntǐ.",
-        "hint": "장소를 나타내는 전치사 '在'를 활용한 문장입니다.",
-        "keywords": "通常 (tōngcháng), 锻炼 (duànliàn)",
-        "weight": 1
-    },
-    {
         "q": "这家餐厅的菜很好吃, 尝一尝吧。",
         "qP": "Zhè jiā cāntīng de cài hěn hǎochī, cháng yì cháng ba.",
         "a": "好, 尝一尝吧。",
