@@ -1152,274 +1152,274 @@ const PART3_2_DATA = [
         "keywords": "日语 (Rìyǔ), 英语 (Yīngyǔ), 汉语 (Hànyǔ), 最近 (zuìjìn)",
         "weight": 1
     },
-		{
-		"q": "为什么开了这么长时间的会议？",
-		"qP": "Wèishénme kāi le zhème cháng shíjiān de huìyì?",
-		"a": "我们开会讨论了明年的工作计划，工作计划很复杂，会议还没结束。",
-		"aP": "Wǒmen kāihuì tǎolùn le míngnián de gōngzuò jìhuà, gōngzuò jìhuà hěn fùzá, huìyì hái méi jiéshù.",
-		"hint": "긴 회의 이유를 설명하는 회사 대화입니다.",
-		"keywords": "会议 (huìyì), 工作计划 (gōngzuò jìhuà), 复杂 (fùzá), 结束 (jiéshù)",
-		"weight": 1
-	},
 	{
-		"q": "为什么出差？",
-		"qP": "Wèishénme chūchāi?",
-		"a": "我去上海参加一个重要的会议，明天出发，跟金部长一起去。",
-		"aP": "Wǒ qù Shànghǎi cānjiā yí ge zhòngyào de huìyì, míngtiān chūfā, gēn Jīn bùzhǎng yìqǐ qù.",
-		"hint": "출장 이유와 일정을 설명하는 대화입니다.",
-		"keywords": "出差 (chūchāi), 上海 (Shànghǎi), 会议 (huìyì), 出发 (chūfā)",
-		"weight": 1
-	},
-	{
-		"q": "听说你去中国出差，跟谁一起去？",
-		"qP": "Tīngshuō nǐ qù Zhōngguó chūchāi, gēn shéi yìqǐ qù?",
-		"a": "我跟金部长一起去，金部长的汉语很好，我很放心。",
-		"aP": "Wǒ gēn Jīn bùzhǎng yìqǐ qù, Jīn bùzhǎng de Hànyǔ hěn hǎo, wǒ hěn fàngxīn.",
-		"hint": "출장 동행자에 대해 이야기하는 회사 대화입니다.",
-		"keywords": "中国 (Zhōngguó), 出差 (chūchāi), 部长 (bùzhǎng), 放心 (fàngxīn)",
-		"weight": 1
-	},
-	{
-		"q": "你第一次去海外出差，心情怎么样？",
-		"qP": "Nǐ dì yī cì qù hǎiwài chūchāi, xīnqíng zěnmeyàng?",
-		"a": "我很紧张，但是也很高兴，因为可以了解外国文化。",
-		"aP": "Wǒ hěn jǐnzhāng, dànshì yě hěn gāoxìng, yīnwèi kěyǐ liǎojiě wàiguó wénhuà.",
-		"hint": "첫 해외 출장을 가는 사람의 기분에 대해 이야기하는 대화입니다.",
-		"keywords": "海外 (hǎiwài), 出差 (chūchāi), 紧张 (jǐnzhāng), 外国文化 (wàiguó wénhuà)",
-		"weight": 1
-	},
-	{
-		"q": "明天跟客户开会，订好会议室了吗？",
-		"qP": "Míngtiān gēn kèhù kāihuì, dìng hǎo huìyìshì le ma?",
-		"a": "我已经订好了，三楼的大会议室，会议资料已经准备好了。",
-		"aP": "Wǒ yǐjīng dìng hǎo le, sān lóu de dà huìyìshì, huìyì zīliào yǐjīng zhǔnbèi hǎo le.",
-		"hint": "고객과의 회의를 준비하는 회사 대화입니다.",
-		"keywords": "客户 (kèhù), 会议室 (huìyìshì), 资料 (zīliào), 准备 (zhǔnbèi)",
-		"weight": 1
-	},
-	{
-		"q": "会议资料准备好了吗？",
-		"qP": "Huìyì zīliào zhǔnbèi hǎo le ma?",
-		"a": "已经准备好了，您有空的话帮我看看，好吗？",
-		"aP": "Yǐjīng zhǔnbèi hǎo le, nín yǒu kòng de huà bāng wǒ kànkan, hǎo ma?",
-		"hint": "회의 자료 검토를 부탁하는 상황입니다.",
-		"keywords": "会议资料 (huìyì zīliào), 准备好 (zhǔnbèi hǎo), 有空 (yǒu kòng), 看看 (kànkan)",
-		"weight": 1
-	},
-	{
-		"q": "明天的会议，什么时候开始好呢？",
-		"qP": "Míngtiān de huìyì, shénme shíhou kāishǐ hǎo ne?",
-		"a": "下午三点，怎么样？我明天上午要去见客户。",
-		"aP": "Xiàwǔ sān diǎn, zěnmeyàng? Wǒ míngtiān shàngwǔ yào qù jiàn kèhù.",
-		"hint": "회의 시간을 조정하는 대화입니다.",
-		"keywords": "会议 (huìyì), 下午三点 (xiàwǔ sān diǎn), 客户 (kèhù), 见 (jiàn)",
-		"weight": 1
-	},
-	{
-		"q": "下周五我要搬家，我打算下星期请假。",
-		"qP": "Xià zhōu wǔ wǒ yào bānjiā, wǒ dǎsuàn xià xīngqī qǐngjià.",
-		"a": "应该没问题吧，最近公司不太忙，周末我去帮你吧。",
-		"aP": "Yīnggāi méi wèntí ba, zuìjìn gōngsī bú tài máng, zhōumò wǒ qù bāng nǐ ba.",
-		"hint": "이사 때문에 휴가를 내는 상황의 대화입니다.",
-		"keywords": "应该 (Yīnggāi, 당연히), 搬家 (bānjiā), 请假 (qǐngjià, 휴가를 신청하다.), 公司 (gōngsī), 帮 (bāng)",
-		"weight": 1
-	},
-	{
-		"q": "要开会了，金科长去哪儿了？",
-		"qP": "Yào kāihuì le, Jīn kēzhǎng qù nǎr le?",
-		"a": "金科长去打印资料了，我们部门的打印机坏了，他去别的部门打印。",
-		"aP": "Jīn kēzhǎng qù dǎyìn zīliào le, wǒmen bùmén de dǎyìnjī huài le, tā qù bié de bùmén dǎyìn.",
-		"hint": "회의 전에 동료의 행방을 묻는 회사 대화입니다.",
-		"keywords": "开会 (kāihuì), 打印资料 (dǎyìn zīliào), 打印机 (dǎyìnjī), 部门 (bùmén)",
-		"weight": 1
-	},
-	{
-		"q": "快九点了，什么时候下班？",
-		"qP": "Kuài jiǔ diǎn le, shénme shíhou xiàbān?",
-		"a": "你先下班吧，我正在准备明天的会议资料。",
-		"aP": "Nǐ xiān xiàbān ba, Wǒ zhèngzài zhǔnbèi míngtiān de huìyì zīliào.",
-		"hint": "야근 중인 동료 사이의 대화입니다.",
-		"keywords": "下班 (xiàbān), 会议资料 (huìyì zīliào)",
-		"weight": 1
-	},
-	{
-		"q": "听说你们部门来了一个新职员，他怎么样？",
-		"qP": "Tīngshuō nǐmen bùmén lái le yí ge xīn zhíyuán, tā zěnmeyàng?",
-		"a": "新职员又高又帅，性格也很好。大家都喜欢他。",
-		"aP": "Xīn zhíyuán yòu gāo yòu shuài, xìnggé yě hěn hǎo. Dàjiā dōu xǐhuan tā.",
-		"hint": "새로 온 직원에 대해 이야기하는 회사 대화입니다.",
-		"keywords": "新职员 (xīn zhíyuán, 신입사원), 性格 (xìnggé), 喜欢 (xǐhuan), 部门 (bùmén)",
-		"weight": 1
-	},
-	{
-		"q": "你和同事的关系怎么样？",
-		"qP": "Nǐ hé tóngshì de guānxì zěnmeyàng?",
-		"a": "我和同事的关系很好。我们工作的时候互相帮助。",
-		"aP": "Wǒ hé tóngshì de guānxì hěn hǎo. Wǒmen gōngzuò de shíhou hùxiāng bāngzhù.",
-		"hint": "직장 동료와의 관계에 대해 이야기하는 대화입니다.",
-		"keywords": "同事 (tóngshì), 关系 (guānxì), 工作 (gōngzuò), 帮助 (bāngzhù, 돕다), 互相 (hùxiāng, 서로)",
-		"weight": 1
-	},
-	{
-		"q": "我的电脑突然死机了，麻烦你帮我看一下。",
-		"qP": "Wǒ de diànnǎo tūrán sǐjī le, máfan nǐ bāng wǒ kàn yíxià.",
-		"a": "好的，没问题。不过我不会修，给售后服务中心打电话吧。",
-		"aP": "Hǎo de, méi wèntí. Búguò wǒ bú huì xiū, gěi shòuhòu fúwù zhōngxīn dǎ diànhuà ba.",
-		"hint": "회사에서 컴퓨터 고장 문제를 이야기하는 상황입니다.",
-		"keywords": "电脑 (diànnǎo), 死机 (sǐjī, 고장나다.), 售后服务中心 (shòuhòu fúwù zhōngxīn, 서비스센터), 电话 (diànhuà)",
-		"weight": 1
-	},
-	{
-		"q": "今天第一天上班，心情怎么样？",
-		"qP": "Jīntiān dì yī tiān shàngbān, xīnqíng zěnmeyàng?",
-		"a": "我们部门的同事们都很热情，气氛也很好，我很满意。",
-		"aP": "Wǒmen bùmén de tóngshìmen dōu hěn rèqíng, qìfēn yě hěn hǎo, wǒ hěn mǎnyì.",
-		"hint": "첫 출근 후 회사 분위기에 대해 이야기하는 대화입니다.",
-		"keywords": "上班 (shàngbān), 同事 (tóngshì), 热情 (rèqíng), 满意 (mǎnyì, 만족하다.)",
-		"weight": 1
-	},
-	{
-		"q": "你对工资满意吗？",
-		"qP": "Nǐ duì gōngzī mǎnyì ma?",
-		"a": "我们公司工资高，待遇好。我很满意。",
-		"aP": "Wǒmen gōngsī gōngzī gāo, dàiyù hǎo. Wǒ hěn mǎnyì.",
-		"hint": "회사 급여와 복지에 대해 이야기하는 대화입니다.",
-		"keywords": "工资 (gōngzī, 급여), 待遇 (dàiyù, 대우), 公司 (gōngsī), 满意 (mǎnyì)",
-		"weight": 1
-	},
-	{
-		"q": "办公用品都买好了吗？",
-		"qP": "Bàngōng yòngpǐn dōu mǎi hǎo le ma?",
-		"a": "上午我很忙，我还没买。我马上去买。",
- 		"aP": "Shàngwǔ wǒ hěn máng, wǒ hái méi mǎi. Wǒ mǎshàng qù mǎi.",
-		"hint": "사무용품 구매 상황을 이야기하는 회사 대화입니다.",
-		"keywords": "办公用品 (bàngōng yòngpǐn), 会议 (huìyì), 买 (mǎi), 上午 (shàngwǔ)",
-		"weight": 1
-	},
-	{
-		"q": "你去外国出过差吗？",
-		"qP": "Nǐ qù wàiguó chū guò chāi ma?",
-		"a": "我常常去中国出差，下个星期我也要去上海出差。我觉得出差很累。",
-		"aP": "Wǒ chángcháng qù Zhōngguó chūchāi, xià ge xīngqī wǒ yě yào qù Shànghǎi chūchāi. Wǒ juéde chūchāi hěn lèi.",
-		"hint": "해외 출장 경험에 대해 이야기하는 대화입니다.",
-		"keywords": "外国 (wàiguó), 出差 (chūchāi), 上海 (Shànghǎi), 累 (lèi)",
-		"weight": 1
-	},
-	{
-		"q": "我们现在要回公司，怎么走？",
-		"qP": "Wǒmen xiànzài yào huí gōngsī, zěnme zǒu?",
-		"a": "坐地铁吧，现在是下班时间，坐地铁不堵车。",
-		"aP": "Zuò dìtiě ba, xiànzài shì xiàbān shíjiān, zuò dìtiě bú dǔchē.",
-		"hint": "퇴근 시간 교통 상황에 대해 이야기하는 대화입니다.",
-		"keywords": "公司 (gōngsī), 地铁 (dìtiě), 下班时间 (xiàbān shíjiān), 堵车 (dǔchē)",
-		"weight": 1
-	},
-	{
-		"q": "工作的时候，你常用外语吗？",
-		"qP": "Gōngzuò de shíhou, nǐ cháng yòng wàiyǔ ma?",
-		"a": "在公司不常用外语，不过我经常去国外出差，出差的时候我要说外语。",
-		"aP": "Zài gōngsī bù cháng yòng wàiyǔ, búguò wǒ jīngcháng qù guówài chūchāi, chūchāi de shíhou wǒ yào shuō wàiyǔ.",
-		"hint": "직장에서 외국어 사용에 대해 이야기하는 대화입니다.",
-		"keywords": "工作 (gōngzuò), 外语 (wàiyǔ, 외국어), 国外 (guówài), 出差 (chūchāi)",
-		"weight": 1
-	},
-	{
-		"q": "暑假的时候，去海外旅行怎么样？",
-		"qP": "Shǔjià de shíhou, qù hǎiwài lǚxíng zěnmeyàng?",
-		"a": "不好意思，暑假我要去打工。你找别人吧。",
-		"aP": "Bù hǎoyìsi, shǔjià wǒ yào qù dǎgōng. Nǐ zhǎo biérén ba.",
-		"hint": "暑假旅行计划에 대해 이야기하는 대화입니다.",
-		"keywords": "暑假 (shǔjià), 海外旅行 (hǎiwài lǚxíng), 打工 (dǎgōng)",
-		"weight": 1
-	},
-	{
-		"q": "这个假期你有什么特别的计划吗？",
-		"qP": "Zhège jiàqī nǐ yǒu shénme tèbié de jìhuà ma?",
-		"a": "我要去北京旅行，我听说北京有很多好吃的菜。",
-		"aP": "Wǒ yào qù Běijīng lǚxíng, wǒ tīngshuō Běijīng yǒu hěnduō hǎochī de cài.",
-		"hint": "假期计划과 北京 여행에 대해 이야기하는 대화입니다.",
-		"keywords": "计划 (jìhuà, 계획) 假期 (jiàqī), 北京 (Běijīng), 名胜古迹 (míngshèng gǔjì)",
-		"weight": 1
-	},
-	{
-		"q": "今年假期你去哪儿旅行了？",
-		"qP": "Jīnnián jiàqī nǐ qù nǎr lǚxíng le?",
-		"a": "今年我们公司特别忙，所以假期我没去旅行。你呢？",
-		"aP": "Jīnnián wǒmen gōngsī tèbié máng, suǒyǐ jiàqī wǒ méi qù lǚxíng. Nǐ ne?",
-		"hint": "假期 여행 여부에 대해 이야기하는 대화입니다.",
-		"keywords": "假期 (jiàqī), 公司 (gōngsī), 旅行 (lǚxíng)",
-		"weight": 1
-	},
-	{
-		"q": "我下个月要去旅行了。",
-		"qP": "Wǒ xià ge yuè yào qù lǚxíng le.",
-		"a": "是吗？你去哪儿？跟谁一起去？真羡慕你。",
-		"aP": "Shì ma? Nǐ qù nǎr? Gēn shéi yìqǐ qù? Zhēn xiànmù nǐ.",
-		"hint": "여행 계획에 대해 이야기하는 대화입니다.",
-		"keywords": "下个月 (xià ge yuè), 旅行 (lǚxíng), 羡慕 (xiànmù)",
-		"weight": 1
-	},
-	{
-		"q": "你想住什么样的宾馆？",
-		"qP": "Nǐ xiǎng zhù shénme yàng de bīnguǎn?",
-		"a": "我想住五星级的宾馆，因为五星级的宾馆很干净，服务也很好。",
-		"aP": "Wǒ xiǎng zhù wǔxīngjí de bīnguǎn, yīnwèi wǔxīngjí de bīnguǎn hěn gānjìng, fúwù yě hěn hǎo.",
-		"hint": "선호하는 호텔에 대해 이야기하는 대화입니다.",
-		"keywords": "五星级 (wǔxīngjí), 宾馆 (bīnguǎn), 服务 (fúwù)",
-		"weight": 1
-	},
-	{
-		"q": "这儿真漂亮啊！",
-		"qP": "Zhèr zhēn piàoliang a!",
-		"a": "是啊，太漂亮了！来，我们一起拍张照。",
-		"aP": "Shì a, tài piàoliang le! Lái, wǒmen yìqǐ pāi zhāng zhào.",
-		"hint": "예쁜 장소에서 사진을 찍는 상황의 대화입니다.",
-		"keywords": "漂亮 (piàoliang), 拍照 (pāizhào), 一起 (yìqǐ)",
-		"weight": 1
-	},
-	{
-		"q": "哥哥，我们一起准备妈妈的生日礼物吧。",
-		"qP": "Gēge, wǒmen yìqǐ zhǔnbèi māma de shēngrì lǐwù ba.",
-		"a": "好啊，明天星期六，我们一起去百货商店看看吧。",
-		"aP": "Hǎo a, míngtiān xīngqīliù, wǒmen yìqǐ qù bǎihuò shāngdiàn kànkan ba.",
-		"hint": "妈妈生日礼物을 준비하는 대화입니다.",
-		"keywords": "生日礼物 (shēngrì lǐwù), 百货商店 (bǎihuò shāngdiàn), 一起 (yìqǐ)",
-		"weight": 1
-	},
-	{
-		"q": "我奶奶的生日快到了，送她什么礼物好呢？",
-		"qP": "Wǒ nǎinai de shēngrì kuài dào le, sòng tā shénme lǐwù hǎo ne?",
-		"a": "现金怎么样？这样奶奶可以自己买自己喜欢的。",
-		"aP": "Xiànjīn zěnmeyàng? Zhèyàng nǎinai kěyǐ zìjǐ mǎi zìjǐ xǐhuan de.",
-		"hint": "奶奶 생일 선물에 대해 이야기하는 대화입니다.",
-		"keywords": "奶奶 (nǎinai), 礼物 (lǐwù), 现金 (xiànjīn)",
-		"weight": 1
-	},
-	{
-		"q": "我哥哥要大学毕业了，送他什么礼物好呢？",
-		"qP": "Wǒ gēge yào dàxué bìyè le, sòng tā shénme lǐwù hǎo ne?",
-		"a": "送给他苹果手机怎么样？年轻人喜欢苹果手机。",
-		"aP": "Sòng gěi tā píngguǒ shǒujī zěnmeyàng? Niánqīngrén xǐhuan píngguǒ shǒujī.",
-		"hint": "大学毕业 선물에 대해 이야기하는 대화입니다.",
-		"keywords": "大学毕业 (dàxué bìyè), 礼物 (lǐwù), 苹果手机 (píngguǒ shǒujī)",
-		"weight": 1
-	},
-	{
-		"q": "哇！你做了最流行的发型。",
-		"qP": "Wa! Nǐ zuò le zuì liúxíng de fàxíng.",
-		"a": "昨天做的。怎么样？好看吗？",
-		"aP": "Zuótiān zuò de. Zěnmeyàng? Hǎokàn ma?",
-		"hint": "새로운 헤어스타일에 대해 이야기하는 대화입니다.",
-		"keywords": "发型 (fàxíng, 헤어스타일), 流行 (liúxíng), 好看 (hǎokàn)",
-		"weight": 1
-	},
-	{
-		"q": "你要做什么？你要剪发还是烫发？",
-		"qP": "Nǐ yào zuò shénme? Nǐ yào jiǎnfà háishì tàngfà?",
-		"a": "我要剪一下，最近流行什么，您给我推荐一下。",
-		"aP": "Wǒ yào jiǎn yíxià, zuìjìn liúxíng shénme, nín gěi wǒ tuījiàn yíxià.",
-		"hint": "미용실에서 헤어스타일을 상담하는 대화입니다.",
-		"keywords": "剪发 (jiǎnfà), 烫发 (tàngfà, 파마), 推荐 (tuījiàn)",
-		"weight": 1
-	}	
+        "q": "为什么开了这么长时间的会议？",
+        "qP": "Wèishénme kāi le zhème cháng shíjiān de huìyì?",
+        "a": "会议开得很长。工作有点儿复杂。",
+        "aP": "Huìyì kāi de hěn cháng. Gōngzuò yǒudiǎnr fùzá.",
+        "hint": "[카테고리: 회사/회의 이유] 긴 회의 이유를 설명하는 회사 대화입니다.",
+        "keywords": "会议 (huìyì), 工作计划 (gōngzuò jìhuà), 复杂 (fùzá), 结束 (jiéshù)",
+        "weight": 1
+    },
+    {
+        "q": "为什么出差？",
+        "qP": "Wèishénme chūchāi?",
+        "a": "因为要开会，所以我去出差。明天去上海。",
+        "aP": "Yīnwèi yào kāihuì, suǒyǐ wǒ qù chūchāi. Míngtiān qù Shànghǎi.",
+        "hint": "[카테고리: 회사/출장 이유] 출장 이유와 일정을 설명하는 대화입니다.",
+        "keywords": "出差 (chūchāi), 上海 (Shànghǎi), 会议 (huìyì), 出发 (chūfā)",
+        "weight": 1
+    },
+    {
+        "q": "听说你去中国出差，跟谁一起去？",
+        "qP": "Tīngshuō nǐ qù Zhōngguó chūchāi, gēn shéi yìqǐ qù?",
+        "a": "我跟金部长一起去。他汉语说得很好。",
+        "aP": "Wǒ gēn Jīn bùzhǎng yìqǐ qù. Tā Hànyǔ shuō de hěn hǎo.",
+        "hint": "[카테고리: 회사/출장 동행] 출장 동행자에 대해 이야기하는 회사 대화입니다.",
+        "keywords": "中国 (Zhōngguó), 出差 (chūchāi), 部长 (bùzhǎng), 放心 (fàngxīn)",
+        "weight": 1
+    },
+    {
+        "q": "你第一次去海外出差，心情怎么样？",
+        "qP": "Nǐ dì yī cì qù hǎiwài chūchāi, xīnqíng zěnmeyàng?",
+        "a": "第一次去，有点儿紧张。但是我很期待。",
+        "aP": "Dì yī cì qù, yǒudiǎnr jǐnzhāng. Dànshì wǒ hěn qīdài.",
+        "hint": "[카테고리: 회사/출장 기분] 첫 해외 출장을 가는 사람의 기분에 대해 이야기하는 대화입니다.",
+        "keywords": "海外 (hǎiwài), 出差 (chūchāi), 紧张 (jǐnzhāng), 外国文化 (wàiguó wénhuà)",
+        "weight": 1
+    },
+    {
+        "q": "明天跟客户开会，订好会议室了吗？",
+        "qP": "Míngtiān gēn kèhù kāihuì, dìng hǎo huìyìshì le ma?",
+        "a": "订好了。会议室在三楼。",
+        "aP": "Dìng hǎo le. Huìyìshì zài sān lóu.",
+        "hint": "[카테고리: 회사/회의 준비] 고객과의 회의를 준비하는 회사 대화입니다.",
+        "keywords": "客户 (kèhù), 会议室 (huìyìshì), 资料 (zīliào), 准备 (zhǔnbèi)",
+        "weight": 1
+    },
+    {
+        "q": "会议资料准备好了吗？",
+        "qP": "Huìyì zīliào zhǔnbèi hǎo le ma?",
+        "a": "准备好了。我现在就发给您。",
+        "aP": "Zhǔnbèi hǎo le. Wǒ xiànzài jiù fā gěi nín.",
+        "hint": "[카테고리: 회사/자료 준비] 회의 자료 검토를 부탁하는 상황입니다.",
+        "keywords": "会议资料 (huìyì zīliào), 准备好 (zhǔnbèi hǎo), 有空 (yǒu kòng), 看看 (kànkan)",
+        "weight": 1
+    },
+    {
+        "q": "明天的会议，什么时候开始好呢？",
+        "qP": "Míngtiān de huìyì, shénme shíhou kāishǐ hǎo ne?",
+        "a": "下午三点怎么样？上午我要见客户。",
+        "aP": "Xiàwǔ sān diǎn zěnmeyàng? Shàngwǔ wǒ yào jiàn kèhù.",
+        "hint": "[카테고리: 회사/시간 조정] 회의 시간을 조정하는 대화입니다.",
+        "keywords": "会议 (huìyì), 下午三点 (xiàwǔ sān diǎn), 客户 (kèhù), 见 (jiàn)",
+        "weight": 1
+    },
+    {
+        "q": "下周五我要搬家，我打算下星期请假。",
+        "qP": "Xià zhōu wǔ wǒ yào bānjiā, wǒ dǎsuàn xià xīngqī qǐngjià.",
+        "a": "应该没问题。你跟部长说说吧。",
+        "aP": "Yīnggāi méi wèntí. Nǐ gēn bùzhǎng shuōshuo ba.",
+        "hint": "[카테고리: 회사/휴가] 이사 때문에 휴가를 내는 상황의 대화입니다.",
+        "keywords": "应该 (Yīnggāi, 당연히), 搬家 (bānjiā), 请假 (qǐngjià, 휴가를 신청하다.), 公司 (gōngsī), 帮 (bāng)",
+        "weight": 1
+    },
+    {
+        "q": "要开会了，金科长去哪儿了？",
+        "qP": "Yào kāihuì le, Jīn kēzhǎng qù nǎr le?",
+        "a": "金科长去打印资料了。打印机坏了。",
+        "aP": "Jīn kēzhǎng qù dǎyìn zīliào le. Dǎyìnjī huài le.",
+        "hint": "[카테고리: 회사/동료 위치] 회의 전에 동료의 행방을 묻는 회사 대화입니다.",
+        "keywords": "开会 (kāihuì), 打印资料 (dǎyìn zīliào), 打印机 (dǎyìnjī), 部门 (bùmén)",
+        "weight": 1
+    },
+    {
+        "q": "快九点了，什么时候下班？",
+        "qP": "Kuài jiǔ diǎn le, shénme shíhou xiàbān?",
+        "a": "你先下班吧。我还要准备资料。",
+        "aP": "Nǐ xiān xiàbān ba. Wǒ hái yào zhǔnbèi zīliào.",
+        "hint": "[카테고리: 회사/야근] 야근 중인 동료 사이의 대화입니다.",
+        "keywords": "下班 (xiàbān), 会议资料 (huìyì zīliào)",
+        "weight": 1
+    },
+    {
+        "q": "听说你们部门来了一个新职员，他怎么样？",
+        "qP": "Tīngshuō nǐmen bùmén lái le yí ge xīn zhíyuán, tā zěnmeyàng?",
+        "a": "他性格很好。大家都喜欢他。",
+        "aP": "Tā xìnggé hěn hǎo. Dàjiā dōu xǐhuan tā.",
+        "hint": "[카테고리: 회사/동료 평가] 새로 온 직원에 대해 이야기하는 회사 대화입니다.",
+        "keywords": "新职员 (xīn zhíyuán, 신입사원), 性格 (xìnggé), 喜欢 (xǐhuan), 部门 (bùmén)",
+        "weight": 1
+    },
+    {
+        "q": "你和同事的关系怎么样？",
+        "qP": "Nǐ hé tóngshì de guānxì zěnmeyàng?",
+        "a": "关系很好。我们常常互相帮助。",
+        "aP": "Guānxi hěn hǎo. Wǒmen chángcháng hùxiāng bāngzhù.",
+        "hint": "[카테고리: 회사/동료 관계] 직장 동료와의 관계에 대해 이야기하는 대화입니다.",
+        "keywords": "同事 (tóngshì), 关系 (guānxì), 工作 (gōngzuò), 帮助 (bāngzhù, 돕다), 互相 (hùxiāng, 서로)",
+        "weight": 1
+    },
+    {
+        "q": "我的电脑突然死机了，麻烦你帮我看一下。",
+        "qP": "Wǒ de diànnǎo tūrán sǐjī le, máfan nǐ bāng wǒ kàn yíxià.",
+        "a": "好的。我帮你看一下。",
+        "aP": "Hǎo de. Wǒ bāng nǐ kàn yíxià.",
+        "hint": "[카테고리: 회사/고장 도움] 회사에서 컴퓨터 고장 문제를 이야기하는 상황입니다.",
+        "keywords": "电脑 (diànnǎo), 死机 (sǐjī, 고장나다.), 售后服务中心 (shòuhòu fúwù zhōngxīn, 서비스센터), 电话 (diànhuà)",
+        "weight": 1
+    },
+    {
+        "q": "今天第一天上班，心情怎么样？",
+        "qP": "Jīntiān dì yī tiān shàngbān, xīnqíng zěnmeyàng?",
+        "a": "有点儿紧张。但是同事们很热情。",
+        "aP": "Yǒudiǎnr jǐnzhāng. Dànshì tóngshìmen hěn rèqíng.",
+        "hint": "[카테고리: 회사/첫 출근] 첫 출근 후 회사 분위기에 대해 이야기하는 대화입니다.",
+        "keywords": "上班 (shàngbān), 同事 (tóngshì), 热情 (rèqíng), 满意 (mǎnyì, 만족하다.)",
+        "weight": 1
+    },
+    {
+        "q": "你对工资满意吗？",
+        "qP": "Nǐ duì gōngzī mǎnyì ma?",
+        "a": "满意。工资还不错，公司也很好。",
+        "aP": "Mǎnyì. Gōngzī hái búcuò, gōngsī yě hěn hǎo.",
+        "hint": "[카테고리: 회사/급여 만족] 회사 급여와 복지에 대해 이야기하는 대화입니다.",
+        "keywords": "工资 (gōngzī, 급여), 待遇 (dàiyù, 대우), 公司 (gōngsī), 满意 (mǎnyì)",
+        "weight": 1
+    },
+    {
+        "q": "办公用品都买好了吗？",
+        "qP": "Bàngōng yòngpǐn dōu mǎi hǎo le ma?",
+        "a": "还没买。我现在就去买。",
+        "aP": "Hái méi mǎi. Wǒ xiànzài jiù qù mǎi.",
+        "hint": "[카테고리: 회사/사무용품] 사무용품 구매 상황을 이야기하는 회사 대화입니다.",
+        "keywords": "办公用品 (bàngōng yòngpǐn), 会议 (huìyì), 买 (mǎi), 上午 (shàngwǔ)",
+        "weight": 1
+    },
+    {
+        "q": "你去外国出过差吗？",
+        "qP": "Nǐ qù wàiguó chū guò chāi ma?",
+        "a": "去过。我常常去中国出差。",
+        "aP": "Qùguo. Wǒ chángcháng qù Zhōngguó chūchāi.",
+        "hint": "[카테고리: 회사/출장 경험] 해외 출장 경험에 대해 이야기하는 대화입니다.",
+        "keywords": "外国 (wàiguó), 出差 (chūchāi), 上海 (Shànghǎi), 累 (lèi)",
+        "weight": 1
+    },
+    {
+        "q": "我们现在要回公司，怎么走？",
+        "qP": "Wǒmen xiànzài yào huí gōngsī, zěnme zǒu?",
+        "a": "坐地铁吧。现在坐地铁不堵车。",
+        "aP": "Zuò dìtiě ba. Xiànzài zuò dìtiě bù dǔchē.",
+        "hint": "[카테고리: 회사/길 안내] 퇴근 시간 교통 상황에 대해 이야기하는 대화입니다.",
+        "keywords": "公司 (gōngsī), 地铁 (dìtiě), 下班时间 (xiàbān shíjiān), 堵车 (dǔchē)",
+        "weight": 1
+    },
+    {
+        "q": "工作的时候，你常用外语吗？",
+        "qP": "Gōngzuò de shíhou, nǐ cháng yòng wàiyǔ ma?",
+        "a": "不常用。出差的时候有时用。",
+        "aP": "Bù cháng yòng. Chūchāi de shíhou yǒushí yòng.",
+        "hint": "[카테고리: 회사/외국어 사용] 직장에서 외국어 사용에 대해 이야기하는 대화입니다.",
+        "keywords": "工作 (gōngzuò), 外语 (wàiyǔ, 외국어), 国外 (guówài), 出差 (chūchāi)",
+        "weight": 1
+    },
+    {
+        "q": "暑假的时候，去海外旅行怎么样？",
+        "qP": "Shǔjià de shíhou, qù hǎiwài lǚxíng zěnmeyàng?",
+        "a": "不好意思。暑假我要打工。",
+        "aP": "Bù hǎoyìsi. Shǔjià wǒ yào dǎgōng.",
+        "hint": "[카테고리: 여행/제안 거절] 暑假旅行计划에 대해 이야기하는 대화입니다.",
+        "keywords": "暑假 (shǔjià), 海外旅行 (hǎiwài lǚxíng), 打工 (dǎgōng)",
+        "weight": 1
+    },
+    {
+        "q": "这个假期你有什么特别的计划吗？",
+        "qP": "Zhège jiàqī nǐ yǒu shénme tèbié de jìhuà ma?",
+        "a": "我要去北京旅行。听说那里有很多好吃的。",
+        "aP": "Wǒ yào qù Běijīng lǚxíng. Tīngshuō nàli yǒu hěnduō hǎochī de.",
+        "hint": "[카테고리: 여행/계획] 假期计划과 北京 여행에 대해 이야기하는 대화입니다.",
+        "keywords": "计划 (jìhuà, 계획) 假期 (jiàqī), 北京 (Běijīng), 名胜古迹 (míngshèng gǔjì)",
+        "weight": 1
+    },
+    {
+        "q": "今年假期你去哪儿旅行了？",
+        "qP": "Jīnnián jiàqī nǐ qù nǎr lǚxíng le?",
+        "a": "没去。公司太忙了。",
+        "aP": "Méi qù. Gōngsī tài máng le.",
+        "hint": "[카테고리: 여행/경험 없음] 假期 여행 여부에 대해 이야기하는 대화입니다.",
+        "keywords": "假期 (jiàqī), 公司 (gōngsī), 旅行 (lǚxíng)",
+        "weight": 1
+    },
+    {
+        "q": "我下个月要去旅行了。",
+        "qP": "Wǒ xià ge yuè yào qù lǚxíng le.",
+        "a": "真的吗？去哪儿？真羡慕你。",
+        "aP": "Zhēn de ma? Qù nǎr? Zhēn xiànmù nǐ.",
+        "hint": "[카테고리: 여행/반응] 여행 계획에 대해 이야기하는 대화입니다.",
+        "keywords": "下个月 (xià ge yuè), 旅行 (lǚxíng), 羡慕 (xiànmù)",
+        "weight": 1
+    },
+    {
+        "q": "你想住什么样的宾馆？",
+        "qP": "Nǐ xiǎng zhù shénme yàng de bīnguǎn?",
+        "a": "我想住干净的宾馆。服务也要好。",
+        "aP": "Wǒ xiǎng zhù gānjìng de bīnguǎn. Fúwù yě yào hǎo.",
+        "hint": "[카테고리: 여행/숙소 선호] 선호하는 호텔에 대해 이야기하는 대화입니다.",
+        "keywords": "五星级 (wǔxīngjí), 宾馆 (bīnguǎn), 服务 (fúwù)",
+        "weight": 1
+    },
+    {
+        "q": "这儿真漂亮啊！",
+        "qP": "Zhèr zhēn piàoliang a!",
+        "a": "是啊，真漂亮。我们拍张照吧。",
+        "aP": "Shì a, zhēn piàoliang. Wǒmen pāi zhāng zhào ba.",
+        "hint": "[카테고리: 여행/사진] 예쁜 장소에서 사진을 찍는 상황의 대화입니다.",
+        "keywords": "漂亮 (piàoliang), 拍照 (pāizhào), 一起 (yìqǐ)",
+        "weight": 1
+    },
+    {
+        "q": "哥哥，我们一起准备妈妈的生日礼物吧。",
+        "qP": "Gēge, wǒmen yìqǐ zhǔnbèi māma de shēngrì lǐwù ba.",
+        "a": "好啊。明天去百货商店看看吧。",
+        "aP": "Hǎo a. Míngtiān qù bǎihuò shāngdiàn kànkan ba.",
+        "hint": "[카테고리: 선물/준비 제안] 妈妈生日礼物을 준비하는 대화입니다.",
+        "keywords": "生日礼物 (shēngrì lǐwù), 百货商店 (bǎihuò shāngdiàn), 一起 (yìqǐ)",
+        "weight": 1
+    },
+    {
+        "q": "我奶奶的生日快到了，送她什么礼物好呢？",
+        "qP": "Wǒ nǎinai de shēngrì kuài dào le, sòng tā shénme lǐwù hǎo ne?",
+        "a": "现金怎么样？奶奶可以买喜欢的东西。",
+        "aP": "Xiànjīn zěnmeyàng? Nǎinai kěyǐ mǎi xǐhuan de dōngxi.",
+        "hint": "[카테고리: 선물/추천] 奶奶 생일 선물에 대해 이야기하는 대화입니다.",
+        "keywords": "奶奶 (nǎinai), 礼物 (lǐwù), 现金 (xiànjīn)",
+        "weight": 1
+    },
+    {
+        "q": "我哥哥要大学毕业了，送他什么礼物好呢？",
+        "qP": "Wǒ gēge yào dàxué bìyè le, sòng tā shénme lǐwù hǎo ne?",
+        "a": "手机怎么样？年轻人都喜欢手机。",
+        "aP": "Shǒujī zěnmeyàng? Niánqīng rén dōu xǐhuan shǒujī.",
+        "hint": "[카테고리: 선물/추천] 大学毕业 선물에 대해 이야기하는 대화입니다.",
+        "keywords": "大学毕业 (dàxué bìyè), 礼物 (lǐwù), 苹果手机 (píngguǒ shǒujī)",
+        "weight": 1
+    },
+    {
+        "q": "哇！你做了最流行的发型。",
+        "qP": "Wa! Nǐ zuò le zuì liúxíng de fàxíng.",
+        "a": "昨天做的。怎么样？还可以吗？",
+        "aP": "Zuótiān zuò de. Zěnmeyàng? Hái kěyǐ ma?",
+        "hint": "[카테고리: 미용/칭찬 반응] 새로운 헤어스타일에 대해 이야기하는 대화입니다.",
+        "keywords": "发型 (fàxíng, 헤어스타일), 流行 (liúxíng), 好看 (hǎokàn)",
+        "weight": 1
+    },
+    {
+        "q": "你要做什么？你要剪发还是烫发？",
+        "qP": "Nǐ yào zuò shénme? Nǐ yào jiǎnfà háishì tàngfà?",
+        "a": "我想剪一下头发。请给我推荐一下。",
+        "aP": "Wǒ xiǎng jiǎn yíxià tóufa. Qǐng gěi wǒ tuījiàn yíxià.",
+        "hint": "[카테고리: 미용/요청] 미용실에서 헤어스타일을 상담하는 대화입니다.",
+        "keywords": "剪发 (jiǎnfà), 烫发 (tàngfà, 파마), 推荐 (tuījiàn)",
+        "weight": 1
+    }
 ];
