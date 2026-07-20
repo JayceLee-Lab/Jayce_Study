@@ -1413,13 +1413,13 @@ const PART3_2_DATA = [
         "keywords": "发型 (fàxíng, 헤어스타일), 流行 (liúxíng), 好看 (hǎokàn)",
         "weight": 1
     },
-    {
-        "q": "你要做什么？你要剪发还是烫发？",
-        "qP": "Nǐ yào zuò shénme? Nǐ yào jiǎnfà háishì tàngfà?",
-        "a": "我想剪一下头发。请给我推荐一下。",
-        "aP": "Wǒ xiǎng jiǎn yíxià tóufa. Qǐng gěi wǒ tuījiàn yíxià.",
-        "hint": "[카테고리: 미용/요청] 미용실에서 헤어스타일을 상담하는 대화입니다.",
-        "keywords": "剪发 (jiǎnfà), 烫发 (tàngfà, 파마), 推荐 (tuījiàn)",
-        "weight": 1
-    }
+	{
+		"q": "你要做什么？你要剪发还是烫发？",
+		"qP": "Nǐ yào zuò shénme? Nǐ yào jiǎnfà háishì tàngfà?",
+		"a": "我要剪一下，最近流行什么，您给我推荐一下。",
+		"aP": "Wǒ yào jiǎn yíxià, zuìjìn liúxíng shénme, nín gěi wǒ tuījiàn yíxià.",
+		"hint": "미용실에서 헤어스타일을 상담하는 대화입니다.",
+		"keywords": "剪发 (jiǎnfà), 烫发 (tàngfà, 파마), 推荐 (tuījiàn)",
+		"weight": 1
+	}	
 ];
