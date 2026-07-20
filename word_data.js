@@ -1318,5 +1318,47 @@ const WORD_DATA = [
         "a": "床上有裤子。",
         "aP": "Chuángshàng yǒu kùzi.",
         "weight": 1
+    },
+    {
+        "hanzi": "风景",
+        "pinyin": "fēngjǐng",
+        "meaning": "풍경",
+        "a": "那儿风景很美。",
+        "aP": "Nàr fēngjǐng hěn měi."
+    },
+    {
+        "hanzi": "上次说的那本",
+        "pinyin": "shàng cì shuō de nà běn",
+        "meaning": "지난번에 얘기했던 그 책",
+        "a": "你可以把上次说的那本书借给我吗？",
+        "aP": "Nǐ kěyǐ bǎ shàng cì shuō de nà běn shū jiè gěi wǒ ma?"
+    },
+    {
+        "hanzi": "我带了",
+        "pinyin": "Wǒ dài le",
+        "meaning": "가져왔다.",
+        "a": "我带了些水果，咱们一起吃吧。",
+        "aP": "Wǒ dài le xiē shuǐguǒ, zánmen yìqǐ chī ba."
+    },
+    {
+        "hanzi": "但是",
+        "pinyin": "dànshì",
+        "meaning": "다만",
+        "a": "我会打一点儿，但是打得不太好。",
+        "aP": "Wǒ huì dǎ yìdiǎnr, dànshì dǎ de bú tài hǎo."
+    },
+    {
+        "hanzi": "你放哪儿了",
+        "pinyin": "Nǐ fàng nǎr le?",
+        "meaning": "어디에 두었나요?",
+        "a": "你放哪儿了？好好想想，我帮你找。",
+        "aP": "Nǐ fàng nǎr le? Hǎohǎo xiǎngxiang, wǒ bāng nǐ zhǎo."
+    },
+    {
+        "hanzi": "就在附近",
+        "pinyin": "Jiù zài fùjìn.",
+        "meaning": "바로 근처에 있어요.",
+        "a": "去咖啡厅怎么样？就在附近。",
+        "aP": "Qù kāfēitīng zěnmeyàng? Jiù zài fùjìn."
     }
 ];
