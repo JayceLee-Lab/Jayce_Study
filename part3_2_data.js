@@ -747,15 +747,15 @@ const PART3_2_DATA = [
         "keywords": "感冒 (gǎnmào), 天气预报 (tiānqì yùbào), 冷 (lěng)",
         "weight": 1
     },
-    {
-        "q": "春天到了，我们去哪儿看花？",
-        "qP": "Chūntiān dào le, wǒmen qù nǎr kànhuā?",
-        "a": "下雨了。我们坐出租车吧。",
-        "aP": "Xià yǔ le. Wǒmen zuò chūzūchē ba.",
-        "hint": "[카테고리: 날씨] 집 근처 공원과 꽃구경에 대해 이야기하는 대화입니다.",
-        "keywords": "附近 (fùjìn), 公园 (gōngyuán), 看花 (kànhuā)",
-        "weight": 1
-    },
+	{
+		"q": "春天到了，我们去哪儿看花？",
+		"qP": "Chūntiān dào le, wǒmen qù nǎr kànhuā?",
+		"a": "我家附近有一个公园。我们去那儿看花吧。",
+		"aP": "Wǒ jiā fùjìn yǒu yí ge gōngyuán. Wǒmen qù nàr kànhuā ba.",
+		"hint": "집 근처 공원과 꽃구경에 대해 이야기하는 대화입니다.",
+		"keywords": "附近 (fùjìn), 公园 (gōngyuán), 看花 (kànhuā)",
+		"weight": 1
+	},
     {
         "q": "外边刮风了，你可以关上窗户吗？",
         "qP": "Wàibian guāfēng le, nǐ kěyǐ guānshang chuānghu ma?",
