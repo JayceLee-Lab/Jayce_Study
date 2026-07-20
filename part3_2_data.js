@@ -783,15 +783,15 @@ const PART3_2_DATA = [
         "keywords": "堵车 (dǔchē, 교통체증), 咖啡厅 (kāfēitīng), 小心 (xiǎoxīn, 조심)",
         "weight": 1
     },
-    {
-        "q": "你怎么来晚了？路上出了什么事？",
-        "qP": "Nǐ zěnme lái wǎn le? Lùshang chū le shénme shì?",
-        "a": "我坐地铁上班。很方便。",
-        "aP": "Wǒ zuò dìtiě shàngbān. Hěn fāngbiàn.",
-        "hint": "[카테고리: 교통] 늦은 이유를 설명하는 대화입니다.",
-        "keywords": "对不起 (duìbuqǐ), 堵车 (dǔchē), 注意 (zhùyì, 주의)",
-        "weight": 1
-    },
+	{
+		"q": "你怎么来晚了？路上出了什么事？",
+		"qP": "Nǐ zěnme lái wǎn le? Lùshang chū le shénme shì?",
+		"a": "真对不起，路上车特别多，下次一定注意。",
+		"aP": "Zhēn duìbuqǐ, lùshang chē tèbié duō, xià cì yídìng zhùyì.",
+		"hint": "늦은 이유를 설명하는 대화입니다.",
+		"keywords": "对不起 (duìbuqǐ), 堵车 (dǔchē), 注意 (zhùyì, 주의)",
+		"weight": 1
+	},
     {
         "q": "你几点从家里出发去公司？",
         "qP": "Nǐ jǐ diǎn cóng jiālǐ chūfā qù gōngsī?",
