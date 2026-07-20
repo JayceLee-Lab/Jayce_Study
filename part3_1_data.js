@@ -820,7 +820,7 @@ const PART3_1_DATA = [
         "weight": 1
     },
     {
-        "q": "下周의考试, 你想跟谁一起准备?",
+        "q": "下周的考试, 你想跟谁一起准备?",
         "qP": "Xiàzhōu de kǎoshì, nǐ xiǎng gēn shéi yìqǐ zhǔnbèi?",
         "a": "下周的考试, 我想跟哥哥一起准备。",
         "aP": "Xiàzhōu de kǎoshì, wǒ xiǎng gēn gēge yìqǐ zhǔnbèi.",
