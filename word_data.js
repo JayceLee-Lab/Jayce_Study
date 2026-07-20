@@ -16,14 +16,6 @@ const WORD_DATA = [
         "weight": 1
     },
     {
-        "hanzi": "不过",
-        "pinyin": "Búguò",
-        "meaning": "하지만",
-        "a": "不过我不喜欢这个颜色",
-        "aP": "Búguò wǒ bù xǐhuān zhège yánsè",
-        "weight": 1
-    },
-    {
         "hanzi": "家具",
         "pinyin": "Jiājù",
         "meaning": "가구",
@@ -208,14 +200,6 @@ const WORD_DATA = [
         "weight": 1
     },
     {
-        "hanzi": "而且",
-        "pinyin": "érqiě",
-        "meaning": "또한",
-        "a": "吃汉堡又好吃又方便，而且省时。",
-        "aP": "chī hànbǎo yòu hǎochī yòu fāngbiàn, érqiě shěngshí.",
-        "weight": 1
-    },
-    {
         "hanzi": "省时",
         "pinyin": "shěngshí",
         "meaning": "시간을 절약하다.",
@@ -384,14 +368,6 @@ const WORD_DATA = [
         "weight": 1
     },
     {
-        "hanzi": "所以",
-        "pinyin": "suǒyǐ",
-        "meaning": "그래서",
-        "a": "去过，很喜欢旅行，所以我去过很多国家。",
-        "aP": "Qùguo, hěn xǐhuan lǚxíng, suǒyǐ wǒ qùguo hěn duō guójiā.",
-        "weight": 1
-    },
-    {
         "hanzi": "国家",
         "pinyin": "guójiā.",
         "meaning": "국가",
@@ -411,8 +387,8 @@ const WORD_DATA = [
         "hanzi": "到时候",
         "pinyin": "dào shíhou",
         "meaning": "그때가 되면",
-        "a": "定了，打算明年5月结婚，到时候你一定要来啊。",
-        "aP": "Dìng le, dǎsuàn míngnián wǔ yuè jiéhūn, dào shíhou nǐ yídìng yào lái a.",
+        "a": "到时候你一定要来啊。",
+        "aP": "dào shíhou nǐ yídìng yào lái a.",
         "weight": 1
     },
     {
@@ -421,22 +397,6 @@ const WORD_DATA = [
         "meaning": "참석하다",
         "a": "你参加小李的婚礼吗？",
         "aP": "Nǐ cānjiā Xiǎo Lǐ de hūnlǐ ma?",
-        "weight": 1
-    },
-    {
-        "hanzi": "告诉",
-        "pinyin": "gàosu",
-        "meaning": "말하다",
-        "a": "那天我要去中国出差，不能参加，我已经告诉小李了。",
-        "aP": "nà tiān wǒ yào qù Zhōngguó chūchāi, bù néng cānjiā, wǒ yǐjīng gàosu Xiǎo Lǐ le.",
-        "weight": 1
-    },
-    {
-        "hanzi": "因为",
-        "pinyin": "yīnwèi",
-        "meaning": "왜냐하면",
-        "a": "我常来，因为我儿子喜欢动物。",
-        "aP": "Wǒ cháng lái, yīnwèi wǒ érzi xǐhuan dòngwù.",
         "weight": 1
     },
     {
@@ -707,8 +667,8 @@ const WORD_DATA = [
         "hanzi": "通过面试",
         "pinyin": "tōngguò miànshì",
         "meaning": "면접 합격",
-        "a": "我通过面试了吗？太好了，谢谢您，我明天就可以上班。",
-        "aP": "Wǒ tōngguò miànshì le ma? Tài hǎo le, xièxie nín, wǒ míngtiān jiù kěyǐ shàngbān.",
+        "a": "我通过面试了吗？太好了。",
+        "aP": "Wǒ tōngguò miànshì le ma? Tài hǎo le.",
         "weight": 1
     },
     {
@@ -1024,14 +984,6 @@ const WORD_DATA = [
         "weight": 1
     },
     {
-        "hanzi": "心情",
-        "pinyin": "xīnqíng",
-        "meaning": "기분, 심정",
-        "a": "今天第一天上班，心情怎么样？",
-        "aP": "Jīntiān dì yī tiān shàngbān, xīnqíng zěnmeyàng?",
-        "weight": 1
-    },
-    {
         "hanzi": "部门",
         "pinyin": "bùmén",
         "meaning": "부서",
@@ -1042,7 +994,7 @@ const WORD_DATA = [
     {
         "hanzi": "热情",
         "pinyin": "rèqíng",
-        "meaning": "열광하다.",
+        "meaning": "열정적이다.",
         "a": "我们部门的同事们都很热情",
         "aP": "Wǒmen bùmén de tóngshìmen dōu hěn rèqíng",
         "weight": 1
@@ -1088,14 +1040,6 @@ const WORD_DATA = [
         "weight": 1
     },
     {
-        "hanzi": "假期",
-        "pinyin": "jiàqī",
-        "meaning": "휴일",
-        "a": "这个假期你有什么特别的计划吗？",
-        "aP": "Zhège jiàqī nǐ yǒu shénme tèbié de jìhuà ma?",
-        "weight": 1
-    },
-    {
         "hanzi": "计划",
         "pinyin": "jìhuà",
         "meaning": "계획",
@@ -1109,14 +1053,6 @@ const WORD_DATA = [
         "meaning": "이번 연휴",
         "a": "这个假期你有什么特别的计划吗？",
         "aP": "Zhège jiàqī nǐ yǒu shénme tèbié de jìhuà ma?",
-        "weight": 1
-    },
-    {
-        "hanzi": "假期",
-        "pinyin": "jiàqī",
-        "meaning": "휴일",
-        "a": "今年假期你去哪儿旅行了？",
-        "aP": "Jīnnián jiàqī nǐ qù nǎr lǚxíng le?",
         "weight": 1
     },
     {
